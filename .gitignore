@@ -1,0 +1,10 @@
+# Video files
+*.mp4
+*.mkv
+*.mov
+*.avi
+
+# OS & Temp
+Thumbs.db
+.DS_Store
+*.tmp

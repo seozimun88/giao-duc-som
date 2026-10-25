@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Cẩm Nang Giáo Dục Sớm Toàn Diện | Thể Chất - Tâm Hồn - Siêu Trí Tuệ</title>
+  <!-- Google Fonts: Be Vietnam Pro & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-canvas: #FAF7F2;
+      --bg-surface: #FFFFFF;
+      --bg-surface-subtle: #F3EFE8;
+      --bg-accent-soft: #FDE8E1;
+      
+      --ink-primary: #1C232B;
+      --ink-secondary: #52606D;
+      --ink-muted: #7E8C9A;
+      
+      --accent-terracotta: #D35400;
+      --accent-terracotta-dark: #BA4A00;
+      --accent-forest: #2E6F52;
+      --accent-forest-soft: #E8F4EE;
+      --accent-amber: #D97706;
+      --accent-amber-soft: #FEF3C7;
+      --accent-indigo: #4F46E5;
+      --accent-indigo-soft: #EEF2FF;
+      
+      --border-subtle: #E8E2D8;
+      --border-focus: #D35400;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 9999px;
+      
+      --shadow-sm: 0 2px 6px rgba(28, 35, 43, 0.04);
+      --shadow-md: 0 8px 20px rgba(28, 35, 43, 0.06);
+      --shadow-lg: 0 16px 36px rgba(28, 35, 43, 0.08);
+      
+      --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-body: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+      
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--ink-primary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      font-size: 15px;
+      overflow-x: hidden;
+      padding-bottom: 90px;
+    }
+
+    /* Header & Hero */
+    header.app-header {
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.95) 100%);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent-terracotta), var(--accent-amber));
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      font-weight: 800;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(211, 84, 0, 0.25);
+    }
+
+    .brand-text h1 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--ink-primary);
+      letter-spacing: -0.2px;
+    }
+
+    .brand-text p {
+      font-size: 11px;
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+
+    .header-badge {
+      background-color: var(--accent-forest-soft);
+      color: var(--accent-forest);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: var(--radius-pill);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 16px 20px;
+    }
+
+    /* App Nav Tabs */
+    .nav-scroller {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 6px 0 14px;
+      margin-bottom: 12px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .nav-scroller::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-tabs {
+      display: inline-flex;
+      gap: 8px;
+      background: var(--bg-surface-subtle);
+      padding: 5px;
+      border-radius: var(--radius-pill);
+    }
+
+    .nav-tab-btn {
+      background: transparent;
+      border: none;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+      user-select: none;
+    }
+
+    .nav-tab-btn.active {
+      background: var(--bg-surface);
+      color: var(--accent-terracotta);
+      box-shadow: var(--shadow-sm);
+      font-weight: 700;
+    }
+
+    /* Card System */
+    .card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 22px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: #DDD4C7;
+    }
+
+    .card-eyebrow {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: var(--accent-terracotta);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--ink-primary);
+      margin-bottom: 10px;
+      line-height: 1.35;
+      text-wrap: balance;
+    }
+
+    .card-subtitle {
+      font-size: 14px;
+      color: var(--ink-secondary);
+      margin-bottom: 16px;
+      line-height: 1.55;
+    }
+
+    /* Visual Pillars Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .pillar-box {
+      border-radius: var(--radius-md);
+      padding: 16px;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pillar-box.doman {
+      background: #FFF7ED;
+      border-color: #FED7AA;
+    }
+    .pillar-box.steiner {
+      background: #F0FDF4;
+      border-color: #BBF7D0;
+    }
+    .pillar-box.shichida {
+      background: #EEF2FF;
+      border-color: #C7D2FE;
+    }
+    .pillar-box.montessori {
+      background: #FAF5FF;
+      border-color: #E9D5FF;
+    }
+
+    .pillar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pillar-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--ink-primary);
+    }
+
+    .pillar-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .pillar-desc {
+      font-size: 12.5px;
+      color: var(--ink-secondary);
+      line-height: 1.45;
+    }
+
+    /* Pyramid Banner */
+    .pyramid-card {
+      background: linear-gradient(135deg, #2A363B 0%, #1E242B 100%);
+      color: #FFF;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pyramid-card::after {
+      content: 'π';
+      position: absolute;
+      right: -15px;
+      bottom: -35px;
+      font-size: 180px;
+      font-family: serif;
+      opacity: 0.05;
+      color: #FFF;
+      pointer-events: none;
+    }
+
+    .pyramid-level {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .pyramid-level.active-peak {
+      background: rgba(211, 84, 0, 0.25);
+      border-color: rgba(211, 84, 0, 0.5);
+    }
+
+    .pyramid-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .pyramid-content h4 {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .pyramid-content p {
+      font-size: 12px;
+      color: #D1D5DB;
+      line-height: 1.4;
+    }
+
+    /* Age Milestone Selector */
+    .age-pill-group {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      scrollbar-width: none;
+    }
+
+    .age-pill-btn {
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+
+    .age-pill-btn.active {
+      background: var(--accent-terracotta);
+      color: #FFF;
+      border-color: var(--accent-terracotta);
+    }
+
+    .age-detail-box {
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      background: var(--bg-surface-subtle);
+      margin-top: 10px;
+    }
+
+    /* Timeline / Schedule */
+    .timeline-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px dashed var(--border-subtle);
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .timeline-time {
+      width: 95px;
+      flex-shrink: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--accent-terracotta);
+    }
+
+    .timeline-body {
+      flex-grow: 1;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--ink-primary);
+      margin-bottom: 4px;
+    }
+
+    .timeline-meta {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-forest-soft);
+      color: var(--accent-forest);
+      margin-bottom: 6px;
+    }
+
+    .timeline-desc {
+      font-size: 13px;
+      color: var(--ink-secondary);
+      line-height: 1.45;
+    }
+
+    .timeline-check {
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .timeline-check input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent-forest);
+      cursor: pointer;
+    }
+
+    /* Eye Tracking Canvas Tool */
+    .canvas-container {
+      background: #111827;
+      border-radius: var(--radius-md);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px;
+      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    canvas#eyeCanvas {
+      width: 100%;
+      height: 220px;
+      display: block;
+      touch-action: none;
+    }
+
+    .canvas-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .canvas-btn {
+      background: rgba(255, 255, 255, 0.15);
+      color: #FFF;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius-pill);
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .canvas-btn:hover, .canvas-btn.active {
+      background: var(--accent-terracotta);
+      border-color: var(--accent-terracotta);
+    }
+
+    /* Pi Peg Lookup Tool */
+    .pi-lookup-box {
+      display: flex;
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .pi-input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-family: var(--font-display);
+      outline: none;
+      background: var(--bg-surface);
+      color: var(--ink-primary);
+    }
+
+    .pi-input:focus {
+      border-color: var(--accent-terracotta);
+      box-shadow: 0 0 0 3px rgba(211, 84, 0, 0.15);
+    }
+
+    .pi-result-card {
+      background: var(--bg-surface-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-left: 4px solid var(--accent-terracotta);
+    }
+
+    .pi-number-badge {
+      font-size: 28px;
+      font-weight: 800;
+      font-family: var(--font-display);
+      color: var(--accent-terracotta);
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .pi-image-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink-primary);
+    }
+
+    .pi-image-hint {
+      font-size: 12px;
+      color: var(--ink-secondary);
+    }
+
+    /* Interactive Scenario Accordion */
+    .scenario-item {
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      margin-bottom: 10px;
+      overflow: hidden;
+      background: var(--bg-surface);
+    }
+
+    .scenario-header {
+      padding: 14px 16px;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--ink-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-surface);
+      transition: var(--transition);
+      user-select: none;
+    }
+
+    .scenario-header:hover {
+      background: var(--bg-surface-subtle);
+    }
+
+    .scenario-content {
+      padding: 16px;
+      background: var(--bg-surface-subtle);
+      font-size: 13.5px;
+      color: var(--ink-secondary);
+      border-top: 1px solid var(--border-subtle);
+      display: none;
+      line-height: 1.5;
+    }
+
+    .scenario-item.open .scenario-content {
+      display: block;
+    }
+
+    .scenario-item.open .scenario-icon {
+      transform: rotate(180deg);
+    }
+
+    .scenario-icon {
+      transition: transform 0.2s ease;
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+
+    .script-dialogue {
+      background: #FFF;
+      border-left: 3px solid var(--accent-forest);
+      padding: 10px 12px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 8px 0;
+      font-style: italic;
+      color: var(--ink-primary);
+    }
+
+    /* Bottom Quick Bar */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 10px;
+      z-index: 99;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .bottom-nav-btn {
+      background: transparent;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      font-size: 11px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--ink-muted);
+      cursor: pointer;
+      min-width: 60px;
+      padding: 4px 6px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .bottom-nav-btn.active {
+      color: var(--accent-terracotta);
+      font-weight: 700;
+    }
+
+    .bottom-nav-btn span.icon {
+      font-size: 19px;
+      line-height: 1;
+    }
+
+    /* Utility */
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      margin-right: 4px;
+    }
+    .tag-orange { background: #FFEDD5; color: #C2410C; }
+    .tag-green { background: #DCFCE7; color: #15803D; }
+    .tag-blue { background: #DBEAFE; color: #1D4ED8; }
+    .tag-purple { background: #F3E8FF; color: #7E22CE; }
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 13.5px;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+    }
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      color: var(--accent-terracotta);
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .tab-pane {
+      display: none;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+    .tab-pane.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Timer Widget */
+    .timer-widget {
+      background: linear-gradient(135deg, #FFF9F5, #FFF3EB);
+      border: 1px solid #FED7AA;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .timer-display {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--accent-terracotta);
+    }
+
+    .timer-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-action {
+      background: var(--accent-terracotta);
+      color: #FFF;
+      border: none;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-action.secondary {
+      background: #FFF;
+      color: var(--ink-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container { padding: 12px 14px; }
+      .card { padding: 18px 16px; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .timeline-time { width: 80px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="brand-icon">🌱</div>
+      <div class="brand-text">
+        <h1>Nuôi Dưỡng Toàn Diện</h1>
+        <p>Thể Chất • Cảm Xúc • Siêu Trí Tuệ</p>
+      </div>
+    </div>
+    <div class="header-badge">
+      <span>●</span> Tâm Trong Sáng
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Nav Scroller (Desktop/Tablet & Direct view) -->
+    <div class="nav-scroller">
+      <div class="nav-tabs">
+        <button class="nav-tab-btn active" onclick="switchTab('tab-overview')">🏛️ Bản Đồ Phối Hợp</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-schedule')">⏰ Lịch 1 Ngày & Đồng Hồ</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-brain')">🧠 Số Pi & Đọc Nhanh</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-heart')">❤️ Đồng Cảm & Biết Ơn</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-adaptive')">🧩 Xử Lý Vấn Đề Ngoài Dự Kiến</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-oath')">🛡️ Lời Nhắc Lão Làng</button>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TAB 1: OVERVIEW / KIẾN TRÚC PHỐI HỢP -->
+    <!-- ========================================== -->
+    <section id="tab-overview" class="tab-pane active">
+      
+      <!-- Kim Tự Tháp Não Bộ -->
+      <div class="pyramid-card">
+        <span class="card-eyebrow" style="color: #FDBA74;">Cốt Lõi Hệ Thống</span>
+        <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 14px;">
+          Kim Tự Tháp 3 Tầng: Phần Cứng - Hệ Điều Hành - Ứng Dụng
+        </h2>
+        
+        <div class="pyramid-level active-peak">
+          <div class="pyramid-number" style="background: var(--accent-terracotta);">3</div>
+          <div class="pyramid-content">
+            <h4>Đỉnh Tháp: Siêu Trí Tuệ Não Phải (Shichida / Heguru)</h4>
+            <p>Trí nhớ chụp hình, chuỗi liên kết nhớ số Pi hàng trăm số, đọc sách quét ảnh sóng não Alpha. Đây là <em>App thần tốc</em> nhưng cần 2 tầng dưới làm bệ phóng.</p>
+          </div>
+        </div>
+
+        <div class="pyramid-level">
+          <div class="pyramid-number" style="background: var(--accent-forest);">2</div>
+          <div class="pyramid-content">
+            <h4>Thân Tháp: Tư Duy Thực Tế & Thích Ứng (Montessori & Heuristic Play)</h4>
+            <p>Hệ điều hành logic, đôi bàn tay thao tác cụ thể, khả năng tập trung sâu 2 tiếng và phản xạ tự giải quyết các sự cố bất ngờ ngoài kế hoạch.</p>
+          </div>
+        </div>
+
+        <div class="pyramid-level">
+          <div class="pyramid-number" style="background: #3B82F6;">1</div>
+          <div class="pyramid-content">
+            <h4>Chân Đế: Thể Chất, Tiền Đình & Tâm Hồn An Định (Doman & Steiner)</h4>
+            <p>Nền tảng thần kinh: bò 500m/ngày, đu xà tăng oxy não, chân trần chạm đất, bảo vệ giác quan khỏi màn hình, tình yêu vô điều kiện (Kokoro).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Trụ Cột Phương Pháp -->
+      <div class="card">
+        <span class="card-eyebrow">Ráp Nối Khoa Học</span>
+        <h3 class="card-title">Vai Trò 4 Bánh Răng Trong 1 Cỗ Máy Hoàn Chỉnh</h3>
+        <p class="card-subtitle">Không thiên lệch, không cực đoan. Mỗi phương pháp đảm nhiệm một tầng sinh học chính xác:</p>
+
+        <div class="pillars-grid">
+          <div class="pillar-box doman">
+            <div class="pillar-header">
+              <span class="pillar-name">🏃 Glenn Doman</span>
+              <span class="pillar-badge" style="color: #C2410C;">Thể Chất</span>
+            </div>
+            <p class="pillar-desc">Xây dựng thể chất cơ bắp, bò/trườn tối đa, đu xà mở rộng lồng ngực đưa oxy lên vỏ não, kích hoạt bao bọc Myelin thần kinh.</p>
+          </div>
+
+          <div class="pillar-box steiner">
+            <div class="pillar-header">
+              <span class="pillar-name">🌿 Steiner / Waldorf</span>
+              <span class="pillar-badge" style="color: #15803D;">Tâm Hồn</span>
+            </div>
+            <p class="pillar-desc">Bảo vệ giác quan tuyệt đối, 0% màn hình, chơi đồ gỗ thô, hòa mình vào thiên nhiên và nhịp điệu sinh hoạt đều đặn như hơi thở.</p>
+          </div>
+
+          <div class="pillar-box shichida">
+            <div class="pillar-header">
+              <span class="pillar-name">⚡ Shichida / Heguru</span>
+              <span class="pillar-badge" style="color: #4338CA;">Não Phải</span>
+            </div>
+            <p class="pillar-desc">Tốc độ tráo thẻ 0.5s, liên kết hình ảnh nhớ số Pi, mở rộng góc nhìn đọc lướt, triết lý yêu thương nuôi dưỡng trái tim (Kokoro).</p>
+          </div>
+
+          <div class="pillar-box montessori">
+            <div class="pillar-header">
+              <span class="pillar-name">🧩 Montessori</span>
+              <span class="pillar-badge" style="color: #7E22CE;">Logic & Tập Trung</span>
+            </div>
+            <p class="pillar-desc">Chuyển hóa dữ liệu trừu tượng thành vật thể 3D, chu kỳ làm việc độc lập 2 tiếng rèn sự kiên trì sâu sắc và văn hóa lịch thiệp.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lộ Trình Theo Tháng Tuổi (Tương Tác) -->
+      <div class="card">
+        <span class="card-eyebrow">Phân Bổ Độ Tuổi</span>
+        <h3 class="card-title">Lộ Trình Từng Giai Đoạn Vàng</h3>
+        <p class="card-subtitle">Chọn độ tuổi để xem trọng tâm phân bổ và bài tập cụ thể:</p>
+
+        <div class="age-pill-group">
+          <button class="age-pill-btn active" onclick="showAgeMilestone('age-0-6')">0 - 6 Tháng</button>
+          <button class="age-pill-btn" onclick="showAgeMilestone('age-6-18')">6 - 18 Tháng</button>
+          <button class="age-pill-btn" onclick="showAgeMilestone('age-18-36')">18 - 36 Tháng</button>
+          <button class="age-pill-btn" onclick="showAgeMilestone('age-3-6y')">3 - 6 Tuổi</button>
+        </div>
+
+        <div id="age-0-6" class="age-milestone-content">
+          <div class="age-detail-box">
+            <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
+              <strong>🎯 Trọng Tâm: Đánh thức giác quan & Gắn kết an toàn</strong>
+              <span class="tag tag-orange">50% Cảm xúc • 35% Vận động • 15% Não phải</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Nằm sấp (Tummy time):</strong> Từ ngày thứ 3 sau sinh trên đệm cứng phẳng để tăng cường cơ cổ, cơ lưng và tiền đình.</li>
+              <li><strong>Thị giác:</strong> Thẻ kích thích thị giác đen - trắng tương phản cao cách mắt 25cm.</li>
+              <li><strong>Thì thầm tiềm thức:</strong> 5 phút trước khi ngủ ru con bằng lời yêu thương vô điều kiện.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="age-6-18" class="age-milestone-content" style="display:none;">
+          <div class="age-detail-box">
+            <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
+              <strong>🎯 Trọng Tâm: Bò bùng nổ & Bắt đầu Flashcard nhịp nhanh</strong>
+              <span class="tag tag-green">40% Thể chất • 25% Não phải • 20% Cảm xúc • 15% Tự lập</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Bò 500m/ngày:</strong> Bò chéo tay chân kích thích thể chai liên kết 2 bán cầu não trái - phải.</li>
+              <li><strong>Flashcard chấm lượng tử (Dots):</strong> Tráo thẻ với tốc độ 0.5s/thẻ để gieo trực giác toán học vào não phải.</li>
+              <li><strong>Đu xà tự động (Brachiation):</strong> Cho bé nắm ngón tay hoặc xà mini 10-20 giây mỗi ngày.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="age-18-36" class="age-milestone-content" style="display:none;">
+          <div class="age-detail-box">
+            <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
+              <strong>🎯 Trọng Tâm: Trí nhớ hình ảnh (Mandala / Pi) & Tự lập</strong>
+              <span class="tag tag-blue">30% Não phải • 30% Vận động • 20% Montessori • 20% Cảm xúc</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Mã hóa số Pi:</strong> Bắt đầu gán các cặp số 00-99 thành các hình ảnh thân thuộc, kể chuỗi câu chuyện phim hoạt hình.</li>
+              <li><strong>Luyện Mandala:</strong> Nhìn hình đối xứng 3-5 giây rồi nhớ vị trí màu sắc.</li>
+              <li><strong>Montessori đời thường:</strong> Bé tự bê khay, tự rót nước, tự cởi giày và dọn đồ chơi.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="age-3-6y" class="age-milestone-content" style="display:none;">
+          <div class="age-detail-box">
+            <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
+              <strong>🎯 Trọng Tâm: Đọc siêu tốc (Wave Reading) & Hòa nhịp 2 bán cầu</strong>
+              <span class="tag tag-purple">30% Đọc & Tư duy • 25% Thể thao • 25% Montessori • 20% Xã hội</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Luyện mắt & Quét trang (Eye Tracking):</strong> Tập lia mắt ziczac để mở rộng góc nhìn toàn phần.</li>
+              <li><strong>Ghi nhớ dãy số Pi dài:</strong> Dùng hệ thống Peg System nhớ từ 100 đến 300+ chữ số thập phân.</li>
+              <li><strong>Tư duy giải quyết vấn đề mở:</strong> Trò chơi Loose parts, xử lý sự cố thực tế không theo kịch bản.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: SCHEDULE & INTERACTIVE TIMER -->
+    <!-- ========================================== -->
+    <section id="tab-schedule" class="tab-pane">
+      
+      <!-- Interactive Timer Widget -->
+      <div class="timer-widget">
+        <div>
+          <span style="font-size:11px; font-weight:700; color:var(--accent-terracotta); text-transform:uppercase;">Bộ Đếm Giờ Phiên Hoạt Động</span>
+          <div class="timer-display" id="timerDisplay">15:00</div>
+          <span id="timerLabel" style="font-size:12px; color:var(--ink-secondary);">Phiên Shichida Tia Chớp Não Phải</span>
+        </div>
+        <div class="timer-actions">
+          <button class="btn-action" id="startTimerBtn" onclick="toggleTimer()">Bắt Đầu</button>
+          <button class="btn-action secondary" onclick="resetTimer()">Đặt Lại</button>
+          <button class="btn-action secondary" onclick="setTimerDuration(15)">15m</button>
+          <button class="btn-action secondary" onclick="setTimerDuration(45)">45m</button>
+        </div>
+      </div>
+
+      <!-- Thời Gian Biểu Chuẩn -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <div>
+            <span class="card-eyebrow">Thời Gian Biểu 1 Ngày Mẫu</span>
+            <h3 class="card-title" style="margin-bottom:0;">Lịch Trình Sinh Hoạt Nhịp Điệu</h3>
+          </div>
+          <button class="btn-action secondary" style="font-size:11px; padding:4px 10px;" onclick="clearDailyChecks()">Xóa Tick</button>
+        </div>
+        <p class="card-subtitle">Tick vào ô tròn để lưu lại tiến độ hoàn thành các hoạt động trong ngày của con:</p>
+
+        <div class="timeline-list">
+          
+          <div class="timeline-item">
+            <div class="timeline-check">
+              <input type="checkbox" id="chk-1" onchange="saveCheck(1)">
+            </div>
+            <div class="timeline-time">06:30 - 07:30</div>
+            <div class="timeline-body">
+              <div class="timeline-title">🏃 Thức Giấc & Đánh Thức Thần Kinh</div>
+              <span class="timeline-meta">Glenn Doman + Steiner</span>
+              <p class="timeline-desc">Chạy bộ, đu xà đơn 30s-1p, đi chân trần trên cỏ ướt sương, hít thở sâu và tắm nắng sớm tăng oxy não.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-check">
+              <input type="checkbox" id="chk-2" onchange="saveCheck(2)">
+            </div>
+            <div class="timeline-time">08:30 - 10:30</div>
+            <div class="timeline-body">
+              <div class="timeline-title">🧩 Chu Kỳ Làm Việc Độc Lập Không Gián Đoạn</div>
+              <span class="timeline-meta">Montessori Focus</span>
+              <p class="timeline-desc">Trẻ tự chọn khay giáo cụ: phân loại hạt, đồ mộc, ghép hình học. Cha mẹ không can thiệp để trẻ rèn sự tập trung sâu (Deep Focus).</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-check">
+              <input type="checkbox" id="chk-3" onchange="saveCheck(3)">
+            </div>
+            <div class="timeline-time">10:30 - 11:30</div>
+            <div class="timeline-body">
+              <div class="timeline-title">🌱 Lao Động Thực Tế & Kết Nối Tự Nhiên</div>
+              <span class="timeline-meta">Steiner / Waldorf</span>
+              <p class="timeline-desc">Cùng cha mẹ tưới cây, nhặt rau, chuẩn bị bàn ăn. Rèn đôi bàn tay khéo léo và biết ơn nguồn thực phẩm.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-check">
+              <input type="checkbox" id="chk-4" onchange="saveCheck(4)">
+            </div>
+            <div class="timeline-time">14:30 - 15:00</div>
+            <div class="timeline-body">
+              <div class="timeline-title">⚡ Tia Chớp Não Phải (High Intensity - Short Burst)</div>
+              <span class="timeline-meta" style="background:#EEF2FF; color:#4338CA;">Shichida / Heguru</span>
+              <p class="timeline-desc">Luyện mắt số 8 nằm ngang, tráo thẻ flashcard tốc độ 0.5s, kể chuỗi phim hoạt hình nhớ 10-20 số Pi tiếp theo, ghép tranh Mandala.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-check">
+              <input type="checkbox" id="chk-5" onchange="saveCheck(5)">
+            </div>
+            <div class="timeline-time">15:30 - 17:00</div>
+            <div class="timeline-body">
+              <div class="timeline-title">🪵 Khám Phá Tự Do Mở (Loose Parts Play)</div>
+              <span class="timeline-meta">Tư Duy Thích Ứng</span>
+              <p class="timeline-desc">Chơi ngoài trời với cành cây, cát, sỏi, hộp các tông. Thử thách giải quyết sự cố thực tế không có khuôn mẫu định sẵn.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-check">
+              <input type="checkbox" id="chk-6" onchange="saveCheck(6)">
+            </div>
+            <div class="timeline-time">19:30 - 20:30</div>
+            <div class="timeline-body">
+              <div class="timeline-title">📚 Đọc Sách Tương Tác & Thấu Cảm Cảm Xúc</div>
+              <span class="timeline-meta">EQ & Ngôn Ngữ</span>
+              <p class="timeline-desc">Đọc sách tranh bằng giọng biểu cảm, hỏi con suy nghĩ về cảm xúc của các nhân vật, chia sẻ 1 điều biết ơn trong ngày.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-check">
+              <input type="checkbox" id="chk-7" onchange="saveCheck(7)">
+            </div>
+            <div class="timeline-time">Trước khi ngủ</div>
+            <div class="timeline-body">
+              <div class="timeline-title">❤️ Ôm 8 Giây & 5 Phút Thì Thầm Tiềm Thức</div>
+              <span class="timeline-meta" style="background:#FFF1F2; color:#BE123C;">Shichida Kokoro</span>
+              <p class="timeline-desc">Ôm chặt kích thích oxytocin. Thì thầm vào tai con khi con thiu thiu ngủ: "Bố mẹ yêu con vô điều kiện. Con luôn bình an và dũng cảm".</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: RIGHT BRAIN / PI & SPEED READING -->
+    <!-- ========================================== -->
+    <section id="tab-brain" class="tab-pane">
+      
+      <!-- Luyện Mắt Eye-Tracking Canvas -->
+      <div class="card">
+        <span class="card-eyebrow">Công Cụ Tương Tác</span>
+        <h3 class="card-title">1. Bài Tập Luyện Mắt (Eye-Tracking Simulator)</h3>
+        <p class="card-subtitle">
+          Giúp cơ mắt dẻo dai và mở rộng góc nhìn ngoại vi (Peripheral Vision) - tiền đề bắt buộc để quét cả trang sách (Wave Reading). Cho con hướng mắt nhìn theo quả bóng chuyển động:
+        </p>
+
+        <div class="canvas-container">
+          <canvas id="eyeCanvas"></canvas>
+          <div class="canvas-controls">
+            <button class="canvas-btn active" id="btnModeInfinity" onclick="setEyePattern('infinity')">Đường Số 8 Nằm Ngang (∞)</button>
+            <button class="canvas-btn" id="btnModeZigzag" onclick="setEyePattern('zigzag')">Đường Ziczac Quét Khối</button>
+            <button class="canvas-btn" id="btnSpeedSlow" onclick="setEyeSpeed(1)">Tốc Độ Thư Thái</button>
+            <button class="canvas-btn" id="btnSpeedFast" onclick="setEyeSpeed(2.5)">Tốc Độ Siêu Tốc</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kỹ Thuật Nhớ Dãy Số Pi Dài Bằng Peg System -->
+      <div class="card">
+        <span class="card-eyebrow">Bí Quyết Shichida</span>
+        <h3 class="card-title">2. Kỹ Thuật Mã Hóa Hình Ảnh Nhớ Số Pi (Peg System)</h3>
+        <p class="card-subtitle">
+          Không bao giờ bắt trẻ học vẹt từng con số khô khan. Hãy biến mỗi cặp số (00 - 99) thành một hình ảnh cố định, sau đó ghép thành một <strong>bộ phim hoạt hình phi lý</strong> để não phải chụp lại.
+        </p>
+
+        <div class="pi-lookup-box">
+          <input type="number" id="piSearchInput" class="pi-input" placeholder="Gõ 2 chữ số (VD: 14, 15, 92...)" min="0" max="99" oninput="lookupPiPeg()">
+          <button class="btn-action" onclick="randomPiPeg()">Gợi Ý Ngẫu Nhiên</button>
+        </div>
+
+        <div class="pi-result-card" id="piResultCard">
+          <div class="pi-number-badge" id="piResultNum">14</div>
+          <div>
+            <div class="pi-image-text" id="piResultName">Chiếc Thuyền Buồm ⛵</div>
+            <div class="pi-image-hint" id="piResultStory">Gợi ý liên kết: Cánh buồm trắng no gió lướt trên sóng xanh.</div>
+          </div>
+        </div>
+
+        <!-- Ví Dụ Đoạn Phim Chuỗi 20 Số Pi Đầu Tiên -->
+        <div style="background:#FFF9F5; border-radius: var(--radius-md); padding:16px; margin-top:16px; border:1px solid #FED7AA;">
+          <h4 style="font-family:var(--font-display); font-size:14px; font-weight:700; color:var(--accent-terracotta); margin-bottom:8px;">
+            🎬 Ví Dụ Chuỗi Phim Cho 10 Cặp Số Pi Đầu Tiên (3.1415926535...):
+          </h4>
+          <p style="font-size:13px; color:var(--ink-secondary); line-height:1.6;">
+            <strong>(14) Thuyền Buồm</strong> chở một quả <strong>(15) Dưa Hấu</strong> khổng lồ. Bỗng một <strong>(92) Quả Bóng Bay</strong> kéo quả dưa bay lên trời, va vào một <strong>(65) Chiếc Xe Lu</strong> đang chạy trên mây. Xe lu cán trúng một <strong>(35) Chùm Bong Bóng Xà Phòng</strong>... Trẻ chỉ cần "chiếu lại" cuộn phim hoạt hình kỳ cục này trong đầu là đọc được vanh vách dãy số!
+          </p>
+        </div>
+      </div>
+
+      <!-- Kỹ Thuật Đọc Gợn Sóng Wave Reading -->
+      <div class="card">
+        <span class="card-eyebrow">Đọc Quét Nguyên Khối</span>
+        <h3 class="card-title">3. Kỹ Thuật Đọc Nhanh (Wave Reading) Chuẩn Shichida</h3>
+        <p class="card-subtitle">Quy trình đưa não về trạng thái sóng Alpha và thu nhận thông tin bằng bức ảnh trực giác:</p>
+
+        <ul class="bullet-list">
+          <li><strong>Bước 1 - Hạ sóng não về Alpha:</strong> Nhắm mắt, hít thở sâu bụng 3 lần. Cho con tưởng tượng một đốm sáng màu cam dịu dàng ấm áp tỏa sáng giữa trán.</li>
+          <li><strong>Bước 2 - Lật trang nhịp nhàng:</strong> Cho con dùng ngón tay cái lật góc trang sách với tốc độ 1 giây / trang. Mắt nhìn vào trung tâm trang sách nhưng mở rộng tầm nhìn bao quát cả 4 góc.</li>
+          <li><strong>Bước 3 - Không dịch ra tiếng (Sub-vocalize):</strong> Não trái thường có thói quen đọc thầm từng từ bằng tiếng nói bên trong. Tốc độ lật nhanh buộc não trái phải nhường chỗ cho não phải chụp ảnh toàn bộ khối chữ.</li>
+          <li><strong>Bước 4 - Khóa bằng Montessori 3D:</strong> Sau khi quét trang về một chủ đề (ví dụ: con bướm), đưa con ra vườn ngắm bướm thật hoặc cho sờ mô hình vòng đời bướm để neo giữ kiến thức vào thế giới thực.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: EMOTION, GRATITUDE & EMPATHY -->
+    <!-- ========================================== -->
+    <section id="tab-heart" class="tab-pane">
+      
+      <div class="card">
+        <span class="card-eyebrow">Trọng Tâm Bổ Sung Đặc Biệt</span>
+        <h3 class="card-title">Nuôi Dưỡng Trái Tim: Đồng Cảm, Yêu Thương & Biết Ơn</h3>
+        <p class="card-subtitle">
+          Một bộ não siêu phàm nếu thiếu khả năng thấu cảm sẽ trở thành một cỗ máy đơn độc. Dưới đây là cách nuôi dưỡng lòng trắc ẩn từ bản năng bên trong:
+        </p>
+
+        <div class="scenario-item open">
+          <div class="scenario-header" onclick="toggleScenario(this)">
+            <span>1. Thấu Thị Cảm Xúc (Theory of Mind & Empathy)</span>
+            <span class="scenario-icon">▼</span>
+          </div>
+          <div class="scenario-content">
+            <p>Trẻ không tự nhiên biết đồng cảm nếu chưa được cha mẹ "công nhận cảm xúc" (Emotional Validation). Khi con buồn, giận, đừng dập tắt bằng câu: <em>"Có gì đâu mà khóc!"</em>.</p>
+            <div class="script-dialogue">
+              "Mẹ thấy con đang rất tiếc vì tháp gỗ bị đổ. Con đang cảm thấy tức giận phải không? Mẹ ở đây với con."
+            </div>
+            <p><strong>Trò chơi "Thám tử cảm xúc":</strong> Khi đọc sách tranh, che mặt nhân vật lại và hỏi: <em>"Theo con bạn gấu đang cảm thấy thế nào khi thấy bạn sóc làm rơi hạt dẻ? Chúng mình có thể làm gì để bạn gấu vui lên?"</em>.</p>
+          </div>
+        </div>
+
+        <div class="scenario-item">
+          <div class="scenario-header" onclick="toggleScenario(this)">
+            <span>2. Lễ Nghi & Tôn Trọng Không Gian (Montessori Grace & Courtesy)</span>
+            <span class="scenario-icon">▼</span>
+          </div>
+          <div class="scenario-content">
+            <p>Montessori dạy tôn trọng thông qua các hành vi chuẩn mực cụ thể:</p>
+            <ul class="bullet-list">
+              <li><strong>Tôn trọng không gian người khác:</strong> Khi một bạn đang trải thảm làm việc, con không được dẫm chân lên thảm của bạn. Muốn xem thì đứng khoanh tay quan sát từ xa và xin phép: <em>"Tớ có thể xem bạn làm được không?"</em>.</li>
+              <li><strong>Cách bước đi nhẹ nhàng:</strong> Dạy con nhấc chân êm ái khi người khác đang ngủ hoặc đang tập trung, không gây ồn ào nơi công cộng.</li>
+              <li><strong>Lời cảm ơn xuất phát từ trái tim:</strong> Không ép con: <em>"Mau cảm ơn bác đi!"</em>. Hãy làm gương trước mặt con: cảm ơn bác bảo vệ dắt xe, cảm ơn cô lao công quét đường bằng ánh mắt ấm áp. Trẻ sao chép năng lượng chứ không sao chép mệnh lệnh.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="scenario-item">
+          <div class="scenario-header" onclick="toggleScenario(this)">
+            <span>3. Nghi Thức Biết Ơn Bàn Ăn & Vạn Vật (Steiner / Waldorf)</span>
+            <span class="scenario-icon">▼</span>
+          </div>
+          <div class="scenario-content">
+            <p>Trước mỗi bữa ăn, cả nhà nắm tay nhau 10 giây trong im lặng ấm áp và cùng nói lời tri ân:</p>
+            <div class="script-dialogue">
+              "Cảm ơn mẹ đất, cảm ơn ánh nắng và hạt mưa. Cảm ơn bác nông dân và người đã nấu bữa cơm thơm lành này. Chúc cả nhà ngon miệng."
+            </div>
+            <p>Khi trẻ hiểu rằng mỗi hạt cơm, cọng rau đều là công sức của bao con người và thiên nhiên, lòng kính trọng và trân quý cuộc sống sẽ tự nhiên bén rễ.</p>
+          </div>
+        </div>
+
+        <div class="scenario-item">
+          <div class="scenario-header" onclick="toggleScenario(this)">
+            <span>4. Chăm Sóc Sinh Mệnh Nhỏ (Care for Living Beings)</span>
+            <span class="scenario-icon">▼</span>
+          </div>
+          <div class="scenario-content">
+            <p>Giao cho con một chậu cây cảnh nhỏ hoặc một chú cá vàng. Dạy con tưới nước mỗi sáng, nhặt lá úa, quan sát nụ hoa hé nở. Trẻ biết nâng niu một mầm cây nhỏ bé sẽ không bao giờ có hành vi tàn nhẫn với bạn bè hay người già.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 5 Câu Thì Thầm Tiềm Thức -->
+      <div class="card" style="background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%); border-color: #FECDD3;">
+        <span class="card-eyebrow" style="color:#E11D48;">Phương Pháp Shichida 5 Phút</span>
+        <h3 class="card-title" style="color:#9F1239;">5 Lời Khẳng Định Tiềm Thức Trước Giờ Ngủ</h3>
+        <p class="card-subtitle" style="color:#881337;">
+          Khi con chớm bước vào trạng thái lơ mơ ngủ (sóng não Theta mở toang tiềm thức), thì thầm nhẹ nhàng bên tai con:
+        </p>
+
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="background:#FFF; padding:10px 14px; border-radius:var(--radius-sm); font-size:13px; font-weight:600; color:#9F1239;">
+            1. "Bố mẹ yêu con tha thiết vô điều kiện, chỉ vì con là chính con."
+          </div>
+          <div style="background:#FFF; padding:10px 14px; border-radius:var(--radius-sm); font-size:13px; font-weight:600; color:#9F1239;">
+            2. "Con luôn an toàn, con là đứa trẻ dũng cảm và có trái tim nhân hậu."
+          </div>
+          <div style="background:#FFF; padding:10px 14px; border-radius:var(--radius-sm); font-size:13px; font-weight:600; color:#9F1239;">
+            3. "Con biết lắng nghe, biết thấu hiểu và quan tâm tới mọi người xung quanh."
+          </div>
+          <div style="background:#FFF; padding:10px 14px; border-radius:var(--radius-sm); font-size:13px; font-weight:600; color:#9F1239;">
+            4. "Khi gặp khó khăn, con luôn bình tĩnh, thông minh tìm ra cách giải quyết."
+          </div>
+          <div style="background:#FFF; padding:10px 14px; border-radius:var(--radius-sm); font-size:13px; font-weight:600; color:#9F1239;">
+            5. "Chúc con yêu ngủ một giấc thật ngon và đón chào ngày mới diệu kỳ."
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 5: ADAPTIVE PROBLEM SOLVER -->
+    <!-- ========================================== -->
+    <section id="tab-adaptive" class="tab-pane">
+      
+      <div class="card">
+        <span class="card-eyebrow">Tư Duy Thích Ứng (Adaptive Intelligence)</span>
+        <h3 class="card-title">Xử Lý Biến Cố & Vấn Đề Ngoài Kế Hoạch</h3>
+        <p class="card-subtitle">
+          Giáo dục rập khuôn tạo ra những đứa trẻ hoảng sợ khi bài toán không có công thức. Chúng ta rèn luyện một <strong>Nhà Khám Phá Thích Nghi</strong> thông qua 4 quy tắc vàng:
+        </p>
+
+        <!-- 4 Bước Phản Ứng Khi Gặp Sự Cố -->
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:10px; margin-bottom:16px;">
+          <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-terracotta);">
+            <div style="font-weight:700; font-size:13px; color:var(--accent-terracotta);">BƯỚC 1: DỪNG 5 GIÂY</div>
+            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Khi con làm đổ đồ, gãy bút hay trễ hẹn: Cha mẹ tuyệt đối KHÔNG la mắng, KHÔNG làm hộ. Im lặng 5 giây để não trẻ tự đánh giá hiện trường.</p>
+          </div>
+          <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-amber);">
+            <div style="font-weight:700; font-size:13px; color:var(--accent-amber);">BƯỚC 2: CÔNG NHẬN SỰ CỐ</div>
+            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Bình thản đón nhận: <em>"Ồ, nước ép cam đã đổ ra thảm rồi"</em> thay vì <em>"Trời ơi sao con hậu đậu thế!"</em>. Biến hoảng loạn thành hiện thực khách quan.</p>
+          </div>
+          <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-forest);">
+            <div style="font-weight:700; font-size:13px; color:var(--accent-forest);">BƯỚC 3: CÂU HỎI SOCRATES</div>
+            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Hỏi kích thích tư duy: <em>"Bây giờ theo con thảm này có tự khô được không? Có đồ vật nào trong nhà hút được nước nhỉ?"</em>.</p>
+          </div>
+          <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-indigo);">
+            <div style="font-weight:700; font-size:13px; color:var(--accent-indigo);">BƯỚC 4: THỬ NGHIỆM MỞ</div>
+            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Ủng hộ mọi giải pháp con đưa ra (dù chưa tối ưu) để con trải nghiệm nguyên nhân - kết quả thực tế.</p>
+          </div>
+        </div>
+
+        <!-- Các Tình Huống Thực Tế Giả Định -->
+        <h4 style="font-family:var(--font-display); font-size:15px; font-weight:700; margin:16px 0 10px;">
+          🛠️ Kịch Bản Xử Lý 3 Tình Huống Ngoài Dự Kiến Phổ Biến:
+        </h4>
+
+        <div class="scenario-item">
+          <div class="scenario-header" onclick="toggleScenario(this)">
+            <span>Tình huống 1: Chuẩn bị đi công viên thì trời đổ mưa lớn</span>
+            <span class="scenario-icon">▼</span>
+          </div>
+          <div class="scenario-content">
+            <p><strong>Sai lầm thông thường:</strong> Cha mẹ bật điện thoại dỗ con hoặc bảo: <em>"Thôi mưa rồi ở nhà, đừng khóc nữa!"</em>.</p>
+            <p><strong>Cách biến thành cơ hội thích ứng:</strong></p>
+            <div class="script-dialogue">
+              "Trời mưa rồi, công viên ngoài trời đang ướt sũng. Nhưng chúng mình vẫn có thể mở một 'Công viên thám hiểm' ngay tại phòng khách! Con muốn dùng bàn ghế làm cầu treo hay lấy chăn làm lều cắm trại?"
+            </div>
+            <p>$\rightarrow$ Dạy trẻ: Khi kế hoạch A sập, ta hào hứng tạo ra kế hoạch B thú vị hơn gấp bội.</p>
+          </div>
+        </div>
+
+        <div class="scenario-item">
+          <div class="scenario-header" onclick="toggleScenario(this)">
+            <span>Tình huống 2: Thiếu dụng cụ hoặc món đồ chơi bị gãy</span>
+            <span class="scenario-icon">▼</span>
+          </div>
+          <div class="scenario-content">
+            <p>Đang vẽ tranh thì hết màu đỏ; đang xếp xe thì bánh xe gãy rụng.</p>
+            <div class="script-dialogue">
+              "Bánh xe rụng rồi, chiếc xe này không chạy được như cũ. Nhưng liệu nó có thể biến thành một chiếc tàu ngầm nằm yên dưới đáy biển không con nhỉ? Chúng mình có thể dùng nắp chai gắn vào thử không?"
+            </div>
+            <p>$\rightarrow$ Kích hoạt tư duy tái định nghĩa (Heuristic Reframing), rèn sự linh hoạt nhận thức.</p>
+          </div>
+        </div>
+
+        <div class="scenario-item">
+          <div class="scenario-header" onclick="toggleScenario(this)">
+            <span>Tình huống 3: Trò chơi vật liệu mở (Loose Parts Play)</span>
+            <span class="scenario-icon">▼</span>
+          </div>
+          <div class="scenario-content">
+            <p>Đồ chơi mua sẵn với công tắc bấm nút sẽ triệt tiêu trí tưởng tượng vì chức năng đã bị đóng khung. Hãy đưa cho con một rổ đựng:</p>
+            <ul class="bullet-list">
+              <li>Lõi cuộn giấy vệ sinh, nút bấc chai rượu, vỏ ốc, cành cây khô, hộp các-tông rỗng, kẹp quần áo bằng gỗ.</li>
+              <li>Không đưa ra hướng dẫn nào cả. Hãy quan sát cách con biến chiếc hộp thành tàu vũ trụ, biến lõi giấy thành kính viễn vọng. Đó chính là cội nguồn của tư duy sáng tạo ngoài kinh nghiệm có sẵn!</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 6: OATH & GUARDRAILS -->
+    <!-- ========================================== -->
+    <section id="tab-oath" class="tab-pane">
+      
+      <div class="card" style="background:#FFFBF5; border:1px solid #FED7AA;">
+        <span class="card-eyebrow" style="color:var(--accent-terracotta);">Lời Cảnh Báo Lão Làng</span>
+        <h3 class="card-title">Lời Nhắc Nhở Để Giữ Trọn Cái Tâm Trong Sáng</h3>
+        
+        <div style="margin:16px 0;">
+          <h4 style="color:#B45309; font-size:14px; font-weight:700; margin-bottom:4px;">
+            ⚠️ 1. TUYỆT ĐỐI KHÔNG BIẾN CON THÀNH "DIỄN VIÊN XIẾC"
+          </h4>
+          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.55;">
+            Nếu con nhớ được 200 chữ số của dãy số Pi, hay đọc xong cuốn sách trong 30 giây: <strong>Hãy giữ niềm vui đó trong căn phòng nhỏ ấm cúng giữa hai cha con</strong>. Tuyệt đối không bắt con đứng trước đám đông họ hàng, quay video đăng lên mạng xã hội để nhận những lời khen ngợi phù phiếm. Lời tán dương của người ngoài sẽ đầu độc động lực nội tại, biến sự hào hứng trong sáng thành gánh nặng áp lực danh dự.
+          </p>
+        </div>
+
+        <div style="margin:16px 0;">
+          <h4 style="color:#B45309; font-size:14px; font-weight:700; margin-bottom:4px;">
+            ⚠️ 2. ĐÔI TAY PHẢI LUÔN BẬN RỘN VỚI THỰC TẾ VẬT CHẤT
+          </h4>
+          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.55;">
+            Đừng bao giờ để một bộ não nhớ được hàng ngàn dữ liệu lại cư ngụ trong một cơ thể vụng về không biết tự cài cúc áo, không biết cầm chổi quét nhà hay sợ lấm lem bùn đất. Trí tuệ đích thực không nằm ở việc nạp bao nhiêu dữ liệu, mà là khả năng dùng năng lực của mình để chăm sóc bản thân, sẻ chia với người khác và cải tạo thế giới vật chất quanh mình.
+          </p>
+        </div>
+
+        <div style="margin:16px 0;">
+          <h4 style="color:#B45309; font-size:14px; font-weight:700; margin-bottom:4px;">
+            ⚠️ 3. KHÔNG DÙNG THÀNH TÍCH ĐỂ BAN PHÁT TÌNH YÊU
+          </h4>
+          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.55;">
+            Nếu hôm nay con lười tráo thẻ, không muốn nhìn thẻ Pi, hãy bình thản mỉm cười dẹp sang một bên và cùng con đi bắt sâu, ngắm lá ngoài vườn. Tình yêu của cha mẹ là pháo đài vững chắc vô điều kiện, không bao giờ là phần thưởng đi kèm việc con có "học giỏi" hay không.
+          </p>
+        </div>
+
+        <div style="text-align:center; padding:18px 0 6px; border-top:1px dashed #FDBA74; margin-top:20px;">
+          <em style="font-size:14px; font-weight:600; color:var(--ink-primary);">
+            "Trí nhớ phi thường là phương tiện.<br>Một con người tử tế, biết yêu thương, mạnh mẽ và tự do mới là Đích Đến."
+          </em>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Bar (Mobile-first app feel) -->
+  <nav class="bottom-nav">
+    <button class="bottom-nav-btn active" id="bnav-overview" onclick="switchTab('tab-overview')">
+      <span class="icon">🏛️</span>
+      <span>Bản Đồ</span>
+    </button>
+    <button class="bottom-nav-btn" id="bnav-schedule" onclick="switchTab('tab-schedule')">
+      <span class="icon">⏰</span>
+      <span>Lịch Trình</span>
+    </button>
+    <button class="bottom-nav-btn" id="bnav-brain" onclick="switchTab('tab-brain')">
+      <span class="icon">🧠</span>
+      <span>Số Pi / Đọc</span>
+    </button>
+    <button class="bottom-nav-btn" id="bnav-heart" onclick="switchTab('tab-heart')">
+      <span class="icon">❤️</span>
+      <span>Tâm Hồn</span>
+    </button>
+    <button class="bottom-nav-btn" id="bnav-adaptive" onclick="switchTab('tab-adaptive')">
+      <span class="icon">🧩</span>
+      <span>Thích Ứng</span>
+    </button>
+  </nav>
+
+  <!-- Embedded JavaScript -->
+  <script>
+    // Tab Switching System
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) targetPane.classList.add('active');
+
+      // Top Tab scroller buttons
+      const tabButtons = document.querySelectorAll('.nav-tab-btn');
+      tabButtons.forEach(btn => {
+        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Bottom Nav buttons
+      document.querySelectorAll('.bottom-nav-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBNav = document.getElementById('bnav-' + tabId.replace('tab-', ''));
+      if (activeBNav) activeBNav.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // If switching to brain tab, resize and start canvas animation
+      if (tabId === 'tab-brain') {
+        setTimeout(initEyeCanvas, 100);
+      }
+    }
+
+    // Age Milestone Switcher
+    function showAgeMilestone(ageId) {
+      document.querySelectorAll('.age-milestone-content').forEach(el => el.style.display = 'none');
+      const target = document.getElementById(ageId);
+      if (target) target.style.display = 'block';
+
+      document.querySelectorAll('.age-pill-btn').forEach(btn => {
+        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(ageId)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // Scenario Accordion Toggle
+    function toggleScenario(headerEl) {
+      const item = headerEl.parentElement;
+      item.classList.toggle('open');
+    }
+
+    // Checklist LocalStorage Persistence
+    function saveCheck(id) {
+      const chk = document.getElementById('chk-' + id);
+      if (chk) {
+        localStorage.setItem('daily_chk_' + id, chk.checked ? '1' : '0');
+      }
+    }
+
+    function loadChecks() {
+      for (let i = 1; i <= 7; i++) {
+        const val = localStorage.getItem('daily_chk_' + i);
+        const chk = document.getElementById('chk-' + i);
+        if (chk && val === '1') {
+          chk.checked = true;
+        }
+      }
+    }
+
+    function clearDailyChecks() {
+      for (let i = 1; i <= 7; i++) {
+        localStorage.removeItem('daily_chk_' + i);
+        const chk = document.getElementById('chk-' + i);
+        if (chk) chk.checked = false;
+      }
+    }
+
+    // Timer Logic
+    let timerDuration = 15 * 60; // 15 mins default
+    let timerRemaining = timerDuration;
+    let timerInterval = null;
+    let isTimerRunning = false;
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    function updateTimerUI() {
+      const el = document.getElementById('timerDisplay');
+      if (el) el.textContent = formatTime(timerRemaining);
+    }
+
+    function toggleTimer() {
+      const btn = document.getElementById('startTimerBtn');
+      if (isTimerRunning) {
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        btn.textContent = 'Tiếp Tục';
+        btn.style.background = 'var(--accent-forest)';
+      } else {
+        isTimerRunning = true;
+        btn.textContent = 'Tạm Dừng';
+        btn.style.background = 'var(--accent-terracotta)';
+        timerInterval = setInterval(() => {
+          if (timerRemaining > 0) {
+            timerRemaining--;
+            updateTimerUI();
+          } else {
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            btn.textContent = 'Hoàn Thành!';
+            alert('🎉 Tuyệt vời! Bạn và con vừa hoàn thành một phiên rèn luyện trọn vẹn!');
+          }
+        }, 1000);
+      }
+    }
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      timerRemaining = timerDuration;
+      updateTimerUI();
+      const btn = document.getElementById('startTimerBtn');
+      btn.textContent = 'Bắt Đầu';
+      btn.style.background = 'var(--accent-terracotta)';
+    }
+
+    function setTimerDuration(mins) {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      timerDuration = mins * 60;
+      timerRemaining = timerDuration;
+      updateTimerUI();
+      const label = document.getElementById('timerLabel');
+      if (mins === 15) {
+        label.textContent = 'Phiên Shichida Tia Chớp Não Phải (15m)';
+      } else {
+        label.textContent = 'Phiên Tập Trung Sâu Montessori (45m)';
+      }
+      const btn = document.getElementById('startTimerBtn');
+      btn.textContent = 'Bắt Đầu';
+      btn.style.background = 'var(--accent-terracotta)';
+    }
+
+    // Eye-Tracking Canvas Animation
+    let canvas, ctx;
+    let animationFrameId;
+    let eyePattern = 'infinity'; // 'infinity' or 'zigzag'
+    let eyeSpeed = 1.0;
+    let t = 0;
+
+    function initEyeCanvas() {
+      canvas = document.getElementById('eyeCanvas');
+      if (!canvas) return;
+      ctx = canvas.getContext('2d');
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      animateEyeTracker();
+    }
+
+    function resizeCanvas() {
+      if (!canvas) return;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * (window.devicePixelRatio || 1);
+      canvas.height = 220 * (window.devicePixelRatio || 1);
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+    }
+
+    function setEyePattern(mode) {
+      eyePattern = mode;
+      t = 0;
+      document.getElementById('btnModeInfinity').classList.toggle('active', mode === 'infinity');
+      document.getElementById('btnModeZigzag').classList.toggle('active', mode === 'zigzag');
+    }
+
+    function setEyeSpeed(speed) {
+      eyeSpeed = speed;
+      document.getElementById('btnSpeedSlow').classList.toggle('active', speed === 1);
+      document.getElementById('btnSpeedFast').classList.toggle('active', speed > 1);
+    }
+
+    function animateEyeTracker() {
+      if (!canvas || !ctx) return;
+      const w = canvas.getBoundingClientRect().width;
+      const h = 220;
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Draw faint guide track
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+      ctx.beginPath();
+
+      const cx = w / 2;
+      const cy = h / 2;
+      const rx = (w / 2) - 30;
+      const ry = (h / 2) - 25;
+
+      if (eyePattern === 'infinity') {
+        // Lemniscate of Bernoulli
+        for (let a = 0; a <= Math.PI * 2; a += 0.03) {
+          const denom = 1 + Math.sin(a) * Math.sin(a);
+          const px = cx + (rx * Math.cos(a)) / denom;
+          const py = cy + (ry * Math.sin(a) * Math.cos(a)) / denom;
+          if (a === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+        ctx.stroke();
+
+        // Calculate moving ball position
+        t += 0.015 * eyeSpeed;
+        const denom = 1 + Math.sin(t) * Math.sin(t);
+        const bx = cx + (rx * Math.cos(t)) / denom;
+        const by = cy + (ry * Math.sin(t) * Math.cos(t)) / denom;
+
+        // Draw glowing moving ball
+        drawBall(bx, by);
+
+      } else {
+        // Zigzag mode
+        const steps = 6;
+        const stepW = (w - 60) / steps;
+        ctx.beginPath();
+        for (let i = 0; i <= steps; i++) {
+          const zx = 30 + i * stepW;
+          const zy = (i % 2 === 0) ? 30 : h - 30;
+          if (i === 0) ctx.moveTo(zx, zy);
+          else ctx.lineTo(zx, zy);
+        }
+        ctx.stroke();
+
+        t += 0.008 * eyeSpeed;
+        const cycle = t % 1;
+        const progress = cycle * steps;
+        const currentSeg = Math.floor(progress);
+        const frac = progress - currentSeg;
+
+        const x1 = 30 + currentSeg * stepW;
+        const y1 = (currentSeg % 2 === 0) ? 30 : h - 30;
+        const x2 = 30 + (currentSeg + 1) * stepW;
+        const y2 = ((currentSeg + 1) % 2 === 0) ? 30 : h - 30;
+
+        const bx = x1 + (x2 - x1) * frac;
+        const by = y1 + (y2 - y1) * frac;
+
+        drawBall(bx, by);
+      }
+
+      animationFrameId = requestAnimationFrame(animateEyeTracker);
+    }
+
+    function drawBall(x, y) {
+      // Outer glow
+      const grad = ctx.createRadialGradient(x, y, 4, x, y, 22);
+      grad.addColorStop(0, 'rgba(211, 84, 0, 1)');
+      grad.addColorStop(0.5, 'rgba(245, 158, 11, 0.5)');
+      grad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(x, y, 22, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Core bright ball
+      ctx.fillStyle = '#FFFFFF';
+      ctx.beginPath();
+      ctx.arc(x, y, 8, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Pi Peg System Dictionary (Sample dataset of visual pegs)
+    const piPegData = {
+      0: { name: "Quả Trứng Gà 🥚", hint: "Hình dáng số 0 tròn xoe như quả trứng vừa đẻ." },
+      1: { name: "Cây Nến Lung Linh 🕯️", hint: "Thẳng đứng và có ngọn lửa sáng ấm áp." },
+      2: { name: "Chú Vịt Con 🦆", hint: "Cổ cong cong bơi lội dưới hồ sen." },
+      3: { name: "Đôi Tai Thỏ 🐰", hint: "Đôi tai vểnh dài nghe ngóng thế giới." },
+      4: { name: "Cánh Buồm Nhỏ ⛵", hint: "Hình tam giác vươn mình ra biển lớn." },
+      5: { name: "Móc Câu Cá 🪝", hint: "Móc câu sắc bén câu chú cá vàng." },
+      6: { name: "Vỏ Ốc Biển 🐚", hint: "Cuộn tròn xoắn ốc bên bờ cát vàng." },
+      7: { name: "Chiếc Rìu Tiều Phu 🪓", hint: "Lưỡi rìu đốn củi trong truyện cổ tích." },
+      8: { name: "Người Tuyết Đáng Yêu ⛄", hint: "Hai khối cầu tròn có khăn choàng đỏ." },
+      9: { name: "Quả Khinh Khí Cầu 🎈", hint: "Bay lơ lửng trên nền trời xanh." },
+      14: { name: "Chiếc Thuyền Buồm Lớn ⛵", hint: "Cánh buồm trắng no gió vượt đại dương." },
+      15: { name: "Quả Dưa Hấu Đỏ 🍉", hint: "Mọng nước ngọt lịm xua tan cơn khát." },
+      92: { name: "Chùm Bóng Bay Rực Rỡ 🎈", hint: "Kéo vạn vật bay bổng lên mây." },
+      65: { name: "Chiếc Xe Lu Khổng Lồ 🚜", hint: "Lăn bánh êm ru san phẳng mọi chướng ngại." },
+      35: { name: "Bong Bóng Xà Phòng 🫧", hint: "Lung linh 7 sắc cầu vồng bay trong gió." },
+      89: { name: "Bình Rót Nước Thần 🫖", hint: "Rót ra dòng nước mát lành nuôi cây cối." },
+      79: { name: "Cây Kẹo Mút Khổng Lồ 🍭", hint: "Ngọt ngào và xoắn ốc màu sắc sặc sỡ." },
+      32: { name: "Chiếc Ô Che Mưa ☂️", hint: "Mở rộng bảo vệ bạn bè dưới cơn mưa rào." },
+      38: { name: "Bông Hoa Hướng Dương 🌻", hint: "Luôn hướng về mặt trời với nụ cười tươi." },
+      46: { name: "Chiếc Kính Lúp Thám Tử 🔍", hint: "Khám phá mọi điều kỳ diệu nhỏ xíu." },
+      26: { name: "Chú Ngựa Phi Nhanh 🐎", hint: "Băng qua thảo nguyên xanh bao la." },
+      53: { name: "Bàn Tay Yêu Thương ✋", hint: "Nắm lấy tay bạn vượt qua khó khăn." },
+      58: { name: "Ngôi Sao May Mắn ⭐", hint: "Lấp lánh soi sáng bầu trời đêm tĩnh lặng." }
+    };
+
+    function lookupPiPeg() {
+      const inputVal = document.getElementById('piSearchInput').value.trim();
+      const num = parseInt(inputVal, 10);
+      const cardNum = document.getElementById('piResultNum');
+      const cardName = document.getElementById('piResultName');
+      const cardStory = document.getElementById('piResultStory');
+
+      if (!isNaN(num) && num >= 0 && num <= 99) {
+        cardNum.textContent = num.toString().padStart(2, '0');
+        if (piPegData[num]) {
+          cardName.textContent = piPegData[num].name;
+          cardStory.textContent = "Gợi ý liên kết: " + piPegData[num].hint;
+        } else {
+          // Dynamic fallback imagery
+          const fallbackEmojis = ['🚀', '🌟', '🏰', '🐬', '🌈', '🚲', '🦁', '🍎', '🎁', '🎸'];
+          const emoji = fallbackEmojis[num % fallbackEmojis.length];
+          cardName.textContent = `Vật Thể Mã Hóa #${num} ${emoji}`;
+          cardStory.textContent = "Gợi ý: Hãy để con tự nghĩ ra hình ảnh gần gũi nhất với con cho con số này!";
+        }
+      }
+    }
+
+    function randomPiPeg() {
+      const keys = Object.keys(piPegData);
+      const randKey = keys[Math.floor(Math.random() * keys.length)];
+      document.getElementById('piSearchInput').value = randKey;
+      lookupPiPeg();
+    }
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
+      loadChecks();
+      updateTimerUI();
+    });
+  </script>
+</body>
+</html>
