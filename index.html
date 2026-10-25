@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Cẩm Nang Giáo Dục Sớm Toàn Diện | Thể Chất - Tâm Hồn - Siêu Trí Tuệ</title>
+  <title>Cẩm Nang Giáo Dục Sớm Thực Chứng | Toàn Não Bộ • Thể Chất • Thấu Cảm • Thích Ứng</title>
   <!-- Google Fonts: Be Vietnam Pro & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,8 @@
       --accent-amber-soft: #FEF3C7;
       --accent-indigo: #4F46E5;
       --accent-indigo-soft: #EEF2FF;
+      --accent-teal: #0D9488;
+      --accent-teal-soft: #CCFBF1;
       
       --border-subtle: #E8E2D8;
       --border-focus: #D35400;
@@ -64,7 +66,7 @@
       padding-bottom: 90px;
     }
 
-    /* Header & Hero */
+    /* Header */
     header.app-header {
       background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.95) 100%);
       backdrop-filter: blur(12px);
@@ -87,7 +89,7 @@
     .brand-icon {
       width: 36px;
       height: 36px;
-      background: linear-gradient(135deg, var(--accent-terracotta), var(--accent-amber));
+      background: linear-gradient(135deg, var(--accent-forest), var(--accent-teal));
       border-radius: var(--radius-md);
       display: flex;
       align-items: center;
@@ -95,7 +97,7 @@
       color: #FFF;
       font-weight: 800;
       font-size: 18px;
-      box-shadow: 0 4px 10px rgba(211, 84, 0, 0.25);
+      box-shadow: 0 4px 10px rgba(46, 111, 82, 0.25);
     }
 
     .brand-text h1 {
@@ -113,8 +115,8 @@
     }
 
     .header-badge {
-      background-color: var(--accent-forest-soft);
-      color: var(--accent-forest);
+      background-color: var(--accent-teal-soft);
+      color: var(--accent-teal);
       font-size: 11px;
       font-weight: 700;
       padding: 5px 10px;
@@ -131,7 +133,7 @@
       padding: 16px 20px;
     }
 
-    /* App Nav Tabs */
+    /* Top Navigation Tabs */
     .nav-scroller {
       overflow-x: auto;
       white-space: nowrap;
@@ -171,7 +173,7 @@
 
     .nav-tab-btn.active {
       background: var(--bg-surface);
-      color: var(--accent-terracotta);
+      color: var(--accent-forest);
       box-shadow: var(--shadow-sm);
       font-weight: 700;
     }
@@ -220,7 +222,123 @@
       line-height: 1.55;
     }
 
-    /* Visual Pillars Grid */
+    /* Science Alert Box (Neuromyth debunking) */
+    .science-banner {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      color: #FFF;
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      margin-bottom: 20px;
+      border: 1px solid #334155;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .science-banner::after {
+      content: '🧠';
+      position: absolute;
+      right: 15px;
+      bottom: -15px;
+      font-size: 110px;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .science-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      background: #EF4444;
+      color: #FFF;
+      margin-bottom: 10px;
+    }
+
+    .science-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .science-item {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .science-item h4 {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #FBBF24;
+    }
+
+    .science-item p {
+      font-size: 12.5px;
+      color: #CBD5E1;
+      line-height: 1.5;
+    }
+
+    /* Whole Brain Framework Card */
+    .wholebrain-card {
+      background: linear-gradient(135deg, #2D4A3E 0%, #1B332B 100%);
+      color: #FFF;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 22px;
+    }
+
+    .wholebrain-level {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 13px 15px;
+      border-radius: var(--radius-md);
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .wholebrain-level.highlight {
+      background: rgba(46, 111, 82, 0.4);
+      border-color: rgba(13, 148, 136, 0.6);
+    }
+
+    .wholebrain-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .wholebrain-text h4 {
+      font-family: var(--font-display);
+      font-size: 14.5px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .wholebrain-text p {
+      font-size: 12.5px;
+      color: #E2E8F0;
+      line-height: 1.45;
+    }
+
+    /* Pillars Grid */
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -237,22 +355,10 @@
       gap: 8px;
     }
 
-    .pillar-box.doman {
-      background: #FFF7ED;
-      border-color: #FED7AA;
-    }
-    .pillar-box.steiner {
-      background: #F0FDF4;
-      border-color: #BBF7D0;
-    }
-    .pillar-box.shichida {
-      background: #EEF2FF;
-      border-color: #C7D2FE;
-    }
-    .pillar-box.montessori {
-      background: #FAF5FF;
-      border-color: #E9D5FF;
-    }
+    .pillar-box.doman { background: #FFF7ED; border-color: #FED7AA; }
+    .pillar-box.steiner { background: #F0FDF4; border-color: #BBF7D0; }
+    .pillar-box.siegel { background: #EEF2FF; border-color: #C7D2FE; }
+    .pillar-box.montessori { background: #FAF5FF; border-color: #E9D5FF; }
 
     .pillar-header {
       display: flex;
@@ -281,73 +387,7 @@
       line-height: 1.45;
     }
 
-    /* Pyramid Banner */
-    .pyramid-card {
-      background: linear-gradient(135deg, #2A363B 0%, #1E242B 100%);
-      color: #FFF;
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      margin-bottom: 22px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pyramid-card::after {
-      content: 'π';
-      position: absolute;
-      right: -15px;
-      bottom: -35px;
-      font-size: 180px;
-      font-family: serif;
-      opacity: 0.05;
-      color: #FFF;
-      pointer-events: none;
-    }
-
-    .pyramid-level {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 12px 14px;
-      border-radius: var(--radius-md);
-      margin-bottom: 10px;
-      background: rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .pyramid-level.active-peak {
-      background: rgba(211, 84, 0, 0.25);
-      border-color: rgba(211, 84, 0, 0.5);
-    }
-
-    .pyramid-number {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 13px;
-      flex-shrink: 0;
-    }
-
-    .pyramid-content h4 {
-      font-family: var(--font-display);
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 3px;
-    }
-
-    .pyramid-content p {
-      font-size: 12px;
-      color: #D1D5DB;
-      line-height: 1.4;
-    }
-
-    /* Age Milestone Selector */
+    /* Age Milestones */
     .age-pill-group {
       display: flex;
       gap: 8px;
@@ -371,9 +411,9 @@
     }
 
     .age-pill-btn.active {
-      background: var(--accent-terracotta);
+      background: var(--accent-forest);
       color: #FFF;
-      border-color: var(--accent-terracotta);
+      border-color: var(--accent-forest);
     }
 
     .age-detail-box {
@@ -384,7 +424,7 @@
       margin-top: 10px;
     }
 
-    /* Timeline / Schedule */
+    /* Timeline */
     .timeline-item {
       display: flex;
       gap: 14px;
@@ -403,12 +443,10 @@
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 13px;
-      color: var(--accent-terracotta);
+      color: var(--accent-forest);
     }
 
-    .timeline-body {
-      flex-grow: 1;
-    }
+    .timeline-body { flex-grow: 1; }
 
     .timeline-title {
       font-weight: 700;
@@ -446,9 +484,9 @@
       cursor: pointer;
     }
 
-    /* Eye Tracking Canvas Tool */
+    /* Eye Tracking Tool */
     .canvas-container {
-      background: #111827;
+      background: #0F172A;
       border-radius: var(--radius-md);
       position: relative;
       overflow: hidden;
@@ -488,11 +526,11 @@
     }
 
     .canvas-btn:hover, .canvas-btn.active {
-      background: var(--accent-terracotta);
-      border-color: var(--accent-terracotta);
+      background: var(--accent-forest);
+      border-color: var(--accent-forest);
     }
 
-    /* Pi Peg Lookup Tool */
+    /* Peg Lookup */
     .pi-lookup-box {
       display: flex;
       gap: 10px;
@@ -512,8 +550,8 @@
     }
 
     .pi-input:focus {
-      border-color: var(--accent-terracotta);
-      box-shadow: 0 0 0 3px rgba(211, 84, 0, 0.15);
+      border-color: var(--accent-forest);
+      box-shadow: 0 0 0 3px rgba(46, 111, 82, 0.15);
     }
 
     .pi-result-card {
@@ -523,14 +561,14 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      border-left: 4px solid var(--accent-terracotta);
+      border-left: 4px solid var(--accent-forest);
     }
 
     .pi-number-badge {
       font-size: 28px;
       font-weight: 800;
       font-family: var(--font-display);
-      color: var(--accent-terracotta);
+      color: var(--accent-forest);
       min-width: 50px;
       text-align: center;
     }
@@ -546,7 +584,7 @@
       color: var(--ink-secondary);
     }
 
-    /* Interactive Scenario Accordion */
+    /* Accordion */
     .scenario-item {
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
@@ -583,13 +621,8 @@
       line-height: 1.5;
     }
 
-    .scenario-item.open .scenario-content {
-      display: block;
-    }
-
-    .scenario-item.open .scenario-icon {
-      transform: rotate(180deg);
-    }
+    .scenario-item.open .scenario-content { display: block; }
+    .scenario-item.open .scenario-icon { transform: rotate(180deg); }
 
     .scenario-icon {
       transition: transform 0.2s ease;
@@ -607,7 +640,7 @@
       color: var(--ink-primary);
     }
 
-    /* Bottom Quick Bar */
+    /* Bottom Navigation */
     .bottom-nav {
       position: fixed;
       bottom: 0;
@@ -642,7 +675,7 @@
     }
 
     .bottom-nav-btn.active {
-      color: var(--accent-terracotta);
+      color: var(--accent-forest);
       font-weight: 700;
     }
 
@@ -651,7 +684,7 @@
       line-height: 1;
     }
 
-    /* Utility */
+    /* Tags & Utilities */
     .tag {
       display: inline-block;
       font-size: 11px;
@@ -664,6 +697,7 @@
     .tag-green { background: #DCFCE7; color: #15803D; }
     .tag-blue { background: #DBEAFE; color: #1D4ED8; }
     .tag-purple { background: #F3E8FF; color: #7E22CE; }
+    .tag-red { background: #FEE2E2; color: #991B1B; }
 
     .bullet-list {
       list-style: none;
@@ -681,7 +715,7 @@
       content: "•";
       position: absolute;
       left: 6px;
-      color: var(--accent-terracotta);
+      color: var(--accent-forest);
       font-weight: bold;
       font-size: 16px;
     }
@@ -690,9 +724,7 @@
       display: none;
       animation: fadeIn 0.25s ease-in-out;
     }
-    .tab-pane.active {
-      display: block;
-    }
+    .tab-pane.active { display: block; }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
@@ -701,8 +733,8 @@
 
     /* Timer Widget */
     .timer-widget {
-      background: linear-gradient(135deg, #FFF9F5, #FFF3EB);
-      border: 1px solid #FED7AA;
+      background: linear-gradient(135deg, #F0FDF4, #E8F4EE);
+      border: 1px solid #BBF7D0;
       border-radius: var(--radius-md);
       padding: 16px;
       margin-bottom: 18px;
@@ -717,7 +749,7 @@
       font-family: var(--font-display);
       font-size: 26px;
       font-weight: 800;
-      color: var(--accent-terracotta);
+      color: var(--accent-forest);
     }
 
     .timer-actions {
@@ -726,7 +758,7 @@
     }
 
     .btn-action {
-      background: var(--accent-terracotta);
+      background: var(--accent-forest);
       color: #FFF;
       border: none;
       padding: 8px 16px;
@@ -743,7 +775,6 @@
       border: 1px solid var(--border-subtle);
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       .container { padding: 12px 14px; }
       .card { padding: 18px 16px; }
@@ -759,113 +790,144 @@
     <div class="header-brand">
       <div class="brand-icon">🌱</div>
       <div class="brand-text">
-        <h1>Nuôi Dưỡng Toàn Diện</h1>
-        <p>Thể Chất • Cảm Xúc • Siêu Trí Tuệ</p>
+        <h1>Giáo Dục Sớm Thực Chứng</h1>
+        <p>Toàn Não Bộ • Thể Chất • Thấu Cảm • Thích Ứng</p>
       </div>
     </div>
     <div class="header-badge">
-      <span>●</span> Tâm Trong Sáng
+      <span>●</span> Khoa Học Thực Chứng
     </div>
   </header>
 
   <!-- Main Container -->
   <main class="container">
 
-    <!-- Nav Scroller (Desktop/Tablet & Direct view) -->
+    <!-- Top Tab Scroller -->
     <div class="nav-scroller">
       <div class="nav-tabs">
-        <button class="nav-tab-btn active" onclick="switchTab('tab-overview')">🏛️ Bản Đồ Phối Hợp</button>
-        <button class="nav-tab-btn" onclick="switchTab('tab-schedule')">⏰ Lịch 1 Ngày & Đồng Hồ</button>
-        <button class="nav-tab-btn" onclick="switchTab('tab-brain')">🧠 Số Pi & Đọc Nhanh</button>
-        <button class="nav-tab-btn" onclick="switchTab('tab-heart')">❤️ Đồng Cảm & Biết Ơn</button>
-        <button class="nav-tab-btn" onclick="switchTab('tab-adaptive')">🧩 Xử Lý Vấn Đề Ngoài Dự Kiến</button>
-        <button class="nav-tab-btn" onclick="switchTab('tab-oath')">🛡️ Lời Nhắc Lão Làng</button>
+        <button class="nav-tab-btn active" onclick="switchTab('tab-science')">🔬 Bác Bỏ Ngộ Nhận (OECD & AAP)</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-overview')">🏛️ Toàn Não Bộ (Whole-Brain)</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-schedule')">⏰ Nhịp Điệu 1 Ngày</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-brain')">🧩 Mã Hóa Số Pi & Đọc Sâu</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-heart')">❤️ Thấu Cảm & Tích Hợp Cảm Xúc</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-adaptive')">🛠️ Tư Duy Thích Ứng Ngoài Kế Hoạch</button>
       </div>
     </div>
 
     <!-- ========================================== -->
-    <!-- TAB 1: OVERVIEW / KIẾN TRÚC PHỐI HỢP -->
+    <!-- TAB 1: BÁC BỎ NGỘ NHẬN THẦN KINH HỌC -->
     <!-- ========================================== -->
-    <section id="tab-overview" class="tab-pane active">
+    <section id="tab-science" class="tab-pane active">
       
-      <!-- Kim Tự Tháp Não Bộ -->
-      <div class="pyramid-card">
-        <span class="card-eyebrow" style="color: #FDBA74;">Cốt Lõi Hệ Thống</span>
-        <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 14px;">
-          Kim Tự Tháp 3 Tầng: Phần Cứng - Hệ Điều Hành - Ứng Dụng
+      <div class="science-banner">
+        <span class="science-tag">Cập Nhật Khoa Học Thần Kinh 2026</span>
+        <h2 style="font-family: var(--font-display); font-size: 19px; font-weight: 800; line-height: 1.35; margin-bottom: 8px;">
+          Bác Bỏ 2 Huyền Thoại Thần Kinh (Neuromyths) Phổ Biến Nhất
         </h2>
-        
-        <div class="pyramid-level active-peak">
-          <div class="pyramid-number" style="background: var(--accent-terracotta);">3</div>
-          <div class="pyramid-content">
-            <h4>Đỉnh Tháp: Siêu Trí Tuệ Não Phải (Shichida / Heguru)</h4>
-            <p>Trí nhớ chụp hình, chuỗi liên kết nhớ số Pi hàng trăm số, đọc sách quét ảnh sóng não Alpha. Đây là <em>App thần tốc</em> nhưng cần 2 tầng dưới làm bệ phóng.</p>
-          </div>
-        </div>
+        <p style="font-size: 13px; color: #CBD5E1; line-height: 1.55;">
+          Các bằng chứng từ fMRI, MEG và báo cáo từ <strong>OECD</strong> cùng <strong>Viện Hàn lâm Nhi khoa Hoa Kỳ (AAP)</strong> đã chính thức loại bỏ hai quan niệm thương mại hóa sai lệch:
+        </p>
 
-        <div class="pyramid-level">
-          <div class="pyramid-number" style="background: var(--accent-forest);">2</div>
-          <div class="pyramid-content">
-            <h4>Thân Tháp: Tư Duy Thực Tế & Thích Ứng (Montessori & Heuristic Play)</h4>
-            <p>Hệ điều hành logic, đôi bàn tay thao tác cụ thể, khả năng tập trung sâu 2 tiếng và phản xạ tự giải quyết các sự cố bất ngờ ngoài kế hoạch.</p>
+        <div class="science-grid">
+          <div class="science-item">
+            <h4>❌ Ngộ nhận 1: "0-3 tuổi chỉ mở Não Phải"</h4>
+            <p><strong>Sự thật:</strong> Không có nghiên cứu y khoa nào chứng minh điều này. Nghiên cứu ĐH Utah (1.000+ người) khẳng định não luôn hoạt động đồng bộ hai bán cầu. Vỏ não trái đã phản ứng với ngữ âm mẹ đẻ ngay từ trong bụng mẹ. Cầu nối quyết định trí tuệ là <strong>Thể chai (Corpus Callosum)</strong> chứ không phải nửa bên nào.</p>
           </div>
-        </div>
 
-        <div class="pyramid-level">
-          <div class="pyramid-number" style="background: #3B82F6;">1</div>
-          <div class="pyramid-content">
-            <h4>Chân Đế: Thể Chất, Tiền Đình & Tâm Hồn An Định (Doman & Steiner)</h4>
-            <p>Nền tảng thần kinh: bò 500m/ngày, đu xà tăng oxy não, chân trần chạm đất, bảo vệ giác quan khỏi màn hình, tình yêu vô điều kiện (Kokoro).</p>
+          <div class="science-item">
+            <h4>❌ Ngộ nhận 2: "Tráo thẻ 0.5s rèn siêu tập trung"</h4>
+            <p><strong>Sự thật:</strong> Trẻ nhìn chăm chú do <em>phản xạ chú ý bắt buộc (thùy chẩm khóa kích thích di động)</em> chứ không phải <em>chú ý chủ động (vỏ não trước trán)</em>. Tráo thẻ chớp nhoáng chỉ là khớp mẫu bề mặt, làm tăng ngưỡng kích thích (nghiện Dopamine nhanh) và tách rời <strong>Nhận thức hiện thân (Embodied Cognition)</strong>.</p>
           </div>
         </div>
       </div>
 
-      <!-- 4 Trụ Cột Phương Pháp -->
+      <!-- Giải pháp đúng chuẩn khoa học -->
       <div class="card">
-        <span class="card-eyebrow">Ráp Nối Khoa Học</span>
-        <h3 class="card-title">Vai Trò 4 Bánh Răng Trong 1 Cỗ Máy Hoàn Chỉnh</h3>
-        <p class="card-subtitle">Không thiên lệch, không cực đoan. Mỗi phương pháp đảm nhiệm một tầng sinh học chính xác:</p>
+        <span class="card-eyebrow">Định Hướng Thực Chứng</span>
+        <h3 class="card-title">Thay Thế Ảo Tưởng Bằng Nền Tảng Sinh Học Bền Vững</h3>
+        <p class="card-subtitle">
+          Chúng ta không huấn luyện trẻ như một chiếc máy tính sao chép dữ liệu, mà nuôi dưỡng một thực thể sống hài hòa theo 3 nguyên lý thực chứng:
+        </p>
 
         <div class="pillars-grid">
-          <div class="pillar-box doman">
-            <div class="pillar-header">
-              <span class="pillar-name">🏃 Glenn Doman</span>
-              <span class="pillar-badge" style="color: #C2410C;">Thể Chất</span>
-            </div>
-            <p class="pillar-desc">Xây dựng thể chất cơ bắp, bò/trườn tối đa, đu xà mở rộng lồng ngực đưa oxy lên vỏ não, kích hoạt bao bọc Myelin thần kinh.</p>
-          </div>
-
           <div class="pillar-box steiner">
             <div class="pillar-header">
-              <span class="pillar-name">🌿 Steiner / Waldorf</span>
-              <span class="pillar-badge" style="color: #15803D;">Tâm Hồn</span>
+              <span class="pillar-name">🍎 Nhận Thức Hiện Thân</span>
+              <span class="pillar-badge" style="color:#15803D;">Embodied</span>
             </div>
-            <p class="pillar-desc">Bảo vệ giác quan tuyệt đối, 0% màn hình, chơi đồ gỗ thô, hòa mình vào thiên nhiên và nhịp điệu sinh hoạt đều đặn như hơi thở.</p>
+            <p class="pillar-desc">Trẻ hiểu quả táo bằng việc sờ bề mặt trơn, hít mùi thơm, cắn giòn ngọt và cảm nhận trọng lượng 3D, chứ không qua bức ảnh 2D tráo chớp nhoáng.</p>
           </div>
 
-          <div class="pillar-box shichida">
+          <div class="pillar-box siegel">
             <div class="pillar-header">
-              <span class="pillar-name">⚡ Shichida / Heguru</span>
-              <span class="pillar-badge" style="color: #4338CA;">Não Phải</span>
+              <span class="pillar-name">🌉 Tích Hợp Toàn Não Bộ</span>
+              <span class="pillar-badge" style="color:#4338CA;">Daniel Siegel</span>
             </div>
-            <p class="pillar-desc">Tốc độ tráo thẻ 0.5s, liên kết hình ảnh nhớ số Pi, mở rộng góc nhìn đọc lướt, triết lý yêu thương nuôi dưỡng trái tim (Kokoro).</p>
+            <p class="pillar-desc">Kết nối Trái - Phải qua Thể chai bằng vận động chéo tay chân. Kết nối Dọc: giúp Vỏ não trước trán điều hòa cảm xúc bản năng từ Thân não & Hạch hạnh nhân.</p>
           </div>
 
           <div class="pillar-box montessori">
             <div class="pillar-header">
-              <span class="pillar-name">🧩 Montessori</span>
-              <span class="pillar-badge" style="color: #7E22CE;">Logic & Tập Trung</span>
+              <span class="pillar-name">🎯 Chú Ý Điều Hành Chủ Động</span>
+              <span class="pillar-badge" style="color:#7E22CE;">Prefrontal Cortex</span>
             </div>
-            <p class="pillar-desc">Chuyển hóa dữ liệu trừu tượng thành vật thể 3D, chu kỳ làm việc độc lập 2 tiếng rèn sự kiên trì sâu sắc và văn hóa lịch thiệp.</p>
+            <p class="pillar-desc">Rèn luyện khả năng tự chọn việc, kiên trì theo đuổi và lọc bỏ xao nhãng trong chu kỳ 2 tiếng Montessori, thay vì phản xạ bị kích thích bởi thẻ chớp nhoáng.</p>
+          </div>
+
+          <div class="pillar-box doman">
+            <div class="pillar-header">
+              <span class="pillar-name">🏃 Vận Động Dày Thể Chai</span>
+              <span class="pillar-badge" style="color:#C2410C;">Corpus Callosum</span>
+            </div>
+            <p class="pillar-desc">Bò chéo 500m/ngày, đu xà mở rộng lồng ngực đưa oxy lên não. Myelin hóa 200 triệu sợi trục để thông tin truyền dẫn thông suốt 2 bên bán cầu.</p>
           </div>
         </div>
       </div>
 
-      <!-- Lộ Trình Theo Tháng Tuổi (Tương Tác) -->
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: TOÀN NÃO BỘ (WHOLE-BRAIN ARCHITECTURE) -->
+    <!-- ========================================== -->
+    <section id="tab-overview" class="tab-pane">
+      
+      <!-- Cấu trúc Whole-Brain -->
+      <div class="wholebrain-card">
+        <span class="card-eyebrow" style="color: #99F6E4;">Mô Hình Thần Kinh Học Hiện Đại</span>
+        <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 14px;">
+          Kiến Trúc Tích Hợp Toàn Não Bộ (Whole-Brain Architecture)
+        </h2>
+
+        <div class="wholebrain-level highlight">
+          <div class="wholebrain-num" style="background: var(--accent-teal);">3</div>
+          <div class="wholebrain-text">
+            <h4>Tầng Đỉnh: Vỏ Não Trước Trán & Chú Ý Điều Hành (Executive Function)</h4>
+            <p>Tư duy phản biện, lập kế hoạch, kiểm soát xung động, tư duy thích ứng khi gặp biến cố ngoài dự kiến và kỹ thuật ghi nhớ liên tưởng sâu (Elaborative Encoding).</p>
+          </div>
+        </div>
+
+        <div class="wholebrain-level">
+          <div class="wholebrain-num" style="background: #3B82F6;">2</div>
+          <div class="wholebrain-text">
+            <h4>Tầng Giữa: Cầu Nối Thể Chai & Nhận Thức 3D Thực Tế</h4>
+            <p>200 triệu sợi trục dẫn truyền hai chiều. Ngôn ngữ logic (bán cầu trái) hòa quyện cùng cảm thụ ngữ điệu và không gian (bán cầu phải). Giáo cụ xúc giác 3D neo giữ kiến thức vào đời thực.</p>
+          </div>
+        </div>
+
+        <div class="wholebrain-level">
+          <div class="wholebrain-num" style="background: #D97706;">1</div>
+          <div class="wholebrain-text">
+            <h4>Tầng Gốc: Thân Não, Tiền Đình & Gắn Kết An Toàn (Limbic / Attachment)</h4>
+            <p>Vận động chéo tay chân giải phóng năng lượng cơ bắp, chân trần chạm đất kích hoạt giác quan. Mối quan hệ an toàn với cha mẹ giải phóng Oxytocin, làm dịu hạch hạnh nhân Amygdala.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lộ trình độ tuổi khoa học -->
       <div class="card">
-        <span class="card-eyebrow">Phân Bổ Độ Tuổi</span>
-        <h3 class="card-title">Lộ Trình Từng Giai Đoạn Vàng</h3>
-        <p class="card-subtitle">Chọn độ tuổi để xem trọng tâm phân bổ và bài tập cụ thể:</p>
+        <span class="card-eyebrow">Phân Bổ Độ Tuổi Khoa Học</span>
+        <h3 class="card-title">Lộ Trình Từng Giai Đoạn Vàng (Dựa Trên Synapse Mật Độ)</h3>
+        <p class="card-subtitle">Không kích thích cơ học, phát triển nhịp nhàng theo quy luật sinh học tự nhiên:</p>
 
         <div class="age-pill-group">
           <button class="age-pill-btn active" onclick="showAgeMilestone('age-0-6')">0 - 6 Tháng</button>
@@ -877,13 +939,13 @@
         <div id="age-0-6" class="age-milestone-content">
           <div class="age-detail-box">
             <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
-              <strong>🎯 Trọng Tâm: Đánh thức giác quan & Gắn kết an toàn</strong>
-              <span class="tag tag-orange">50% Cảm xúc • 35% Vận động • 15% Não phải</span>
+              <strong>🎯 Trọng Tâm: Gắn kết an toàn & Đánh thức giác quan tự nhiên</strong>
+              <span class="tag tag-green">60% Gắn kết • 40% Vận động thô & Giác quan</span>
             </div>
             <ul class="bullet-list">
-              <li><strong>Nằm sấp (Tummy time):</strong> Từ ngày thứ 3 sau sinh trên đệm cứng phẳng để tăng cường cơ cổ, cơ lưng và tiền đình.</li>
-              <li><strong>Thị giác:</strong> Thẻ kích thích thị giác đen - trắng tương phản cao cách mắt 25cm.</li>
-              <li><strong>Thì thầm tiềm thức:</strong> 5 phút trước khi ngủ ru con bằng lời yêu thương vô điều kiện.</li>
+              <li><strong>Tummy Time trên đệm phẳng:</strong> Nằm sấp kích hoạt cơ cổ, cơ lưng và hệ thống tiền đình nguyên thủy.</li>
+              <li><strong>Trò chuyện bằng mắt & Ngữ âm mẹ đẻ:</strong> Vỏ não thái dương trái của trẻ phản ứng mạnh với giọng nói yêu thương của cha mẹ (Motherese).</li>
+              <li><strong>Mát-xa đa xúc giác:</strong> Tiếp xúc da kề da nuôi dưỡng hệ thần kinh phó giao cảm (giảm cortisol gây căng thẳng).</li>
             </ul>
           </div>
         </div>
@@ -891,13 +953,13 @@
         <div id="age-6-18" class="age-milestone-content" style="display:none;">
           <div class="age-detail-box">
             <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
-              <strong>🎯 Trọng Tâm: Bò bùng nổ & Bắt đầu Flashcard nhịp nhanh</strong>
-              <span class="tag tag-green">40% Thể chất • 25% Não phải • 20% Cảm xúc • 15% Tự lập</span>
+              <strong>🎯 Trọng Tâm: Bò chéo làm dày Thể Chai & Khám phá 3D</strong>
+              <span class="tag tag-orange">45% Vận động • 30% Nhận thức hiện thân • 25% Cảm xúc</span>
             </div>
             <ul class="bullet-list">
-              <li><strong>Bò 500m/ngày:</strong> Bò chéo tay chân kích thích thể chai liên kết 2 bán cầu não trái - phải.</li>
-              <li><strong>Flashcard chấm lượng tử (Dots):</strong> Tráo thẻ với tốc độ 0.5s/thẻ để gieo trực giác toán học vào não phải.</li>
-              <li><strong>Đu xà tự động (Brachiation):</strong> Cho bé nắm ngón tay hoặc xà mini 10-20 giây mỗi ngày.</li>
+              <li><strong>Bò chéo tay chân 500m/ngày:</strong> Sự phối hợp tay nọ chân kia ép hai bán cầu não trao đổi thông tin liên tục qua Thể chai.</li>
+              <li><strong>Khám phá vật thể thực tế:</strong> Cho trẻ cầm sờ thìa gỗ, rổ mây, vỏ ốc, lá cây thay vì đưa thẻ ảnh tĩnh.</li>
+              <li><strong>Đọc sách đối thoại 2 chiều:</strong> Cùng chỉ vào hình trong sách, cùng làm âm thanh con vật, chờ đợi phản xạ của con (tương tác qua lại Serve & Return).</li>
             </ul>
           </div>
         </div>
@@ -905,13 +967,13 @@
         <div id="age-18-36" class="age-milestone-content" style="display:none;">
           <div class="age-detail-box">
             <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
-              <strong>🎯 Trọng Tâm: Trí nhớ hình ảnh (Mandala / Pi) & Tự lập</strong>
-              <span class="tag tag-blue">30% Não phải • 30% Vận động • 20% Montessori • 20% Cảm xúc</span>
+              <strong>🎯 Trọng Tâm: Chú ý điều hành (Executive Attention) & Ngôn ngữ sâu</strong>
+              <span class="tag tag-blue">35% Montessori tự lập • 35% Vận động tự nhiên • 30% EQ & Trí nhớ chuỗi</span>
             </div>
             <ul class="bullet-list">
-              <li><strong>Mã hóa số Pi:</strong> Bắt đầu gán các cặp số 00-99 thành các hình ảnh thân thuộc, kể chuỗi câu chuyện phim hoạt hình.</li>
-              <li><strong>Luyện Mandala:</strong> Nhìn hình đối xứng 3-5 giây rồi nhớ vị trí màu sắc.</li>
-              <li><strong>Montessori đời thường:</strong> Bé tự bê khay, tự rót nước, tự cởi giày và dọn đồ chơi.</li>
+              <li><strong>Chu kỳ làm việc độc lập Montessori:</strong> Để trẻ tự rót nước, tự gài cúc, tự lau bàn – rèn luyện Vỏ não trước trán tập trung sâu.</li>
+              <li><strong>Trò chơi mã hóa chuỗi câu chuyện:</strong> Bắt đầu chơi các trò chơi liên tưởng hình ảnh vui vẻ để rèn trí nhớ chuỗi (Peg System).</li>
+              <li><strong>Quản trị cảm xúc Whole-Brain:</strong> Áp dụng kỹ thuật <em>"Gọi tên để thuần hóa" (Name it to tame it)</em> khi con có cơn khủng hoảng tuổi lên 2.</li>
             </ul>
           </div>
         </div>
@@ -919,13 +981,13 @@
         <div id="age-3-6y" class="age-milestone-content" style="display:none;">
           <div class="age-detail-box">
             <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
-              <strong>🎯 Trọng Tâm: Đọc siêu tốc (Wave Reading) & Hòa nhịp 2 bán cầu</strong>
-              <span class="tag tag-purple">30% Đọc & Tư duy • 25% Thể thao • 25% Montessori • 20% Xã hội</span>
+              <strong>🎯 Trọng Tâm: Tư duy thích ứng, Lập luận logic & Thấu cảm xã hội</strong>
+              <span class="tag tag-purple">35% Tư duy phản biện & Thích ứng • 35% Thể thao kỷ luật • 30% Đạo đức & Thấu cảm</span>
             </div>
             <ul class="bullet-list">
-              <li><strong>Luyện mắt & Quét trang (Eye Tracking):</strong> Tập lia mắt ziczac để mở rộng góc nhìn toàn phần.</li>
-              <li><strong>Ghi nhớ dãy số Pi dài:</strong> Dùng hệ thống Peg System nhớ từ 100 đến 300+ chữ số thập phân.</li>
-              <li><strong>Tư duy giải quyết vấn đề mở:</strong> Trò chơi Loose parts, xử lý sự cố thực tế không theo kịch bản.</li>
+              <li><strong>Trò chơi vật liệu mở (Loose parts):</strong> Sáng tạo không giới hạn từ cành cây, bìa các tông; giải quyết các sự cố ngoài kế hoạch.</li>
+              <li><strong>Mã hóa chuỗi số Pi dài:</strong> Dùng hệ thống Móc treo (Peg System) – kết hợp mã hóa số (não trái) với cuộn phim hoạt hình giàu cảm xúc (não phải).</li>
+              <li><strong>Lễ nghi & Tôn trọng không gian:</strong> Thực hành văn hóa nhã nhặn, tôn trọng ranh giới người khác và biết ơn cuộc sống.</li>
             </ul>
           </div>
         </div>
@@ -935,35 +997,37 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 2: SCHEDULE & INTERACTIVE TIMER -->
+    <!-- TAB 3: SCHEDULE / NHỊP ĐIỆU 1 NGÀY -->
     <!-- ========================================== -->
     <section id="tab-schedule" class="tab-pane">
       
-      <!-- Interactive Timer Widget -->
+      <!-- Timer Widget -->
       <div class="timer-widget">
         <div>
-          <span style="font-size:11px; font-weight:700; color:var(--accent-terracotta); text-transform:uppercase;">Bộ Đếm Giờ Phiên Hoạt Động</span>
-          <div class="timer-display" id="timerDisplay">15:00</div>
-          <span id="timerLabel" style="font-size:12px; color:var(--ink-secondary);">Phiên Shichida Tia Chớp Não Phải</span>
+          <span style="font-size:11px; font-weight:700; color:var(--accent-forest); text-transform:uppercase;">Đồng Hồ Tập Trung Sâu</span>
+          <div class="timer-display" id="timerDisplay">20:00</div>
+          <span id="timerLabel" style="font-size:12px; color:var(--ink-secondary);">Phiên Trò Chơi Tương Tác 2 Chiều</span>
         </div>
         <div class="timer-actions">
           <button class="btn-action" id="startTimerBtn" onclick="toggleTimer()">Bắt Đầu</button>
           <button class="btn-action secondary" onclick="resetTimer()">Đặt Lại</button>
-          <button class="btn-action secondary" onclick="setTimerDuration(15)">15m</button>
+          <button class="btn-action secondary" onclick="setTimerDuration(20)">20m</button>
           <button class="btn-action secondary" onclick="setTimerDuration(45)">45m</button>
         </div>
       </div>
 
-      <!-- Thời Gian Biểu Chuẩn -->
+      <!-- Thời gian biểu 1 ngày -->
       <div class="card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
           <div>
-            <span class="card-eyebrow">Thời Gian Biểu 1 Ngày Mẫu</span>
-            <h3 class="card-title" style="margin-bottom:0;">Lịch Trình Sinh Hoạt Nhịp Điệu</h3>
+            <span class="card-eyebrow">Thời Gian Biểu 1 Ngày Thực Chứng</span>
+            <h3 class="card-title" style="margin-bottom:0;">Bảo Vệ Ngưỡng Nhạy Cảm Thần Kinh</h3>
           </div>
           <button class="btn-action secondary" style="font-size:11px; padding:4px 10px;" onclick="clearDailyChecks()">Xóa Tick</button>
         </div>
-        <p class="card-subtitle">Tick vào ô tròn để lưu lại tiến độ hoàn thành các hoạt động trong ngày của con:</p>
+        <p class="card-subtitle">
+          Nhịp điệu sinh hoạt chậm rãi, hòa nhịp cùng tự nhiên, tránh bơm Dopamine nhân tạo để trẻ hình thành khả năng kiên nhẫn sâu:
+        </p>
 
         <div class="timeline-list">
           
@@ -973,9 +1037,9 @@
             </div>
             <div class="timeline-time">06:30 - 07:30</div>
             <div class="timeline-body">
-              <div class="timeline-title">🏃 Thức Giấc & Đánh Thức Thần Kinh</div>
+              <div class="timeline-title">🏃 Thể Lực & Kích Hoạt Thể Chai (Corpus Callosum)</div>
               <span class="timeline-meta">Glenn Doman + Steiner</span>
-              <p class="timeline-desc">Chạy bộ, đu xà đơn 30s-1p, đi chân trần trên cỏ ướt sương, hít thở sâu và tắm nắng sớm tăng oxy não.</p>
+              <p class="timeline-desc">Chạy bộ, đu xà đơn mở rộng lồng ngực nạp oxy cho vỏ não. Đi chân trần trên cỏ ướt sương để hàng vạn thụ thể thần kinh xúc giác kết nối với não bộ.</p>
             </div>
           </div>
 
@@ -985,9 +1049,9 @@
             </div>
             <div class="timeline-time">08:30 - 10:30</div>
             <div class="timeline-body">
-              <div class="timeline-title">🧩 Chu Kỳ Làm Việc Độc Lập Không Gián Đoạn</div>
-              <span class="timeline-meta">Montessori Focus</span>
-              <p class="timeline-desc">Trẻ tự chọn khay giáo cụ: phân loại hạt, đồ mộc, ghép hình học. Cha mẹ không can thiệp để trẻ rèn sự tập trung sâu (Deep Focus).</p>
+              <div class="timeline-title">🎯 Chu Kỳ Chú Ý Điều Hành Chủ Động (Executive Focus)</div>
+              <span class="timeline-meta">Montessori Deep Work</span>
+              <p class="timeline-desc">Trẻ tự chọn khay giáo cụ độc lập 2 tiếng: tự thắt dây, phân loại hạt, đồ mộc. Không bị ngắt quãng để rèn luyện Vỏ não trước trán (Prefrontal Cortex) lọc xao nhãng.</p>
             </div>
           </div>
 
@@ -997,9 +1061,9 @@
             </div>
             <div class="timeline-time">10:30 - 11:30</div>
             <div class="timeline-body">
-              <div class="timeline-title">🌱 Lao Động Thực Tế & Kết Nối Tự Nhiên</div>
-              <span class="timeline-meta">Steiner / Waldorf</span>
-              <p class="timeline-desc">Cùng cha mẹ tưới cây, nhặt rau, chuẩn bị bàn ăn. Rèn đôi bàn tay khéo léo và biết ơn nguồn thực phẩm.</p>
+              <div class="timeline-title">🌱 Nhận Thức Hiện Thân & Lao Động Thực Tế</div>
+              <span class="timeline-meta">Embodied Cognition</span>
+              <p class="timeline-desc">Cùng nhặt rau, chuẩn bị bàn ăn, tưới cây. Cảm nhận độ nặng, mùi vị, bề mặt thực tế thay vì xem hình ảnh trừu tượng trên mặt phẳng 2D.</p>
             </div>
           </div>
 
@@ -1009,9 +1073,9 @@
             </div>
             <div class="timeline-time">14:30 - 15:00</div>
             <div class="timeline-body">
-              <div class="timeline-title">⚡ Tia Chớp Não Phải (High Intensity - Short Burst)</div>
-              <span class="timeline-meta" style="background:#EEF2FF; color:#4338CA;">Shichida / Heguru</span>
-              <p class="timeline-desc">Luyện mắt số 8 nằm ngang, tráo thẻ flashcard tốc độ 0.5s, kể chuỗi phim hoạt hình nhớ 10-20 số Pi tiếp theo, ghép tranh Mandala.</p>
+              <div class="timeline-title">🧩 Kỹ Thuật Trí Nhớ Chuỗi (Peg Story) & Trò Chơi Tương Tác 2 Chiều</div>
+              <span class="timeline-meta" style="background:#EEF2FF; color:#4338CA;">Elaborative Encoding</span>
+              <p class="timeline-desc">Tuyệt đối không tráo thẻ tốc độ 0.5s gây thôi miên bị động. Cùng nhau sáng tạo bộ phim hoạt hình liên kết các cặp số Pi, chơi đố vui hình ảnh tương tác 2 chiều (Serve & Return).</p>
             </div>
           </div>
 
@@ -1021,9 +1085,9 @@
             </div>
             <div class="timeline-time">15:30 - 17:00</div>
             <div class="timeline-body">
-              <div class="timeline-title">🪵 Khám Phá Tự Do Mở (Loose Parts Play)</div>
-              <span class="timeline-meta">Tư Duy Thích Ứng</span>
-              <p class="timeline-desc">Chơi ngoài trời với cành cây, cát, sỏi, hộp các tông. Thử thách giải quyết sự cố thực tế không có khuôn mẫu định sẵn.</p>
+              <div class="timeline-title">🪵 Trò Chơi Vật Liệu Mở & Bản Lĩnh Vượt Khó</div>
+              <span class="timeline-meta">Loose Parts Play</span>
+              <p class="timeline-desc">Khám phá bùn đất, cành cây, đá cuội ngoài trời. Trẻ tự do thử nghiệm, tự giải quyết các sự cố bất ngờ khi tháp gỗ đổ hay cành cây gãy.</p>
             </div>
           </div>
 
@@ -1033,9 +1097,9 @@
             </div>
             <div class="timeline-time">19:30 - 20:30</div>
             <div class="timeline-body">
-              <div class="timeline-title">📚 Đọc Sách Tương Tác & Thấu Cảm Cảm Xúc</div>
-              <span class="timeline-meta">EQ & Ngôn Ngữ</span>
-              <p class="timeline-desc">Đọc sách tranh bằng giọng biểu cảm, hỏi con suy nghĩ về cảm xúc của các nhân vật, chia sẻ 1 điều biết ơn trong ngày.</p>
+              <div class="timeline-title">📚 Đọc Sách Đối Thoại (Dialogic Reading) & Thấu Cảm</div>
+              <span class="timeline-meta">Ngôn Ngữ & EQ</span>
+              <p class="timeline-desc">Đọc sách chậm rãi, hỏi con về cảm xúc của các nhân vật, liên hệ với tình huống ngoài đời. Chia sẻ 1 điều biết ơn trong ngày của từng thành viên gia đình.</p>
             </div>
           </div>
 
@@ -1045,9 +1109,9 @@
             </div>
             <div class="timeline-time">Trước khi ngủ</div>
             <div class="timeline-body">
-              <div class="timeline-title">❤️ Ôm 8 Giây & 5 Phút Thì Thầm Tiềm Thức</div>
-              <span class="timeline-meta" style="background:#FFF1F2; color:#BE123C;">Shichida Kokoro</span>
-              <p class="timeline-desc">Ôm chặt kích thích oxytocin. Thì thầm vào tai con khi con thiu thiu ngủ: "Bố mẹ yêu con vô điều kiện. Con luôn bình an và dũng cảm".</p>
+              <div class="timeline-title">❤️ Ôm 8 Giây & Tích Hợp Tiềm Thức Yêu Thương</div>
+              <span class="timeline-meta" style="background:#FFF1F2; color:#BE123C;">Oxytocin & Safe Attachment</span>
+              <p class="timeline-desc">Cái ôm chặt giải phóng Oxytocin triệt tiêu Cortisol. Thì thầm những lời khẳng định về tình yêu vô điều kiện và lòng dũng cảm khi con bắt đầu chìm vào giấc ngủ.</p>
             </div>
           </div>
 
@@ -1057,36 +1121,25 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 3: RIGHT BRAIN / PI & SPEED READING -->
+    <!-- TAB 4: MNEMONICS & DEEP READING -->
     <!-- ========================================== -->
     <section id="tab-brain" class="tab-pane">
       
-      <!-- Luyện Mắt Eye-Tracking Canvas -->
+      <!-- Khoa học về Ghi nhớ số Pi -->
       <div class="card">
-        <span class="card-eyebrow">Công Cụ Tương Tác</span>
-        <h3 class="card-title">1. Bài Tập Luyện Mắt (Eye-Tracking Simulator)</h3>
+        <span class="card-eyebrow">Giải Mã Khoa Học Nhận Thức</span>
+        <h3 class="card-title">1. Kỹ Thuật Ghi Nhớ Sâu Số Pi (Peg System & Elaborative Encoding)</h3>
         <p class="card-subtitle">
-          Giúp cơ mắt dẻo dai và mở rộng góc nhìn ngoại vi (Peripheral Vision) - tiền đề bắt buộc để quét cả trang sách (Wave Reading). Cho con hướng mắt nhìn theo quả bóng chuyển động:
+          Nhớ hàng trăm số Pi <strong>không phải là phép màu huyền bí của riêng não phải</strong>, mà là đỉnh cao của <strong>Sự Phối Hợp Toàn Não Bộ (Whole-Brain Integration)</strong>:
         </p>
 
-        <div class="canvas-container">
-          <canvas id="eyeCanvas"></canvas>
-          <div class="canvas-controls">
-            <button class="canvas-btn active" id="btnModeInfinity" onclick="setEyePattern('infinity')">Đường Số 8 Nằm Ngang (∞)</button>
-            <button class="canvas-btn" id="btnModeZigzag" onclick="setEyePattern('zigzag')">Đường Ziczac Quét Khối</button>
-            <button class="canvas-btn" id="btnSpeedSlow" onclick="setEyeSpeed(1)">Tốc Độ Thư Thái</button>
-            <button class="canvas-btn" id="btnSpeedFast" onclick="setEyeSpeed(2.5)">Tốc Độ Siêu Tốc</button>
-          </div>
+        <div style="background:#F0FDF4; border:1px solid #BBF7D0; border-radius:var(--radius-md); padding:14px; margin-bottom:14px; font-size:13px; color:#14532D; line-height:1.6;">
+          <strong>🧠 Cơ chế hoạt động của não bộ:</strong>
+          <br>• <strong>Bán cầu trái:</strong> Nhận diện các con số trừu tượng (14, 15, 92...).
+          <br>• <strong>Thể chai (Corpus Callosum):</strong> Truyền dữ liệu số sang bán cầu đối diện trong vài mili-giây.
+          <br>• <strong>Bán cầu phải:</strong> Mã hóa các con số khô khan thành hình ảnh giàu cảm xúc (Thuyền buồm, Dưa hấu, Bóng bay).
+          <br>• <strong>Vỏ não trước trán:</strong> Chủ động xâu chuỗi các hình ảnh thành một cuộn phim hoạt hình logic (Mã hóa liên tưởng sâu - Elaborative Encoding).
         </div>
-      </div>
-
-      <!-- Kỹ Thuật Nhớ Dãy Số Pi Dài Bằng Peg System -->
-      <div class="card">
-        <span class="card-eyebrow">Bí Quyết Shichida</span>
-        <h3 class="card-title">2. Kỹ Thuật Mã Hóa Hình Ảnh Nhớ Số Pi (Peg System)</h3>
-        <p class="card-subtitle">
-          Không bao giờ bắt trẻ học vẹt từng con số khô khan. Hãy biến mỗi cặp số (00 - 99) thành một hình ảnh cố định, sau đó ghép thành một <strong>bộ phim hoạt hình phi lý</strong> để não phải chụp lại.
-        </p>
 
         <div class="pi-lookup-box">
           <input type="number" id="piSearchInput" class="pi-input" placeholder="Gõ 2 chữ số (VD: 14, 15, 92...)" min="0" max="99" oninput="lookupPiPeg()">
@@ -1101,95 +1154,115 @@
           </div>
         </div>
 
-        <!-- Ví Dụ Đoạn Phim Chuỗi 20 Số Pi Đầu Tiên -->
+        <!-- Chuỗi phim hoạt hình mẫu -->
         <div style="background:#FFF9F5; border-radius: var(--radius-md); padding:16px; margin-top:16px; border:1px solid #FED7AA;">
           <h4 style="font-family:var(--font-display); font-size:14px; font-weight:700; color:var(--accent-terracotta); margin-bottom:8px;">
             🎬 Ví Dụ Chuỗi Phim Cho 10 Cặp Số Pi Đầu Tiên (3.1415926535...):
           </h4>
           <p style="font-size:13px; color:var(--ink-secondary); line-height:1.6;">
-            <strong>(14) Thuyền Buồm</strong> chở một quả <strong>(15) Dưa Hấu</strong> khổng lồ. Bỗng một <strong>(92) Quả Bóng Bay</strong> kéo quả dưa bay lên trời, va vào một <strong>(65) Chiếc Xe Lu</strong> đang chạy trên mây. Xe lu cán trúng một <strong>(35) Chùm Bong Bóng Xà Phòng</strong>... Trẻ chỉ cần "chiếu lại" cuộn phim hoạt hình kỳ cục này trong đầu là đọc được vanh vách dãy số!
+            <strong>(14) Thuyền Buồm</strong> chở một quả <strong>(15) Dưa Hấu</strong> ngọt lịm. Bỗng một <strong>(92) Chùm Bóng Bay</strong> kéo quả dưa bay vút lên trời, va trúng một <strong>(65) Chiếc Xe Lu</strong> đang chạy trên mây. Xe lu cán vỡ một <strong>(35) Chùm Bong Bóng Xà Phòng</strong> bảy sắc cầu vồng...
+            <br><em>Trẻ không học vẹt chữ số, trẻ đang xem lại bộ phim hoạt hình sống động do chính mình sáng tác!</em>
           </p>
         </div>
       </div>
 
-      <!-- Kỹ Thuật Đọc Gợn Sóng Wave Reading -->
+      <!-- Đọc sách đối thoại thay vì lướt quét cơ học -->
       <div class="card">
-        <span class="card-eyebrow">Đọc Quét Nguyên Khối</span>
-        <h3 class="card-title">3. Kỹ Thuật Đọc Nhanh (Wave Reading) Chuẩn Shichida</h3>
-        <p class="card-subtitle">Quy trình đưa não về trạng thái sóng Alpha và thu nhận thông tin bằng bức ảnh trực giác:</p>
+        <span class="card-eyebrow">Đọc Hiểu Thực Chất</span>
+        <h3 class="card-title">2. Đọc Sách Đối Thoại (Dialogic Reading) vs Đọc Quét Lướt Bề Mặt</h3>
+        <p class="card-subtitle">
+          Nghiên cứu cho thấy đọc quét ảnh chớp nhoáng (1s/trang) chỉ kích hoạt khớp mẫu đồ họa ở vỏ não thị giác, hoàn toàn không tạo ra sự thấu cảm hay tư duy phản biện. Khoa học thần kinh khuyến nghị <strong>Đọc Sách Đối Thoại 4 Bước (PEER Sequence)</strong>:
+        </p>
 
         <ul class="bullet-list">
-          <li><strong>Bước 1 - Hạ sóng não về Alpha:</strong> Nhắm mắt, hít thở sâu bụng 3 lần. Cho con tưởng tượng một đốm sáng màu cam dịu dàng ấm áp tỏa sáng giữa trán.</li>
-          <li><strong>Bước 2 - Lật trang nhịp nhàng:</strong> Cho con dùng ngón tay cái lật góc trang sách với tốc độ 1 giây / trang. Mắt nhìn vào trung tâm trang sách nhưng mở rộng tầm nhìn bao quát cả 4 góc.</li>
-          <li><strong>Bước 3 - Không dịch ra tiếng (Sub-vocalize):</strong> Não trái thường có thói quen đọc thầm từng từ bằng tiếng nói bên trong. Tốc độ lật nhanh buộc não trái phải nhường chỗ cho não phải chụp ảnh toàn bộ khối chữ.</li>
-          <li><strong>Bước 4 - Khóa bằng Montessori 3D:</strong> Sau khi quét trang về một chủ đề (ví dụ: con bướm), đưa con ra vườn ngắm bướm thật hoặc cho sờ mô hình vòng đời bướm để neo giữ kiến thức vào thế giới thực.</li>
+          <li><strong>P (Prompt - Gợi mở):</strong> Đặt câu hỏi kích thích suy nghĩ của con: <em>"Theo con bạn thỏ này chuẩn bị đi đâu với cái xô nhỏ?"</em>.</li>
+          <li><strong>E (Evaluate - Đánh giá):</strong> Lắng nghe và trân trọng câu trả lời của con: <em>"Đúng rồi, có thể bạn ấy đi lấy nước đấy!"</em>.</li>
+          <li><strong>E (Expand - Mở rộng):</strong> Bổ sung thêm vốn từ và ý niệm thực tế: <em>"Nước trong giếng rất mát, giống như lần chúng mình đi thăm vườn bách thảo nhỉ!"</em>.</li>
+          <li><strong>R (Repeat - Lặp lại):</strong> Khuyến khích con lặp lại ý niệm vừa được mở rộng.</li>
         </ul>
+      </div>
+
+      <!-- Luyện Mắt Điều Hòa Thần Kinh Thị Giác -->
+      <div class="card">
+        <span class="card-eyebrow">Điều Hòa Vận Động Mắt</span>
+        <h3 class="card-title">3. Bài Tập Thư Thái Cơ Mắt (Eye Relaxation & Tracking)</h3>
+        <p class="card-subtitle">
+          Mục tiêu không phải để ép mắt chạy siêu tốc, mà giúp cơ vận nhãn dẻo dai, điều hòa hệ thần kinh thị giác và mở rộng góc nhìn tự nhiên:
+        </p>
+
+        <div class="canvas-container">
+          <canvas id="eyeCanvas"></canvas>
+          <div class="canvas-controls">
+            <button class="canvas-btn active" id="btnModeInfinity" onclick="setEyePattern('infinity')">Đường Số 8 Nằm Ngang (∞)</button>
+            <button class="canvas-btn" id="btnModeZigzag" onclick="setEyePattern('zigzag')">Đường Quét Êm Dịu</button>
+            <button class="canvas-btn" id="btnSpeedSlow" onclick="setEyeSpeed(1)">Tốc Độ Thư Thái</button>
+            <button class="canvas-btn" id="btnSpeedFast" onclick="setEyeSpeed(1.8)">Tốc Độ Nhịp Nhàng</button>
+          </div>
+        </div>
       </div>
 
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 4: EMOTION, GRATITUDE & EMPATHY -->
+    <!-- TAB 5: THẤU CẢM & TÍCH HỢP CẢM XÚC -->
     <!-- ========================================== -->
     <section id="tab-heart" class="tab-pane">
       
       <div class="card">
-        <span class="card-eyebrow">Trọng Tâm Bổ Sung Đặc Biệt</span>
-        <h3 class="card-title">Nuôi Dưỡng Trái Tim: Đồng Cảm, Yêu Thương & Biết Ơn</h3>
+        <span class="card-eyebrow">Tích Hợp Cảm Xúc Daniel Siegel</span>
+        <h3 class="card-title">Chiến Lược Tích Hợp Cảm Xúc (Connect & Redirect)</h3>
         <p class="card-subtitle">
-          Một bộ não siêu phàm nếu thiếu khả năng thấu cảm sẽ trở thành một cỗ máy đơn độc. Dưới đây là cách nuôi dưỡng lòng trắc ẩn từ bản năng bên trong:
+          Khi con khóc lóc, ăn vạ hay giận dữ, hạch hạnh nhân (Amygdala) và não phải đang bùng nổ dữ dội. Mọi lời dạy bảo logic của não trái lúc này đều vô hiệu!
         </p>
 
         <div class="scenario-item open">
           <div class="scenario-header" onclick="toggleScenario(this)">
-            <span>1. Thấu Thị Cảm Xúc (Theory of Mind & Empathy)</span>
+            <span>1. Kết Nối Trước, Chuyển Hướng Sau (Connect & Redirect)</span>
             <span class="scenario-icon">▼</span>
           </div>
           <div class="scenario-content">
-            <p>Trẻ không tự nhiên biết đồng cảm nếu chưa được cha mẹ "công nhận cảm xúc" (Emotional Validation). Khi con buồn, giận, đừng dập tắt bằng câu: <em>"Có gì đâu mà khóc!"</em>.</p>
+            <p><strong>Bước 1 (Kết nối cảm xúc):</strong> Đến gần con, hạ thấp người ngang tầm mắt, ôm hoặc chạm nhẹ vào vai, dùng giọng nói ấm áp công nhận cảm xúc:</p>
             <div class="script-dialogue">
-              "Mẹ thấy con đang rất tiếc vì tháp gỗ bị đổ. Con đang cảm thấy tức giận phải không? Mẹ ở đây với con."
+              "Mẹ thấy con đang rất tiếc vì tháp gỗ bị sập. Con đang thấy bực bội lắm phải không? Mẹ ở đây với con."
             </div>
-            <p><strong>Trò chơi "Thám tử cảm xúc":</strong> Khi đọc sách tranh, che mặt nhân vật lại và hỏi: <em>"Theo con bạn gấu đang cảm thấy thế nào khi thấy bạn sóc làm rơi hạt dẻ? Chúng mình có thể làm gì để bạn gấu vui lên?"</em>.</p>
+            <p><strong>Bước 2 (Chuyển hướng logic):</strong> Khi hơi thở của con đã đều lại (hạch hạnh nhân được xoa dịu), mới dùng bán cầu trái để cùng tìm giải pháp:</p>
+            <div class="script-dialogue">
+              "Bây giờ chúng mình cùng xem nhé: làm thế nào để chân tháp gỗ lần này vững chãi hơn nhỉ?"
+            </div>
           </div>
         </div>
 
         <div class="scenario-item">
           <div class="scenario-header" onclick="toggleScenario(this)">
-            <span>2. Lễ Nghi & Tôn Trọng Không Gian (Montessori Grace & Courtesy)</span>
+            <span>2. Gọi Tên Để Thuần Hóa (Name It to Tame It)</span>
             <span class="scenario-icon">▼</span>
           </div>
           <div class="scenario-content">
-            <p>Montessori dạy tôn trọng thông qua các hành vi chuẩn mực cụ thể:</p>
+            <p>Khoa học chứng minh: Khi một đứa trẻ gọi tên được cảm xúc bằng ngôn ngữ (<em>"Con đang thất vọng", "Con đang sợ hãi"</em>), vỏ não trước trán bên trái sẽ gửi tín hiệu ức chế hạch hạnh nhân bên phải, giúp cơn bão cảm xúc hạ nhiệt nhanh chóng.</p>
+          </div>
+        </div>
+
+        <div class="scenario-item">
+          <div class="scenario-header" onclick="toggleScenario(this)">
+            <span>3. Lòng Biết Ơn Bàn Ăn & Nghi Thức Nhã Nhặn (Montessori & Steiner)</span>
+            <span class="scenario-icon">▼</span>
+          </div>
+          <div class="scenario-content">
             <ul class="bullet-list">
-              <li><strong>Tôn trọng không gian người khác:</strong> Khi một bạn đang trải thảm làm việc, con không được dẫm chân lên thảm của bạn. Muốn xem thì đứng khoanh tay quan sát từ xa và xin phép: <em>"Tớ có thể xem bạn làm được không?"</em>.</li>
-              <li><strong>Cách bước đi nhẹ nhàng:</strong> Dạy con nhấc chân êm ái khi người khác đang ngủ hoặc đang tập trung, không gây ồn ào nơi công cộng.</li>
-              <li><strong>Lời cảm ơn xuất phát từ trái tim:</strong> Không ép con: <em>"Mau cảm ơn bác đi!"</em>. Hãy làm gương trước mặt con: cảm ơn bác bảo vệ dắt xe, cảm ơn cô lao công quét đường bằng ánh mắt ấm áp. Trẻ sao chép năng lượng chứ không sao chép mệnh lệnh.</li>
+              <li><strong>Nghi thức bàn ăn:</strong> 10 giây im lặng nắm tay nhau trước bữa ăn, cảm ơn đất mẹ, ánh nắng và bàn tay người nấu nướng thơm lành.</li>
+              <li><strong>Tôn trọng không gian riêng:</strong> Con không dẫm lên thảm làm việc của bạn. Muốn quan sát thì xin phép lịch thiệp: <em>"Tớ có thể xem bạn làm việc được không?"</em>.</li>
+              <li><strong>Tấm gương biết ơn:</strong> Cảm ơn bác bảo vệ, cô lao công bằng sự chân thành trước mặt con. Trẻ sao chép năng lượng yêu thương từ cha mẹ.</li>
             </ul>
           </div>
         </div>
 
         <div class="scenario-item">
           <div class="scenario-header" onclick="toggleScenario(this)">
-            <span>3. Nghi Thức Biết Ơn Bàn Ăn & Vạn Vật (Steiner / Waldorf)</span>
+            <span>4. Chăm Sóc Một Mầm Sống Nhỏ</span>
             <span class="scenario-icon">▼</span>
           </div>
           <div class="scenario-content">
-            <p>Trước mỗi bữa ăn, cả nhà nắm tay nhau 10 giây trong im lặng ấm áp và cùng nói lời tri ân:</p>
-            <div class="script-dialogue">
-              "Cảm ơn mẹ đất, cảm ơn ánh nắng và hạt mưa. Cảm ơn bác nông dân và người đã nấu bữa cơm thơm lành này. Chúc cả nhà ngon miệng."
-            </div>
-            <p>Khi trẻ hiểu rằng mỗi hạt cơm, cọng rau đều là công sức của bao con người và thiên nhiên, lòng kính trọng và trân quý cuộc sống sẽ tự nhiên bén rễ.</p>
-          </div>
-        </div>
-
-        <div class="scenario-item">
-          <div class="scenario-header" onclick="toggleScenario(this)">
-            <span>4. Chăm Sóc Sinh Mệnh Nhỏ (Care for Living Beings)</span>
-            <span class="scenario-icon">▼</span>
-          </div>
-          <div class="scenario-content">
-            <p>Giao cho con một chậu cây cảnh nhỏ hoặc một chú cá vàng. Dạy con tưới nước mỗi sáng, nhặt lá úa, quan sát nụ hoa hé nở. Trẻ biết nâng niu một mầm cây nhỏ bé sẽ không bao giờ có hành vi tàn nhẫn với bạn bè hay người già.</p>
+            <p>Giao cho con một chậu cây cảnh nhỏ: tự tay tưới nước mỗi sáng, nhặt lá úa, che gió. Đứa trẻ biết nâng niu một mầm cây non sẽ tự nhiên có lòng trắc ẩn sâu sắc với mọi sinh mệnh xung quanh.</p>
           </div>
         </div>
 
@@ -1197,10 +1270,10 @@
 
       <!-- 5 Câu Thì Thầm Tiềm Thức -->
       <div class="card" style="background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%); border-color: #FECDD3;">
-        <span class="card-eyebrow" style="color:#E11D48;">Phương Pháp Shichida 5 Phút</span>
+        <span class="card-eyebrow" style="color:#E11D48;">Nuôi Dưỡng Gắn Kết An Toàn</span>
         <h3 class="card-title" style="color:#9F1239;">5 Lời Khẳng Định Tiềm Thức Trước Giờ Ngủ</h3>
         <p class="card-subtitle" style="color:#881337;">
-          Khi con chớm bước vào trạng thái lơ mơ ngủ (sóng não Theta mở toang tiềm thức), thì thầm nhẹ nhàng bên tai con:
+          Khi con chớm bước vào trạng thái lơ mơ ngủ (sóng não Theta mở toang tiềm thức), thì thầm êm dịu bên tai con:
         </p>
 
         <div style="display:flex; flex-direction:column; gap:8px;">
@@ -1214,7 +1287,7 @@
             3. "Con biết lắng nghe, biết thấu hiểu và quan tâm tới mọi người xung quanh."
           </div>
           <div style="background:#FFF; padding:10px 14px; border-radius:var(--radius-sm); font-size:13px; font-weight:600; color:#9F1239;">
-            4. "Khi gặp khó khăn, con luôn bình tĩnh, thông minh tìm ra cách giải quyết."
+            4. "Khi gặp chuyện bất ngờ, con luôn bình tĩnh, thông minh tìm ra cách giải quyết."
           </div>
           <div style="background:#FFF; padding:10px 14px; border-radius:var(--radius-sm); font-size:13px; font-weight:600; color:#9F1239;">
             5. "Chúc con yêu ngủ một giấc thật ngon và đón chào ngày mới diệu kỳ."
@@ -1225,129 +1298,78 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 5: ADAPTIVE PROBLEM SOLVER -->
+    <!-- TAB 6: TƯ DUY THÍCH ỨNG & XỬ LÝ BIẾN CỐ -->
     <!-- ========================================== -->
     <section id="tab-adaptive" class="tab-pane">
       
       <div class="card">
-        <span class="card-eyebrow">Tư Duy Thích Ứng (Adaptive Intelligence)</span>
-        <h3 class="card-title">Xử Lý Biến Cố & Vấn Đề Ngoài Kế Hoạch</h3>
+        <span class="card-eyebrow">Rèn Luyện Vỏ Não Trước Trán</span>
+        <h3 class="card-title">Tư Duy Thích Ứng Khi Gặp Biến Cố Ngoài Kế Hoạch</h3>
         <p class="card-subtitle">
-          Giáo dục rập khuôn tạo ra những đứa trẻ hoảng sợ khi bài toán không có công thức. Chúng ta rèn luyện một <strong>Nhà Khám Phá Thích Nghi</strong> thông qua 4 quy tắc vàng:
+          Trong thế kỷ 21, năng lực thích ứng với những điều chưa từng biết quan trọng hơn việc tích lũy dữ liệu có sẵn. Dưới đây là quy trình rèn luyện <strong>Nhà Khám Phá Thích Nghi</strong>:
         </p>
 
-        <!-- 4 Bước Phản Ứng Khi Gặp Sự Cố -->
+        <!-- 4 Bước Phản Ứng -->
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:10px; margin-bottom:16px;">
-          <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-terracotta);">
-            <div style="font-weight:700; font-size:13px; color:var(--accent-terracotta);">BƯỚC 1: DỪNG 5 GIÂY</div>
-            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Khi con làm đổ đồ, gãy bút hay trễ hẹn: Cha mẹ tuyệt đối KHÔNG la mắng, KHÔNG làm hộ. Im lặng 5 giây để não trẻ tự đánh giá hiện trường.</p>
+          <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-forest);">
+            <div style="font-weight:700; font-size:13px; color:var(--accent-forest);">BƯỚC 1: DỪNG 5 GIÂY</div>
+            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Khi đổ nước, gãy đồ chơi: Cha mẹ KHÔNG mắng, KHÔNG làm hộ. Im lặng 5 giây cho Vỏ não trước trán của trẻ tự kích hoạt đánh giá hiện trường.</p>
           </div>
           <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-amber);">
-            <div style="font-weight:700; font-size:13px; color:var(--accent-amber);">BƯỚC 2: CÔNG NHẬN SỰ CỐ</div>
-            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Bình thản đón nhận: <em>"Ồ, nước ép cam đã đổ ra thảm rồi"</em> thay vì <em>"Trời ơi sao con hậu đậu thế!"</em>. Biến hoảng loạn thành hiện thực khách quan.</p>
+            <div style="font-weight:700; font-size:13px; color:var(--accent-amber);">BƯỚC 2: CÔNG NHẬN HIỆN THỰC</div>
+            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Bình thản đón nhận: <em>"Ồ, nước ép cam đã tràn ra thảm rồi"</em> thay vì <em>"Trời ơi sao con vụng về thế!"</em>. Giúp trẻ giữ được sự bình tĩnh sinh học.</p>
           </div>
-          <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-forest);">
-            <div style="font-weight:700; font-size:13px; color:var(--accent-forest);">BƯỚC 3: CÂU HỎI SOCRATES</div>
-            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Hỏi kích thích tư duy: <em>"Bây giờ theo con thảm này có tự khô được không? Có đồ vật nào trong nhà hút được nước nhỉ?"</em>.</p>
+          <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-teal);">
+            <div style="font-weight:700; font-size:13px; color:var(--accent-teal);">BƯỚC 3: CÂU HỎI SOCRATES</div>
+            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Hỏi kích thích giải pháp: <em>"Theo con giờ thảm có tự khô được không? Có đồ vật nào trong nhà mình thấm được nước nhỉ?"</em>.</p>
           </div>
           <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-indigo);">
-            <div style="font-weight:700; font-size:13px; color:var(--accent-indigo);">BƯỚC 4: THỬ NGHIỆM MỞ</div>
-            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Ủng hộ mọi giải pháp con đưa ra (dù chưa tối ưu) để con trải nghiệm nguyên nhân - kết quả thực tế.</p>
+            <div style="font-weight:700; font-size:13px; color:var(--accent-indigo);">BƯỚC 4: THỬ NGHIỆM TỰ DO</div>
+            <p style="font-size:12.5px; color:var(--ink-secondary); margin-top:4px;">Ủng hộ mọi giải pháp con đưa ra để con trải nghiệm mối quan hệ Nhân - Quả thực tế ngoài đời.</p>
           </div>
         </div>
 
-        <!-- Các Tình Huống Thực Tế Giả Định -->
+        <!-- Tình huống thực tế -->
         <h4 style="font-family:var(--font-display); font-size:15px; font-weight:700; margin:16px 0 10px;">
-          🛠️ Kịch Bản Xử Lý 3 Tình Huống Ngoài Dự Kiến Phổ Biến:
+          🛠️ 3 Kịch Bản Biến Sự Cố Bất Ngờ Thành Cơ Hội Rèn Bản Lĩnh:
         </h4>
 
         <div class="scenario-item">
           <div class="scenario-header" onclick="toggleScenario(this)">
-            <span>Tình huống 1: Chuẩn bị đi công viên thì trời đổ mưa lớn</span>
+            <span>Kịch bản 1: Trời mưa lớn hủy chuyến đi công viên</span>
             <span class="scenario-icon">▼</span>
           </div>
           <div class="scenario-content">
-            <p><strong>Sai lầm thông thường:</strong> Cha mẹ bật điện thoại dỗ con hoặc bảo: <em>"Thôi mưa rồi ở nhà, đừng khóc nữa!"</em>.</p>
-            <p><strong>Cách biến thành cơ hội thích ứng:</strong></p>
+            <p><strong>Sai lầm:</strong> Bật điện thoại dỗ con hoặc bảo: <em>"Thôi mưa rồi ở nhà, đừng khóc!"</em>.</p>
+            <p><strong>Cách xử lý chuẩn thích ứng:</strong></p>
             <div class="script-dialogue">
-              "Trời mưa rồi, công viên ngoài trời đang ướt sũng. Nhưng chúng mình vẫn có thể mở một 'Công viên thám hiểm' ngay tại phòng khách! Con muốn dùng bàn ghế làm cầu treo hay lấy chăn làm lều cắm trại?"
+              "Trời mưa rồi, công viên ngoài trời đang ướt sũng. Nhưng chúng mình có thể kích hoạt 'Kế hoạch B': Mở một khu rừng thám hiểm ngay tại phòng khách! Con muốn dùng chăn làm hang động hay xếp gối làm cầu treo?"
             </div>
-            <p>$\rightarrow$ Dạy trẻ: Khi kế hoạch A sập, ta hào hứng tạo ra kế hoạch B thú vị hơn gấp bội.</p>
+            <p>$\rightarrow$ Cài đặt tư duy: Biến cố ngoài kế hoạch luôn là khởi đầu cho một cuộc phiêu lưu thú vị mới.</p>
           </div>
         </div>
 
         <div class="scenario-item">
           <div class="scenario-header" onclick="toggleScenario(this)">
-            <span>Tình huống 2: Thiếu dụng cụ hoặc món đồ chơi bị gãy</span>
+            <span>Kịch bản 2: Thiếu dụng cụ hoặc món đồ chơi bị gãy hỏng</span>
             <span class="scenario-icon">▼</span>
           </div>
           <div class="scenario-content">
-            <p>Đang vẽ tranh thì hết màu đỏ; đang xếp xe thì bánh xe gãy rụng.</p>
             <div class="script-dialogue">
-              "Bánh xe rụng rồi, chiếc xe này không chạy được như cũ. Nhưng liệu nó có thể biến thành một chiếc tàu ngầm nằm yên dưới đáy biển không con nhỉ? Chúng mình có thể dùng nắp chai gắn vào thử không?"
+              "Bánh xe ô tô gãy rồi, chiếc xe không lăn được nữa. Nhưng liệu nó có thể biến thành một chiếc tàu ngầm nằm yên dưới đáy đại dương không nhỉ? Hay chúng ta có thể dùng nắp chai gắn vào thử xem sao?"
             </div>
-            <p>$\rightarrow$ Kích hoạt tư duy tái định nghĩa (Heuristic Reframing), rèn sự linh hoạt nhận thức.</p>
+            <p>$\rightarrow$ Rèn luyện tư duy tái định nghĩa (Heuristic Reframing), giúp trẻ không sợ hãi trước sự thiếu thốn hay đổ vỡ.</p>
           </div>
         </div>
 
         <div class="scenario-item">
           <div class="scenario-header" onclick="toggleScenario(this)">
-            <span>Tình huống 3: Trò chơi vật liệu mở (Loose Parts Play)</span>
+            <span>Kịch bản 3: Chơi đồ chơi vật liệu mở (Loose Parts Play)</span>
             <span class="scenario-icon">▼</span>
           </div>
           <div class="scenario-content">
-            <p>Đồ chơi mua sẵn với công tắc bấm nút sẽ triệt tiêu trí tưởng tượng vì chức năng đã bị đóng khung. Hãy đưa cho con một rổ đựng:</p>
-            <ul class="bullet-list">
-              <li>Lõi cuộn giấy vệ sinh, nút bấc chai rượu, vỏ ốc, cành cây khô, hộp các-tông rỗng, kẹp quần áo bằng gỗ.</li>
-              <li>Không đưa ra hướng dẫn nào cả. Hãy quan sát cách con biến chiếc hộp thành tàu vũ trụ, biến lõi giấy thành kính viễn vọng. Đó chính là cội nguồn của tư duy sáng tạo ngoài kinh nghiệm có sẵn!</li>
-            </ul>
+            <p>Đưa cho con một rổ đựng: lõi giấy vệ sinh, nút bấc chai, vỏ ốc, cành cây khô, hộp các tông. Không đưa bất kỳ hướng dẫn nào. Hãy quan sát cách con biến chiếc hộp thành phi thuyền vũ trụ, biến lõi giấy thành ống nhòm thám hiểm. Đó chính là cội nguồn của năng lực sáng tạo vô hạn!</p>
           </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ========================================== -->
-    <!-- TAB 6: OATH & GUARDRAILS -->
-    <!-- ========================================== -->
-    <section id="tab-oath" class="tab-pane">
-      
-      <div class="card" style="background:#FFFBF5; border:1px solid #FED7AA;">
-        <span class="card-eyebrow" style="color:var(--accent-terracotta);">Lời Cảnh Báo Lão Làng</span>
-        <h3 class="card-title">Lời Nhắc Nhở Để Giữ Trọn Cái Tâm Trong Sáng</h3>
-        
-        <div style="margin:16px 0;">
-          <h4 style="color:#B45309; font-size:14px; font-weight:700; margin-bottom:4px;">
-            ⚠️ 1. TUYỆT ĐỐI KHÔNG BIẾN CON THÀNH "DIỄN VIÊN XIẾC"
-          </h4>
-          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.55;">
-            Nếu con nhớ được 200 chữ số của dãy số Pi, hay đọc xong cuốn sách trong 30 giây: <strong>Hãy giữ niềm vui đó trong căn phòng nhỏ ấm cúng giữa hai cha con</strong>. Tuyệt đối không bắt con đứng trước đám đông họ hàng, quay video đăng lên mạng xã hội để nhận những lời khen ngợi phù phiếm. Lời tán dương của người ngoài sẽ đầu độc động lực nội tại, biến sự hào hứng trong sáng thành gánh nặng áp lực danh dự.
-          </p>
-        </div>
-
-        <div style="margin:16px 0;">
-          <h4 style="color:#B45309; font-size:14px; font-weight:700; margin-bottom:4px;">
-            ⚠️ 2. ĐÔI TAY PHẢI LUÔN BẬN RỘN VỚI THỰC TẾ VẬT CHẤT
-          </h4>
-          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.55;">
-            Đừng bao giờ để một bộ não nhớ được hàng ngàn dữ liệu lại cư ngụ trong một cơ thể vụng về không biết tự cài cúc áo, không biết cầm chổi quét nhà hay sợ lấm lem bùn đất. Trí tuệ đích thực không nằm ở việc nạp bao nhiêu dữ liệu, mà là khả năng dùng năng lực của mình để chăm sóc bản thân, sẻ chia với người khác và cải tạo thế giới vật chất quanh mình.
-          </p>
-        </div>
-
-        <div style="margin:16px 0;">
-          <h4 style="color:#B45309; font-size:14px; font-weight:700; margin-bottom:4px;">
-            ⚠️ 3. KHÔNG DÙNG THÀNH TÍCH ĐỂ BAN PHÁT TÌNH YÊU
-          </h4>
-          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.55;">
-            Nếu hôm nay con lười tráo thẻ, không muốn nhìn thẻ Pi, hãy bình thản mỉm cười dẹp sang một bên và cùng con đi bắt sâu, ngắm lá ngoài vườn. Tình yêu của cha mẹ là pháo đài vững chắc vô điều kiện, không bao giờ là phần thưởng đi kèm việc con có "học giỏi" hay không.
-          </p>
-        </div>
-
-        <div style="text-align:center; padding:18px 0 6px; border-top:1px dashed #FDBA74; margin-top:20px;">
-          <em style="font-size:14px; font-weight:600; color:var(--ink-primary);">
-            "Trí nhớ phi thường là phương tiện.<br>Một con người tử tế, biết yêu thương, mạnh mẽ và tự do mới là Đích Đến."
-          </em>
         </div>
 
       </div>
@@ -1356,18 +1378,22 @@
 
   </main>
 
-  <!-- Bottom Navigation Bar (Mobile-first app feel) -->
+  <!-- Bottom Navigation -->
   <nav class="bottom-nav">
-    <button class="bottom-nav-btn active" id="bnav-overview" onclick="switchTab('tab-overview')">
+    <button class="bottom-nav-btn active" id="bnav-science" onclick="switchTab('tab-science')">
+      <span class="icon">🔬</span>
+      <span>Khoa Học</span>
+    </button>
+    <button class="bottom-nav-btn" id="bnav-overview" onclick="switchTab('tab-overview')">
       <span class="icon">🏛️</span>
-      <span>Bản Đồ</span>
+      <span>Toàn Não</span>
     </button>
     <button class="bottom-nav-btn" id="bnav-schedule" onclick="switchTab('tab-schedule')">
       <span class="icon">⏰</span>
       <span>Lịch Trình</span>
     </button>
     <button class="bottom-nav-btn" id="bnav-brain" onclick="switchTab('tab-brain')">
-      <span class="icon">🧠</span>
+      <span class="icon">🧩</span>
       <span>Số Pi / Đọc</span>
     </button>
     <button class="bottom-nav-btn" id="bnav-heart" onclick="switchTab('tab-heart')">
@@ -1375,20 +1401,19 @@
       <span>Tâm Hồn</span>
     </button>
     <button class="bottom-nav-btn" id="bnav-adaptive" onclick="switchTab('tab-adaptive')">
-      <span class="icon">🧩</span>
+      <span class="icon">🛠️</span>
       <span>Thích Ứng</span>
     </button>
   </nav>
 
   <!-- Embedded JavaScript -->
   <script>
-    // Tab Switching System
+    // Tab Switching
     function switchTab(tabId) {
       document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
       const targetPane = document.getElementById(tabId);
       if (targetPane) targetPane.classList.add('active');
 
-      // Top Tab scroller buttons
       const tabButtons = document.querySelectorAll('.nav-tab-btn');
       tabButtons.forEach(btn => {
         if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
@@ -1398,20 +1423,18 @@
         }
       });
 
-      // Bottom Nav buttons
       document.querySelectorAll('.bottom-nav-btn').forEach(btn => btn.classList.remove('active'));
       const activeBNav = document.getElementById('bnav-' + tabId.replace('tab-', ''));
       if (activeBNav) activeBNav.classList.add('active');
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // If switching to brain tab, resize and start canvas animation
       if (tabId === 'tab-brain') {
         setTimeout(initEyeCanvas, 100);
       }
     }
 
-    // Age Milestone Switcher
+    // Age Milestone
     function showAgeMilestone(ageId) {
       document.querySelectorAll('.age-milestone-content').forEach(el => el.style.display = 'none');
       const target = document.getElementById(ageId);
@@ -1426,23 +1449,23 @@
       });
     }
 
-    // Scenario Accordion Toggle
+    // Accordion Toggle
     function toggleScenario(headerEl) {
       const item = headerEl.parentElement;
       item.classList.toggle('open');
     }
 
-    // Checklist LocalStorage Persistence
+    // Checklist LocalStorage
     function saveCheck(id) {
       const chk = document.getElementById('chk-' + id);
       if (chk) {
-        localStorage.setItem('daily_chk_' + id, chk.checked ? '1' : '0');
+        localStorage.setItem('dds_chk_' + id, chk.checked ? '1' : '0');
       }
     }
 
     function loadChecks() {
       for (let i = 1; i <= 7; i++) {
-        const val = localStorage.getItem('daily_chk_' + i);
+        const val = localStorage.getItem('dds_chk_' + i);
         const chk = document.getElementById('chk-' + i);
         if (chk && val === '1') {
           chk.checked = true;
@@ -1452,14 +1475,14 @@
 
     function clearDailyChecks() {
       for (let i = 1; i <= 7; i++) {
-        localStorage.removeItem('daily_chk_' + i);
+        localStorage.removeItem('dds_chk_' + i);
         const chk = document.getElementById('chk-' + i);
         if (chk) chk.checked = false;
       }
     }
 
     // Timer Logic
-    let timerDuration = 15 * 60; // 15 mins default
+    let timerDuration = 20 * 60;
     let timerRemaining = timerDuration;
     let timerInterval = null;
     let isTimerRunning = false;
@@ -1494,7 +1517,7 @@
             clearInterval(timerInterval);
             isTimerRunning = false;
             btn.textContent = 'Hoàn Thành!';
-            alert('🎉 Tuyệt vời! Bạn và con vừa hoàn thành một phiên rèn luyện trọn vẹn!');
+            alert('🎉 Chúc mừng! Bạn và con vừa hoàn thành một phiên chú ý điều hành chủ động trọn vẹn!');
           }
         }, 1000);
       }
@@ -1507,7 +1530,7 @@
       updateTimerUI();
       const btn = document.getElementById('startTimerBtn');
       btn.textContent = 'Bắt Đầu';
-      btn.style.background = 'var(--accent-terracotta)';
+      btn.style.background = 'var(--accent-forest)';
     }
 
     function setTimerDuration(mins) {
@@ -1517,20 +1540,20 @@
       timerRemaining = timerDuration;
       updateTimerUI();
       const label = document.getElementById('timerLabel');
-      if (mins === 15) {
-        label.textContent = 'Phiên Shichida Tia Chớp Não Phải (15m)';
+      if (mins === 20) {
+        label.textContent = 'Phiên Trò Chơi Tương Tác 2 Chiều (20m)';
       } else {
-        label.textContent = 'Phiên Tập Trung Sâu Montessori (45m)';
+        label.textContent = 'Phiên Chú Ý Điều Hành Chủ Động Montessori (45m)';
       }
       const btn = document.getElementById('startTimerBtn');
       btn.textContent = 'Bắt Đầu';
-      btn.style.background = 'var(--accent-terracotta)';
+      btn.style.background = 'var(--accent-forest)';
     }
 
-    // Eye-Tracking Canvas Animation
+    // Eye Tracking Animation
     let canvas, ctx;
     let animationFrameId;
-    let eyePattern = 'infinity'; // 'infinity' or 'zigzag'
+    let eyePattern = 'infinity';
     let eyeSpeed = 1.0;
     let t = 0;
 
@@ -1572,7 +1595,6 @@
 
       ctx.clearRect(0, 0, w, h);
 
-      // Draw faint guide track
       ctx.lineWidth = 2;
       ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
       ctx.beginPath();
@@ -1583,7 +1605,6 @@
       const ry = (h / 2) - 25;
 
       if (eyePattern === 'infinity') {
-        // Lemniscate of Bernoulli
         for (let a = 0; a <= Math.PI * 2; a += 0.03) {
           const denom = 1 + Math.sin(a) * Math.sin(a);
           const px = cx + (rx * Math.cos(a)) / denom;
@@ -1593,17 +1614,14 @@
         }
         ctx.stroke();
 
-        // Calculate moving ball position
-        t += 0.015 * eyeSpeed;
+        t += 0.012 * eyeSpeed;
         const denom = 1 + Math.sin(t) * Math.sin(t);
         const bx = cx + (rx * Math.cos(t)) / denom;
         const by = cy + (ry * Math.sin(t) * Math.cos(t)) / denom;
 
-        // Draw glowing moving ball
         drawBall(bx, by);
 
       } else {
-        // Zigzag mode
         const steps = 6;
         const stepW = (w - 60) / steps;
         ctx.beginPath();
@@ -1615,7 +1633,7 @@
         }
         ctx.stroke();
 
-        t += 0.008 * eyeSpeed;
+        t += 0.007 * eyeSpeed;
         const cycle = t % 1;
         const progress = cycle * steps;
         const currentSeg = Math.floor(progress);
@@ -1636,24 +1654,22 @@
     }
 
     function drawBall(x, y) {
-      // Outer glow
       const grad = ctx.createRadialGradient(x, y, 4, x, y, 22);
-      grad.addColorStop(0, 'rgba(211, 84, 0, 1)');
-      grad.addColorStop(0.5, 'rgba(245, 158, 11, 0.5)');
-      grad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+      grad.addColorStop(0, 'rgba(46, 111, 82, 1)');
+      grad.addColorStop(0.5, 'rgba(13, 148, 136, 0.5)');
+      grad.addColorStop(1, 'rgba(13, 148, 136, 0)');
       ctx.fillStyle = grad;
       ctx.beginPath();
       ctx.arc(x, y, 22, 0, Math.PI * 2);
       ctx.fill();
 
-      // Core bright ball
       ctx.fillStyle = '#FFFFFF';
       ctx.beginPath();
       ctx.arc(x, y, 8, 0, Math.PI * 2);
       ctx.fill();
     }
 
-    // Pi Peg System Dictionary (Sample dataset of visual pegs)
+    // Pi Peg System Dictionary
     const piPegData = {
       0: { name: "Quả Trứng Gà 🥚", hint: "Hình dáng số 0 tròn xoe như quả trứng vừa đẻ." },
       1: { name: "Cây Nến Lung Linh 🕯️", hint: "Thẳng đứng và có ngọn lửa sáng ấm áp." },
@@ -1693,11 +1709,10 @@
           cardName.textContent = piPegData[num].name;
           cardStory.textContent = "Gợi ý liên kết: " + piPegData[num].hint;
         } else {
-          // Dynamic fallback imagery
           const fallbackEmojis = ['🚀', '🌟', '🏰', '🐬', '🌈', '🚲', '🦁', '🍎', '🎁', '🎸'];
           const emoji = fallbackEmojis[num % fallbackEmojis.length];
           cardName.textContent = `Vật Thể Mã Hóa #${num} ${emoji}`;
-          cardStory.textContent = "Gợi ý: Hãy để con tự nghĩ ra hình ảnh gần gũi nhất với con cho con số này!";
+          cardStory.textContent = "Gợi ý: Cùng con sáng tạo ra hình ảnh ngộ nghĩnh gần gũi nhất với con!";
         }
       }
     }
@@ -1709,7 +1724,6 @@
       lookupPiPeg();
     }
 
-    // Initialize on load
     window.addEventListener('DOMContentLoaded', () => {
       loadChecks();
       updateTimerUI();
