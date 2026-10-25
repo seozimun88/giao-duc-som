@@ -32,7 +32,7 @@
       --accent-teal-soft: #CCFBF1;
       
       --border-subtle: #E8E2D8;
-      --border-focus: #D35400;
+      --border-focus: #2E6F52;
       
       --radius-sm: 8px;
       --radius-md: 14px;
@@ -222,7 +222,7 @@
       line-height: 1.55;
     }
 
-    /* Science Alert Box (Neuromyth debunking) */
+    /* Science Banner */
     .science-banner {
       background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
       color: #FFF;
@@ -338,56 +338,7 @@
       line-height: 1.45;
     }
 
-    /* Pillars Grid */
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin: 16px 0;
-    }
-
-    .pillar-box {
-      border-radius: var(--radius-md);
-      padding: 16px;
-      border: 1px solid transparent;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .pillar-box.doman { background: #FFF7ED; border-color: #FED7AA; }
-    .pillar-box.steiner { background: #F0FDF4; border-color: #BBF7D0; }
-    .pillar-box.siegel { background: #EEF2FF; border-color: #C7D2FE; }
-    .pillar-box.montessori { background: #FAF5FF; border-color: #E9D5FF; }
-
-    .pillar-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .pillar-name {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--ink-primary);
-    }
-
-    .pillar-badge {
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: var(--radius-pill);
-      background: rgba(255, 255, 255, 0.85);
-    }
-
-    .pillar-desc {
-      font-size: 12.5px;
-      color: var(--ink-secondary);
-      line-height: 1.45;
-    }
-
-    /* Age Milestones */
+    /* Age Pills Selector */
     .age-pill-group {
       display: flex;
       gap: 8px;
@@ -398,22 +349,32 @@
     }
 
     .age-pill-btn {
-      padding: 7px 14px;
+      padding: 8px 16px;
       border-radius: var(--radius-pill);
       border: 1px solid var(--border-subtle);
       background: var(--bg-surface);
-      font-size: 12.5px;
+      font-size: 13px;
       font-weight: 600;
       color: var(--ink-secondary);
       cursor: pointer;
       white-space: nowrap;
       transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .age-pill-btn:hover {
+      background: var(--bg-surface-subtle);
+      border-color: #DDD4C7;
     }
 
     .age-pill-btn.active {
       background: var(--accent-forest);
       color: #FFF;
       border-color: var(--accent-forest);
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(46, 111, 82, 0.25);
     }
 
     .age-detail-box {
@@ -424,7 +385,66 @@
       margin-top: 10px;
     }
 
-    /* Timeline */
+    /* Biological Wake Window Profile Card */
+    .bio-profile-card {
+      background: linear-gradient(135deg, #F0FDF4 0%, #E8F4EE 100%);
+      border: 1px solid #BBF7D0;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 18px;
+    }
+
+    .bio-profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .bio-title {
+      font-family: var(--font-display);
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #166534;
+    }
+
+    .bio-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      background: #DCFCE7;
+      color: #15803D;
+      border: 1px solid #86EFAC;
+    }
+
+    .bio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      font-size: 12.5px;
+      color: #14532D;
+    }
+
+    .bio-grid-item {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid #D1FAE5;
+    }
+
+    .bio-grid-item strong {
+      display: block;
+      color: #166534;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 2px;
+    }
+
+    /* Timeline Items */
     .timeline-item {
       display: flex;
       gap: 14px;
@@ -482,6 +502,55 @@
       height: 18px;
       accent-color: var(--accent-forest);
       cursor: pointer;
+    }
+
+    /* Pillars Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .pillar-box {
+      border-radius: var(--radius-md);
+      padding: 16px;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pillar-box.doman { background: #FFF7ED; border-color: #FED7AA; }
+    .pillar-box.steiner { background: #F0FDF4; border-color: #BBF7D0; }
+    .pillar-box.siegel { background: #EEF2FF; border-color: #C7D2FE; }
+    .pillar-box.montessori { background: #FAF5FF; border-color: #E9D5FF; }
+
+    .pillar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pillar-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--ink-primary);
+    }
+
+    .pillar-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .pillar-desc {
+      font-size: 12.5px;
+      color: var(--ink-secondary);
+      line-height: 1.45;
     }
 
     /* Eye Tracking Tool */
@@ -697,7 +766,6 @@
     .tag-green { background: #DCFCE7; color: #15803D; }
     .tag-blue { background: #DBEAFE; color: #1D4ED8; }
     .tag-purple { background: #F3E8FF; color: #7E22CE; }
-    .tag-red { background: #FEE2E2; color: #991B1B; }
 
     .bullet-list {
       list-style: none;
@@ -725,6 +793,12 @@
       animation: fadeIn 0.25s ease-in-out;
     }
     .tab-pane.active { display: block; }
+
+    .sched-age-pane {
+      display: none;
+      animation: fadeIn 0.2s ease-in-out;
+    }
+    .sched-age-pane.active { display: block; }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
@@ -805,22 +879,638 @@
     <!-- Top Tab Scroller -->
     <div class="nav-scroller">
       <div class="nav-tabs">
-        <button class="nav-tab-btn active" onclick="switchTab('tab-science')">🔬 Bác Bỏ Ngộ Nhận (OECD & AAP)</button>
+        <button class="nav-tab-btn active" onclick="switchTab('tab-schedule')">⏰ Nhịp Điệu 1 Ngày Theo Tháng Tuổi</button>
+        <button class="nav-tab-btn" onclick="switchTab('tab-science')">🔬 Bác Bỏ Ngộ Nhận (OECD & AAP)</button>
         <button class="nav-tab-btn" onclick="switchTab('tab-overview')">🏛️ Toàn Não Bộ (Whole-Brain)</button>
-        <button class="nav-tab-btn" onclick="switchTab('tab-schedule')">⏰ Nhịp Điệu 1 Ngày</button>
         <button class="nav-tab-btn" onclick="switchTab('tab-brain')">🧩 Mã Hóa Số Pi & Đọc Sâu</button>
         <button class="nav-tab-btn" onclick="switchTab('tab-heart')">❤️ Thấu Cảm & Tích Hợp Cảm Xúc</button>
         <button class="nav-tab-btn" onclick="switchTab('tab-adaptive')">🛠️ Tư Duy Thích Ứng Ngoài Kế Hoạch</button>
       </div>
     </div>
 
+    <!-- ======================================================= -->
+    <!-- TAB: NHỊP ĐIỆU 1 NGÀY CHIA THEO THÁNG TUỔI (YÊU CẦU MỚI) -->
+    <!-- ======================================================= -->
+    <section id="tab-schedule" class="tab-pane active">
+      
+      <!-- Bộ Chọn Tháng Tuổi -->
+      <div class="card" style="padding-bottom: 14px; margin-bottom: 14px;">
+        <span class="card-eyebrow">Bước 1: Chọn Độ Tháng Tuổi Của Con</span>
+        <h3 class="card-title" style="margin-bottom: 8px;">Lộ Trình Sinh Học Đúng Từng Giai Đoạn</h3>
+        <p class="card-subtitle" style="margin-bottom: 14px;">
+          Mỗi mốc tháng tuổi có cửa sổ thức (Wake Window) và nhu cầu sinh học hoàn toàn khác nhau. Chọn đúng tuổi của con để mở thời gian biểu phù hợp:
+        </p>
+
+        <div class="age-pill-group" style="margin-bottom: 0;">
+          <button class="age-pill-btn active" id="btn-sched-0-6" onclick="selectScheduleAge('sched-0-6')">
+            👶 0 – 6 Tháng
+          </button>
+          <button class="age-pill-btn" id="btn-sched-6-12" onclick="selectScheduleAge('sched-6-12')">
+            🚼 6 – 12 Tháng
+          </button>
+          <button class="age-pill-btn" id="btn-sched-1-2y" onclick="selectScheduleAge('sched-1-2y')">
+            🚶 1 – 2 Tuổi
+          </button>
+          <button class="age-pill-btn" id="btn-sched-2-3y" onclick="selectScheduleAge('sched-2-3y')">
+            🎨 2 – 3 Tuổi
+          </button>
+          <button class="age-pill-btn" id="btn-sched-3-6y" onclick="selectScheduleAge('sched-3-6y')">
+            🚀 3 – 6 Tuổi
+          </button>
+        </div>
+      </div>
+
+      <!-- Đồng Hồ Bấm Giờ Tập Trung Nhanh -->
+      <div class="timer-widget">
+        <div>
+          <span style="font-size:11px; font-weight:700; color:var(--accent-forest); text-transform:uppercase;">Đồng Hồ Đồng Hành Cùng Con</span>
+          <div class="timer-display" id="timerDisplay">20:00</div>
+          <span id="timerLabel" style="font-size:12px; color:var(--ink-secondary);">Phiên Trò Chơi Tương Tác 2 Chiều (20m)</span>
+        </div>
+        <div class="timer-actions">
+          <button class="btn-action" id="startTimerBtn" onclick="toggleTimer()">Bắt Đầu</button>
+          <button class="btn-action secondary" onclick="resetTimer()">Đặt Lại</button>
+          <button class="btn-action secondary" onclick="setTimerDuration(15)">15m</button>
+          <button class="btn-action secondary" onclick="setTimerDuration(30)">30m</button>
+          <button class="btn-action secondary" onclick="setTimerDuration(45)">45m</button>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- NHÓM 1: 0 - 6 THÁNG (SƠ SINH & GẮN KẾT AN TOÀN) -->
+      <!-- ============================================== -->
+      <div id="sched-0-6" class="sched-age-pane active">
+        
+        <!-- Thẻ hồ sơ sinh học -->
+        <div class="bio-profile-card">
+          <div class="bio-profile-header">
+            <span class="bio-title">🍼 Hồ Sơ Sinh Học: Giai Đoạn 0 – 6 Tháng</span>
+            <span class="bio-tag">Chu kỳ E.A.S.Y (Ăn - Chơi - Ngủ)</span>
+          </div>
+          <div class="bio-grid">
+            <div class="bio-grid-item">
+              <strong>Cửa sổ thức (Wake window)</strong>
+              60 – 90 phút tối đa (tránh quá tải thần kinh)
+            </div>
+            <div class="bio-grid-item">
+              <strong>Số giấc ngủ ngày (Naps)</strong>
+              3 – 4 giấc (tổng 14 – 17 giờ ngủ/ngày)
+            </div>
+            <div class="bio-grid-item">
+              <strong>Nhiệm vụ cốt lõi</strong>
+              Tummy Time (nằm sấp), gắn kết da kề da, tiếng mẹ đẻ
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 0 – 6 Tháng</h3>
+            <button class="btn-action secondary" style="font-size:11px; padding:4px 10px;" onclick="clearAgeChecks('0_6')">Xóa Tick</button>
+          </div>
+          <p class="card-subtitle">Áp dụng theo chu kỳ thức - ngủ tự nhiên, không ép khuôn cứng nhắc:</p>
+
+          <div class="timeline-list">
+            
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-0_6-1" onchange="saveAgeCheck('0_6', 1)"></div>
+              <div class="timeline-time">07:00 - 08:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">☀️ Thức Giấc, Bú Sáng & Đánh Thức Xúc Giác</div>
+                <span class="timeline-meta">Gắn kết an toàn</span>
+                <p class="timeline-desc">Bú mẹ/sữa ấm. Tắm nắng sớm 15 phút. Da kề da (Kangaroo care), mát-xa nhẹ nhàng bàn chân và lưng giúp giải phóng Oxytocin và hạ Cortisol.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-0_6-2" onchange="saveAgeCheck('0_6', 2)"></div>
+              <div class="timeline-time">08:00 - 08:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🐢 Tummy Time Lần 1 & Ngôn Ngữ Mẹ Đẻ (Motherese)</div>
+                <span class="timeline-meta">Vận động thô & Tiền đình</span>
+                <p class="timeline-desc">Cho bé nằm sấp trên đệm cứng phẳng 5-10 phút để nâng cơ cổ và lưng. Cha mẹ nằm đối diện, nhìn vào mắt con, trò chuyện bằng giọng nói truyền cảm điệu đà.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-0_6-3" onchange="saveAgeCheck('0_6', 3)"></div>
+              <div class="timeline-time">08:30 - 10:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">💤 Giấc Ngủ Ngày 1 (Nap Sáng 1.5h)</div>
+                <span class="timeline-meta">Phục hồi thần kinh</span>
+                <p class="timeline-desc">Ngủ trong phòng thoáng mát, ánh sáng dịu. Mở nhạc êm dịu tiết tấu 60 nhịp/phút để ổn định nhịp tim và sóng não.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-0_6-4" onchange="saveAgeCheck('0_6', 4)"></div>
+              <div class="timeline-time">10:00 - 11:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">👀 Thức Giấc, Bú Cữ 2 & Thị Giác Tương Phản 3D</div>
+                <span class="timeline-meta">Giác quan thực tế</span>
+                <p class="timeline-desc">Cho bé nhìn thẻ hoa văn đen - trắng tương phản cách mắt 25cm. Để bé chạm ngón tay vào lục lạc bằng gỗ mộc, vải lụa mềm (tránh đồ nhựa phát sáng ồn ào).</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-0_6-5" onchange="saveAgeCheck('0_6', 5)"></div>
+              <div class="timeline-time">11:30 - 13:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">💤 Giấc Ngủ Ngày 2 (Nap Trưa Sâu 2h)</div>
+                <span class="timeline-meta">Tái tạo năng lượng</span>
+                <p class="timeline-desc">Giấc ngủ trưa quan trọng giúp não bộ xử lý và sắp xếp các kết nối thần kinh (synapse) mới tạo trong buổi sáng.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-0_6-6" onchange="saveAgeCheck('0_6', 6)"></div>
+              <div class="timeline-time">14:00 - 15:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🌿 Tummy Time Lần 2 & Tập Lẫy Tự Do</div>
+                <span class="timeline-meta">Glenn Doman sơ sinh</span>
+                <p class="timeline-desc">Đặt bé nằm sấp, để đồ chơi gỗ có tiếng chuông nhẹ trước mặt khuyến khích bé ngóc đầu và với tay. Cho chân chạm bề mặt mát/ấm tự nhiên.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-0_6-7" onchange="saveAgeCheck('0_6', 7)"></div>
+              <div class="timeline-time">17:00 - 18:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🛁 Tắm Nước Ấm & Vận Động Bồn Nước</div>
+                <span class="timeline-meta">Thư giãn tiền đình</span>
+                <p class="timeline-desc">Cho bé đạp chân tự do trong nước ấm. Mát-xa toàn thân bằng dầu dừa/dầu hạnh nhân hữu cơ.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-0_6-8" onchange="saveAgeCheck('0_6', 8)"></div>
+              <div class="timeline-time">19:30 - 20:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">❤️ Bú Cữ Đêm & 5 Phút Thì Thầm Tiềm Thức</div>
+                <span class="timeline-meta">Soul Communication</span>
+                <p class="timeline-desc">Ôm ấp 8 giây. Khi bé bắt đầu thiu thiu ngủ, thì thầm nhẹ nhàng: "Bố mẹ yêu con vô điều kiện. Con luôn bình an và được bảo bọc".</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- NHÓM 2: 6 - 12 THÁNG (BÒ BÙNG NỔ & ĂN DẶM BLW) -->
+      <!-- ============================================== -->
+      <div id="sched-6-12" class="sched-age-pane">
+        
+        <div class="bio-profile-card">
+          <div class="bio-profile-header">
+            <span class="bio-title">🚼 Hồ Sơ Sinh Học: Giai Đoạn 6 – 12 Tháng</span>
+            <span class="bio-tag">Vận Động Chéo & Ăn Dặm 3D</span>
+          </div>
+          <div class="bio-grid">
+            <div class="bio-grid-item">
+              <strong>Cửa sổ thức (Wake window)</strong>
+              2.5 – 3.5 giờ (bền bỉ hơn rõ rệt)
+            </div>
+            <div class="bio-grid-item">
+              <strong>Số giấc ngủ ngày (Naps)</strong>
+              2 giấc (sáng 9:30 & chiều 14:00, tổng 13-14h/ngày)
+            </div>
+            <div class="bio-grid-item">
+              <strong>Nhiệm vụ tối thượng</strong>
+              Bò chéo tay chân 500m/ngày làm dày Thể Chai
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 6 – 12 Tháng</h3>
+            <button class="btn-action secondary" style="font-size:11px; padding:4px 10px;" onclick="clearAgeChecks('6_12')">Xóa Tick</button>
+          </div>
+          <p class="card-subtitle">Ưu tiên tối thượng cho sàn nhà rộng rãi để bé bò tự do không giới hạn:</p>
+
+          <div class="timeline-list">
+            
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-6_12-1" onchange="saveAgeCheck('6_12', 1)"></div>
+              <div class="timeline-time">06:30 - 07:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">☀️ Thức Giấc, Bú Sáng & Vận Động Bò Chéo</div>
+                <span class="timeline-meta">Glenn Doman Motor</span>
+                <p class="timeline-desc">Bú mẹ/sữa. Thả bé xuống sàn nhà trơn không chướng ngại vật để bé bò tự do 15-20 phút đầu ngày.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-6_12-2" onchange="saveAgeCheck('6_12', 2)"></div>
+              <div class="timeline-time">08:00 - 09:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🥦 Ăn Dặm Hiện Thân (BLW - Bốc Nhặt Tự Chủ)</div>
+                <span class="timeline-meta">Embodied Cognition</span>
+                <p class="timeline-desc">Cho bé tự dùng ngón tay bốc cà rốt hấp, chuối, bông cải. Cảm nhận độ mềm, trơn, mùi vị tự nhiên thay vì chỉ đút bột xay nhuyễn.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-6_12-3" onchange="saveAgeCheck('6_12', 3)"></div>
+              <div class="timeline-time">09:30 - 11:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">💤 Giấc Ngủ Ngày 1 (Nap Sáng 1.5h)</div>
+                <span class="timeline-meta">Hồi phục năng lượng</span>
+                <p class="timeline-desc">Không gian yên tĩnh, tối nhẹ để giấc ngủ sâu hỗ trợ hormone tăng trưởng tiết ra.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-6_12-4" onchange="saveAgeCheck('6_12', 4)"></div>
+              <div class="timeline-time">11:30 - 12:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🧩 Khám Phá Kho Báu Thực Tế & Chơi Ú Òa</div>
+                <span class="timeline-meta">Montessori Sensory</span>
+                <p class="timeline-desc">Cho bé rổ đựng đồ dùng nhà bếp: thìa gỗ, bát inox, nắp hộp. Chơi giấu đồ dưới khăn (Ú òa) để bé hiểu quy luật vật thể vẫn tồn tại dù bị che khuất.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-6_12-5" onchange="saveAgeCheck('6_12', 5)"></div>
+              <div class="timeline-time">14:00 - 15:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">💤 Giấc Ngủ Ngày 2 (Nap Chiều 1.5h)</div>
+                <span class="timeline-meta">Ổn định nhịp sinh học</span>
+                <p class="timeline-desc">Cữ ngủ chiều giúp bé không bị quá mệt (overtired) vào buổi tối.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-6_12-6" onchange="saveAgeCheck('6_12', 6)"></div>
+              <div class="timeline-time">15:30 - 17:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🌳 Khám Phá Ngoài Trời & Bò Vượt Chướng Ngại Vật</div>
+                <span class="timeline-meta">Tiền đình & Thiên nhiên</span>
+                <p class="timeline-desc">Đi dạo công viên, cho chân chạm cỏ, tay sờ vỏ cây. Trong nhà: xếp gối đệm thành bậc nhỏ để bé bò trèo qua, rèn lực nắm ngón tay vào thanh xà mini.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-6_12-7" onchange="saveAgeCheck('6_12', 7)"></div>
+              <div class="timeline-time">19:00 - 20:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">📚 Đọc Sách Bìa Cứng Đối Thoại (Serve & Return) & Ngủ Đêm</div>
+                <span class="timeline-meta">Ngôn ngữ tương tác</span>
+                <p class="timeline-desc">Đọc sách bìa cứng, cùng chỉ con chó, bắt chước tiếng sủa "gâu gâu", chờ bé ê a đáp lại. Tắm nước ấm, ôm 8 giây và thì thầm trước giờ ngủ.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- NHÓM 3: 1 – 2 TUỔI (TẬP ĐI, NGÔN NGỮ & TỰ LẬP) -->
+      <!-- ============================================== -->
+      <div id="sched-1-2y" class="sched-age-pane">
+        
+        <div class="bio-profile-card">
+          <div class="bio-profile-header">
+            <span class="bio-title">🚶 Hồ Sơ Sinh Học: Giai Đoạn 1 – 2 Tuổi</span>
+            <span class="bio-tag">Chuyển Sang 1 Giấc Nap Trưa</span>
+          </div>
+          <div class="bio-grid">
+            <div class="bio-grid-item">
+              <strong>Cửa sổ thức (Wake window)</strong>
+              4.5 – 5.5 giờ giữa các giấc
+            </div>
+            <div class="bio-grid-item">
+              <strong>Số giấc ngủ ngày (Naps)</strong>
+              1 giấc duy nhất buổi trưa (12:00 – 14:00, 2h)
+            </div>
+            <div class="bio-grid-item">
+              <strong>Nhiệm vụ cốt lõi</strong>
+              Tự lập thực hành cuộc sống (Montessori) & Ngôn ngữ sâu
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 1 – 2 Tuổi</h3>
+            <button class="btn-action secondary" style="font-size:11px; padding:4px 10px;" onclick="clearAgeChecks('1_2y')">Xóa Tick</button>
+          </div>
+          <p class="card-subtitle">Khuyến khích bé tự làm mọi việc trong khả năng của đôi tay:</p>
+
+          <div class="timeline-list">
+            
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-1_2y-1" onchange="saveAgeCheck('1_2y', 1)"></div>
+              <div class="timeline-time">06:30 - 07:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🏃 Đi Bộ Chân Trần & Leo Bậc Thang Ngoài Trời</div>
+                <span class="timeline-meta">Doman + Tiền đình</span>
+                <p class="timeline-desc">Đi dạo ngoài trời, cho bé đi chân trần trên cỏ, leo cầu thang dốc thoai thoải có người đỡ. Tập đu xà đơn tự thụ động 10 - 20 giây.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-1_2y-2" onchange="saveAgeCheck('1_2y', 2)"></div>
+              <div class="timeline-time">07:30 - 08:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🥣 Bữa Sáng Tự Chủ & Tự Cất Bát Đĩa</div>
+                <span class="timeline-meta">Montessori Practical Life</span>
+                <p class="timeline-desc">Bé tự dùng thìa xúc ăn, tự cầm cốc nước hai quai uống. Ăn xong, hướng dẫn bé bê đĩa đặt vào bồn rửa chén nhỏ vừa tầm.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-1_2y-3" onchange="saveAgeCheck('1_2y', 3)"></div>
+              <div class="timeline-time">08:30 - 10:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🎯 Chu Kỳ Tập Trung Độc Lập 45 – 60 Phút</div>
+                <span class="timeline-meta">Chú ý điều hành chủ động</span>
+                <p class="timeline-desc">Bé tự chọn giáo cụ trên kệ thấp: thả cọc gỗ, phân loại khối tròn/vuông, xâu vòng hạt lớn. Cha mẹ chỉ quan sát, tuyệt đối không ngắt quãng dòng suy nghĩ của con.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-1_2y-4" onchange="saveAgeCheck('1_2y', 4)"></div>
+              <div class="timeline-time">10:30 - 11:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🌱 Lao Động Thực Tế: Tưới Cây & Lau Bàn</div>
+                <span class="timeline-meta">Lao động đời sống</span>
+                <p class="timeline-desc">Đưa cho bé chiếc bình tưới nước mini để tưới chậu hoa, chiếc khăn lau nhỏ để lau bàn ăn. Bé học được cảm giác tự hào vì "mình là người có ích".</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-1_2y-5" onchange="saveAgeCheck('1_2y', 5)"></div>
+              <div class="timeline-time">12:00 - 14:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">💤 Giấc Ngủ Trưa Sâu Duy Nhất (2 Giờ)</div>
+                <span class="timeline-meta">Tái tạo thần kinh</span>
+                <p class="timeline-desc">Ngủ trưa trọn vẹn giúp não bộ củng cố trí nhớ dài hạn và phục hồi thể lực sau một buổi sáng vận động tích cực.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-1_2y-6" onchange="saveAgeCheck('1_2y', 6)"></div>
+              <div class="timeline-time">14:30 - 15:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🧩 Trò Chơi Liên Tưởng Hình Ảnh & Nhận Diện 3D</div>
+                <span class="timeline-meta">Tiền đề Peg System</span>
+                <p class="timeline-desc">Chơi đố vui liên tưởng: Cầm ngọn nến thật rồi chỉ số 1; cầm quả trứng gà rồi chỉ số 0. Dạy bé cách mã hóa thế giới qua hình tượng quen thuộc một cách vui vẻ.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-1_2y-7" onchange="saveAgeCheck('1_2y', 7)"></div>
+              <div class="timeline-time">16:00 - 17:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🪵 Khám Phá Thiên Nhiên & Vận Động Tự Do</div>
+                <span class="timeline-meta">Cảm quan Steiner</span>
+                <p class="timeline-desc">Chơi với cát sạch, bê sỏi cuội, nhặt lá rụng xếp thành hình. Để bàn tay bận rộn với chất liệu mộc nguyên bản của tự nhiên.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-1_2y-8" onchange="saveAgeCheck('1_2y', 8)"></div>
+              <div class="timeline-time">19:30 - 20:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">❤️ Đọc Sách Đối Thoại (Dialogic Reading) & Ngủ Đêm</div>
+                <span class="timeline-meta">Gắn kết yêu thương</span>
+                <p class="timeline-desc">Hỏi con về cảm xúc của bạn gấu trong truyện. Ôm chặt 8 giây và thì thầm 5 lời khẳng định tiềm thức trước khi chìm vào giấc ngủ.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- NHÓM 4: 2 – 3 TUỔI (CẢM XÚC, BẢN LĨNH & SỐ PI) -->
+      <!-- ============================================== -->
+      <div id="sched-2-3y" class="sched-age-pane">
+        
+        <div class="bio-profile-card">
+          <div class="bio-profile-header">
+            <span class="bio-title">🎨 Hồ Sơ Sinh Học: Giai Đoạn 2 – 3 Tuổi</span>
+            <span class="bio-tag">Khủng Hoảng Tuổi Lên 2 & Trí Nhớ Chuỗi</span>
+          </div>
+          <div class="bio-grid">
+            <div class="bio-grid-item">
+              <strong>Cửa sổ thức (Wake window)</strong>
+              5.5 – 6 giờ giữa các giấc
+            </div>
+            <div class="bio-grid-item">
+              <strong>Số giấc ngủ ngày (Naps)</strong>
+              1 giấc trưa đều đặn (12:30 – 14:00, 1.5h)
+            </div>
+            <div class="bio-grid-item">
+              <strong>Nhiệm vụ cốt lõi</strong>
+              Connect & Redirect cảm xúc, rèn Peg System nhớ số Pi
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 2 – 3 Tuổi</h3>
+            <button class="btn-action secondary" style="font-size:11px; padding:4px 10px;" onclick="clearAgeChecks('2_3y')">Xóa Tick</button>
+          </div>
+          <p class="card-subtitle">Kết hợp rèn luyện thể lực cơ bắp với năng lực quản trị cảm xúc bản năng:</p>
+
+          <div class="timeline-list">
+            
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-2_3y-1" onchange="saveAgeCheck('2_3y', 1)"></div>
+              <div class="timeline-time">06:30 - 07:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🏃 Vận Động Bùng Nổ & Đu Xà Mở Rộng Phổi</div>
+                <span class="timeline-meta">Glenn Doman Khỏe Khoắn</span>
+                <p class="timeline-desc">Chạy thi cùng cha mẹ 300 - 500m. Đu xà đơn 20 - 30 giây giúp kéo giãn cột sống và tăng lượng oxy bơm lên vỏ não trước trán.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-2_3y-2" onchange="saveAgeCheck('2_3y', 2)"></div>
+              <div class="timeline-time">08:30 - 10:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🎯 Chu Kỳ Montessori Sâu 60 – 90 Phút</div>
+                <span class="timeline-meta">Executive Function</span>
+                <p class="timeline-desc">Tự chuẩn bị bàn làm việc: cắt chuối bằng dao gỗ cùn, rót nước từ bình nhỏ không làm rớt, ghép mô hình động vật 3D. Rèn tính kiên nhẫn sâu.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-2_3y-3" onchange="saveAgeCheck('2_3y', 3)"></div>
+              <div class="timeline-time">10:30 - 11:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🌱 Nghi Thức Bàn Ăn & Biết Ơn Bữa Cơm</div>
+                <span class="timeline-meta">Lòng biết ơn Steiner</span>
+                <p class="timeline-desc">Cùng mẹ nhặt rau ngót, bóc vỏ trứng luộc. Nắm tay nhau 10 giây trước khi ăn cảm ơn đất mẹ và người nấu nướng.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-2_3y-4" onchange="saveAgeCheck('2_3y', 4)"></div>
+              <div class="timeline-time">12:30 - 14:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">💤 Giấc Ngủ Trưa Tĩnh Lặng (1.5 Giờ)</div>
+                <span class="timeline-meta">Phục hồi tế bào não</span>
+                <p class="timeline-desc">Phòng ngủ mát mẻ, yên tĩnh để não bộ hoàn thiện quá trình phân nhánh tế bào thần kinh.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-2_3y-5" onchange="saveAgeCheck('2_3y', 5)"></div>
+              <div class="timeline-time">14:30 - 15:15</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🎬 Kể Chuyện Hoạt Hình Nhớ Dãy Số Pi (Peg System)</div>
+                <span class="timeline-meta">Mã hóa liên tưởng sâu</span>
+                <p class="timeline-desc">Cùng sáng tạo chuỗi phim kỳ thú cho 10-20 số Pi tiếp theo: "Thuyền buồm chở dưa hấu bay lên trời...". Trẻ cười vui vẻ và tự chiếu lại bộ phim trong đầu.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-2_3y-6" onchange="saveAgeCheck('2_3y', 6)"></div>
+              <div class="timeline-time">15:30 - 17:00</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🪵 Trò Chơi Vật Liệu Mở (Loose Parts Play)</div>
+                <span class="timeline-meta">Tư duy thích ứng</span>
+                <p class="timeline-desc">Cho bé rổ đựng bìa các-tông, lõi giấy, vỏ ốc, cành cây khô. Quan sát bé tự nghĩ ra cách biến tấu. Rèn bản lĩnh khi tháp gãy đổ (áp dụng dừng 5 giây).</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-2_3y-7" onchange="saveAgeCheck('2_3y', 7)"></div>
+              <div class="timeline-time">19:30 - 20:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">❤️ Thấu Cảm Cảm Xúc (Name It to Tame It) & Ngủ Đêm</div>
+                <span class="timeline-meta">Daniel Siegel EQ</span>
+                <p class="timeline-desc">Đọc truyện trước khi ngủ, giải thích các cảm xúc giận dữ/lo lắng trong ngày của con. Ôm 8 giây và thì thầm 5 lời khẳng định tiềm thức.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- NHÓM 5: 3 – 6 TUỔI (TOÀN DIỆN, THÍCH ỨNG & ĐỌC SÂU) -->
+      <!-- ============================================== -->
+      <div id="sched-3-6y" class="sched-age-pane">
+        
+        <div class="bio-profile-card">
+          <div class="bio-profile-header">
+            <span class="bio-title">🚀 Hồ Sơ Sinh Học: Giai Đoạn 3 – 6 Tuổi</span>
+            <span class="bio-tag">Vỏ Não Trước Trán Trưởng Thành & Đọc Hiểu Sâu</span>
+          </div>
+          <div class="bio-grid">
+            <div class="bio-grid-item">
+              <strong>Khả năng tập trung sâu</strong>
+              Chu kỳ làm việc độc lập 90 – 120 phút liên tục
+            </div>
+            <div class="bio-grid-item">
+              <strong>Số giấc ngủ ngày (Naps)</strong>
+              1 giấc trưa ngắn (12:30 – 13:45, ~1h15p)
+            </div>
+            <div class="bio-grid-item">
+              <strong>Nhiệm vụ tối thượng</strong>
+              Tư duy thích ứng, đạo đức thấu cảm & Kỹ thuật ghi nhớ sâu
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 3 – 6 Tuổi</h3>
+            <button class="btn-action secondary" style="font-size:11px; padding:4px 10px;" onclick="clearAgeChecks('3_6y')">Xóa Tick</button>
+          </div>
+          <p class="card-subtitle">Hoàn thiện cả 3 mục tiêu: Thể chất dẻo dai, Trái tim thấu cảm và Trí tuệ phi thường:</p>
+
+          <div class="timeline-list">
+            
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-3_6y-1" onchange="saveAgeCheck('3_6y', 1)"></div>
+              <div class="timeline-time">06:30 - 07:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🏃 Thể Thao Kỷ Luật: Chạy Bộ, Bơi Lội & Đu Xà 1 Phút</div>
+                <span class="timeline-meta">Doman Nâng Cao</span>
+                <p class="timeline-desc">Chạy cự ly 1 – 2km, tập bơi lội hoặc thể dục dụng cụ. Đu xà 30 giây đến 1 phút giúp lồng ngực nở rộng, lượng oxy lên não đạt mức tối ưu.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-3_6y-2" onchange="saveAgeCheck('3_6y', 2)"></div>
+              <div class="timeline-time">08:30 - 10:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🎯 Chu Kỳ Tập Trung Sâu Montessori 2 Tiếng (Deep Focus)</div>
+                <span class="timeline-meta">Vỏ não trước trán đỉnh cao</span>
+                <p class="timeline-desc">Trẻ tự lập dự án: làm toán học cụ 3D (bê khối 1000 hạt cườm), xếp bản đồ thế giới, ghép mạch điện mini, làm mộc với dụng cụ thật. Không ai được phép ngắt quãng.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-3_6y-3" onchange="saveAgeCheck('3_6y', 3)"></div>
+              <div class="timeline-time">10:30 - 11:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🌱 Dự Án Cộng Đồng Gia Đình & Lễ Nghi Nhã Nhặn</div>
+                <span class="timeline-meta">Montessori Grace & Courtesy</span>
+                <p class="timeline-desc">Cùng nấu ăn, dọn vườn, chăm sóc chậu cây nhỏ. Thực hành tôn trọng không gian riêng của người khác và nói lời cảm ơn chân thành.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-3_6y-4" onchange="saveAgeCheck('3_6y', 4)"></div>
+              <div class="timeline-time">12:30 - 13:45</div>
+              <div class="timeline-body">
+                <div class="timeline-title">💤 Giấc Ngủ Trưa Tái Tạo Thần Kinh (~1h15p)</div>
+                <span class="timeline-meta">Hồi phục nhận thức</span>
+                <p class="timeline-desc">Giúp duy trì sự tỉnh táo và khả năng tập trung sắc bén cho các hoạt động sáng tạo buổi chiều.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-3_6y-5" onchange="saveAgeCheck('3_6y', 5)"></div>
+              <div class="timeline-time">14:30 - 15:15</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🧩 Mã Hóa Dãy Số Pi Dài (Peg System 100+ Số) & Luyện Mắt</div>
+                <span class="timeline-meta">Toàn não bộ hòa nhịp</span>
+                <p class="timeline-desc">Tăng độ dài chuỗi liên tưởng lên 50 - 100+ số Pi. Bài tập điều hòa cơ mắt theo hình số 8 vô cực thư thái, mở rộng góc nhìn toàn phần.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-3_6y-6" onchange="saveAgeCheck('3_6y', 6)"></div>
+              <div class="timeline-time">15:30 - 17:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">🪵 Thám Hiểm Mạo Hiểm Có Kiểm Soát & Tư Duy Thích Ứng</div>
+                <span class="timeline-meta">Loose parts & Heuristics</span>
+                <p class="timeline-desc">Trèo cây thấp, leo vách đá nhân tạo, thử nghiệm vật liệu mở. Áp dụng quy trình 4 bước khi gặp sự cố ngoài kế hoạch (kế hoạch B vui nhộn).</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-check"><input type="checkbox" id="chk-3_6y-7" onchange="saveAgeCheck('3_6y', 7)"></div>
+              <div class="timeline-time">19:30 - 20:30</div>
+              <div class="timeline-body">
+                <div class="timeline-title">📚 Đọc Sách Đối Thoại (Dialogic Reading PEER) & Chia Sẻ Biết Ơn</div>
+                <span class="timeline-meta">Phản biện & Thấu cảm</span>
+                <p class="timeline-desc">Đọc truyện tranh sâu sắc, đặt câu hỏi phản biện mở. Cả nhà cùng chia sẻ 1 điều biết ơn trong ngày. Ôm 8 giây và thì thầm trước khi ngủ.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
     <!-- ========================================== -->
     <!-- TAB 1: BÁC BỎ NGỘ NHẬN THẦN KINH HỌC -->
     <!-- ========================================== -->
-    <section id="tab-science" class="tab-pane active">
+    <section id="tab-science" class="tab-pane">
       
       <div class="science-banner">
-        <span class="science-tag">Cập Nhật Khoa Học Thần Kinh 2026</span>
+        <span class="science-tag">Cập Nhật Khoa Học Thần Kinh Thực Chứng</span>
         <h2 style="font-family: var(--font-display); font-size: 19px; font-weight: 800; line-height: 1.35; margin-bottom: 8px;">
           Bác Bỏ 2 Huyền Thoại Thần Kinh (Neuromyths) Phổ Biến Nhất
         </h2>
@@ -841,12 +1531,11 @@
         </div>
       </div>
 
-      <!-- Giải pháp đúng chuẩn khoa học -->
       <div class="card">
         <span class="card-eyebrow">Định Hướng Thực Chứng</span>
         <h3 class="card-title">Thay Thế Ảo Tưởng Bằng Nền Tảng Sinh Học Bền Vững</h3>
         <p class="card-subtitle">
-          Chúng ta không huấn luyện trẻ như một chiếc máy tính sao chép dữ liệu, mà nuôi dưỡng một thực thể sống hài hòa theo 3 nguyên lý thực chứng:
+          Chúng ta không huấn luyện trẻ như một chiếc máy tính sao chép dữ liệu, mà nuôi dưỡng một thực thể sống hài hòa theo 4 nguyên lý thực chứng:
         </p>
 
         <div class="pillars-grid">
@@ -887,11 +1576,10 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 2: TOÀN NÃO BỘ (WHOLE-BRAIN ARCHITECTURE) -->
+    <!-- TAB 2: TOÀN NÃO BỘ (WHOLE-BRAIN) -->
     <!-- ========================================== -->
     <section id="tab-overview" class="tab-pane">
       
-      <!-- Cấu trúc Whole-Brain -->
       <div class="wholebrain-card">
         <span class="card-eyebrow" style="color: #99F6E4;">Mô Hình Thần Kinh Học Hiện Đại</span>
         <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 14px;">
@@ -923,199 +1611,18 @@
         </div>
       </div>
 
-      <!-- Lộ trình độ tuổi khoa học -->
       <div class="card">
-        <span class="card-eyebrow">Phân Bổ Độ Tuổi Khoa Học</span>
-        <h3 class="card-title">Lộ Trình Từng Giai Đoạn Vàng (Dựa Trên Synapse Mật Độ)</h3>
-        <p class="card-subtitle">Không kích thích cơ học, phát triển nhịp nhàng theo quy luật sinh học tự nhiên:</p>
+        <span class="card-eyebrow">Tổng Quan Phương Pháp Thực Chứng</span>
+        <h3 class="card-title">Mỗi Phương Pháp Đảm Nhiệm 1 Mắt Xích Sinh Học</h3>
+        <p class="card-subtitle">Không đối đầu, không nhồi nhét. Tất cả hội tụ vào một đứa trẻ khỏe khoắn và nhân hậu:</p>
 
-        <div class="age-pill-group">
-          <button class="age-pill-btn active" onclick="showAgeMilestone('age-0-6')">0 - 6 Tháng</button>
-          <button class="age-pill-btn" onclick="showAgeMilestone('age-6-18')">6 - 18 Tháng</button>
-          <button class="age-pill-btn" onclick="showAgeMilestone('age-18-36')">18 - 36 Tháng</button>
-          <button class="age-pill-btn" onclick="showAgeMilestone('age-3-6y')">3 - 6 Tuổi</button>
-        </div>
-
-        <div id="age-0-6" class="age-milestone-content">
-          <div class="age-detail-box">
-            <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
-              <strong>🎯 Trọng Tâm: Gắn kết an toàn & Đánh thức giác quan tự nhiên</strong>
-              <span class="tag tag-green">60% Gắn kết • 40% Vận động thô & Giác quan</span>
-            </div>
-            <ul class="bullet-list">
-              <li><strong>Tummy Time trên đệm phẳng:</strong> Nằm sấp kích hoạt cơ cổ, cơ lưng và hệ thống tiền đình nguyên thủy.</li>
-              <li><strong>Trò chuyện bằng mắt & Ngữ âm mẹ đẻ:</strong> Vỏ não thái dương trái của trẻ phản ứng mạnh với giọng nói yêu thương của cha mẹ (Motherese).</li>
-              <li><strong>Mát-xa đa xúc giác:</strong> Tiếp xúc da kề da nuôi dưỡng hệ thần kinh phó giao cảm (giảm cortisol gây căng thẳng).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="age-6-18" class="age-milestone-content" style="display:none;">
-          <div class="age-detail-box">
-            <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
-              <strong>🎯 Trọng Tâm: Bò chéo làm dày Thể Chai & Khám phá 3D</strong>
-              <span class="tag tag-orange">45% Vận động • 30% Nhận thức hiện thân • 25% Cảm xúc</span>
-            </div>
-            <ul class="bullet-list">
-              <li><strong>Bò chéo tay chân 500m/ngày:</strong> Sự phối hợp tay nọ chân kia ép hai bán cầu não trao đổi thông tin liên tục qua Thể chai.</li>
-              <li><strong>Khám phá vật thể thực tế:</strong> Cho trẻ cầm sờ thìa gỗ, rổ mây, vỏ ốc, lá cây thay vì đưa thẻ ảnh tĩnh.</li>
-              <li><strong>Đọc sách đối thoại 2 chiều:</strong> Cùng chỉ vào hình trong sách, cùng làm âm thanh con vật, chờ đợi phản xạ của con (tương tác qua lại Serve & Return).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="age-18-36" class="age-milestone-content" style="display:none;">
-          <div class="age-detail-box">
-            <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
-              <strong>🎯 Trọng Tâm: Chú ý điều hành (Executive Attention) & Ngôn ngữ sâu</strong>
-              <span class="tag tag-blue">35% Montessori tự lập • 35% Vận động tự nhiên • 30% EQ & Trí nhớ chuỗi</span>
-            </div>
-            <ul class="bullet-list">
-              <li><strong>Chu kỳ làm việc độc lập Montessori:</strong> Để trẻ tự rót nước, tự gài cúc, tự lau bàn – rèn luyện Vỏ não trước trán tập trung sâu.</li>
-              <li><strong>Trò chơi mã hóa chuỗi câu chuyện:</strong> Bắt đầu chơi các trò chơi liên tưởng hình ảnh vui vẻ để rèn trí nhớ chuỗi (Peg System).</li>
-              <li><strong>Quản trị cảm xúc Whole-Brain:</strong> Áp dụng kỹ thuật <em>"Gọi tên để thuần hóa" (Name it to tame it)</em> khi con có cơn khủng hoảng tuổi lên 2.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="age-3-6y" class="age-milestone-content" style="display:none;">
-          <div class="age-detail-box">
-            <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
-              <strong>🎯 Trọng Tâm: Tư duy thích ứng, Lập luận logic & Thấu cảm xã hội</strong>
-              <span class="tag tag-purple">35% Tư duy phản biện & Thích ứng • 35% Thể thao kỷ luật • 30% Đạo đức & Thấu cảm</span>
-            </div>
-            <ul class="bullet-list">
-              <li><strong>Trò chơi vật liệu mở (Loose parts):</strong> Sáng tạo không giới hạn từ cành cây, bìa các tông; giải quyết các sự cố ngoài kế hoạch.</li>
-              <li><strong>Mã hóa chuỗi số Pi dài:</strong> Dùng hệ thống Móc treo (Peg System) – kết hợp mã hóa số (não trái) với cuộn phim hoạt hình giàu cảm xúc (não phải).</li>
-              <li><strong>Lễ nghi & Tôn trọng không gian:</strong> Thực hành văn hóa nhã nhặn, tôn trọng ranh giới người khác và biết ơn cuộc sống.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ========================================== -->
-    <!-- TAB 3: SCHEDULE / NHỊP ĐIỆU 1 NGÀY -->
-    <!-- ========================================== -->
-    <section id="tab-schedule" class="tab-pane">
-      
-      <!-- Timer Widget -->
-      <div class="timer-widget">
-        <div>
-          <span style="font-size:11px; font-weight:700; color:var(--accent-forest); text-transform:uppercase;">Đồng Hồ Tập Trung Sâu</span>
-          <div class="timer-display" id="timerDisplay">20:00</div>
-          <span id="timerLabel" style="font-size:12px; color:var(--ink-secondary);">Phiên Trò Chơi Tương Tác 2 Chiều</span>
-        </div>
-        <div class="timer-actions">
-          <button class="btn-action" id="startTimerBtn" onclick="toggleTimer()">Bắt Đầu</button>
-          <button class="btn-action secondary" onclick="resetTimer()">Đặt Lại</button>
-          <button class="btn-action secondary" onclick="setTimerDuration(20)">20m</button>
-          <button class="btn-action secondary" onclick="setTimerDuration(45)">45m</button>
-        </div>
-      </div>
-
-      <!-- Thời gian biểu 1 ngày -->
-      <div class="card">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-          <div>
-            <span class="card-eyebrow">Thời Gian Biểu 1 Ngày Thực Chứng</span>
-            <h3 class="card-title" style="margin-bottom:0;">Bảo Vệ Ngưỡng Nhạy Cảm Thần Kinh</h3>
-          </div>
-          <button class="btn-action secondary" style="font-size:11px; padding:4px 10px;" onclick="clearDailyChecks()">Xóa Tick</button>
-        </div>
-        <p class="card-subtitle">
-          Nhịp điệu sinh hoạt chậm rãi, hòa nhịp cùng tự nhiên, tránh bơm Dopamine nhân tạo để trẻ hình thành khả năng kiên nhẫn sâu:
-        </p>
-
-        <div class="timeline-list">
-          
-          <div class="timeline-item">
-            <div class="timeline-check">
-              <input type="checkbox" id="chk-1" onchange="saveCheck(1)">
-            </div>
-            <div class="timeline-time">06:30 - 07:30</div>
-            <div class="timeline-body">
-              <div class="timeline-title">🏃 Thể Lực & Kích Hoạt Thể Chai (Corpus Callosum)</div>
-              <span class="timeline-meta">Glenn Doman + Steiner</span>
-              <p class="timeline-desc">Chạy bộ, đu xà đơn mở rộng lồng ngực nạp oxy cho vỏ não. Đi chân trần trên cỏ ướt sương để hàng vạn thụ thể thần kinh xúc giác kết nối với não bộ.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-check">
-              <input type="checkbox" id="chk-2" onchange="saveCheck(2)">
-            </div>
-            <div class="timeline-time">08:30 - 10:30</div>
-            <div class="timeline-body">
-              <div class="timeline-title">🎯 Chu Kỳ Chú Ý Điều Hành Chủ Động (Executive Focus)</div>
-              <span class="timeline-meta">Montessori Deep Work</span>
-              <p class="timeline-desc">Trẻ tự chọn khay giáo cụ độc lập 2 tiếng: tự thắt dây, phân loại hạt, đồ mộc. Không bị ngắt quãng để rèn luyện Vỏ não trước trán (Prefrontal Cortex) lọc xao nhãng.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-check">
-              <input type="checkbox" id="chk-3" onchange="saveCheck(3)">
-            </div>
-            <div class="timeline-time">10:30 - 11:30</div>
-            <div class="timeline-body">
-              <div class="timeline-title">🌱 Nhận Thức Hiện Thân & Lao Động Thực Tế</div>
-              <span class="timeline-meta">Embodied Cognition</span>
-              <p class="timeline-desc">Cùng nhặt rau, chuẩn bị bàn ăn, tưới cây. Cảm nhận độ nặng, mùi vị, bề mặt thực tế thay vì xem hình ảnh trừu tượng trên mặt phẳng 2D.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-check">
-              <input type="checkbox" id="chk-4" onchange="saveCheck(4)">
-            </div>
-            <div class="timeline-time">14:30 - 15:00</div>
-            <div class="timeline-body">
-              <div class="timeline-title">🧩 Kỹ Thuật Trí Nhớ Chuỗi (Peg Story) & Trò Chơi Tương Tác 2 Chiều</div>
-              <span class="timeline-meta" style="background:#EEF2FF; color:#4338CA;">Elaborative Encoding</span>
-              <p class="timeline-desc">Tuyệt đối không tráo thẻ tốc độ 0.5s gây thôi miên bị động. Cùng nhau sáng tạo bộ phim hoạt hình liên kết các cặp số Pi, chơi đố vui hình ảnh tương tác 2 chiều (Serve & Return).</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-check">
-              <input type="checkbox" id="chk-5" onchange="saveCheck(5)">
-            </div>
-            <div class="timeline-time">15:30 - 17:00</div>
-            <div class="timeline-body">
-              <div class="timeline-title">🪵 Trò Chơi Vật Liệu Mở & Bản Lĩnh Vượt Khó</div>
-              <span class="timeline-meta">Loose Parts Play</span>
-              <p class="timeline-desc">Khám phá bùn đất, cành cây, đá cuội ngoài trời. Trẻ tự do thử nghiệm, tự giải quyết các sự cố bất ngờ khi tháp gỗ đổ hay cành cây gãy.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-check">
-              <input type="checkbox" id="chk-6" onchange="saveCheck(6)">
-            </div>
-            <div class="timeline-time">19:30 - 20:30</div>
-            <div class="timeline-body">
-              <div class="timeline-title">📚 Đọc Sách Đối Thoại (Dialogic Reading) & Thấu Cảm</div>
-              <span class="timeline-meta">Ngôn Ngữ & EQ</span>
-              <p class="timeline-desc">Đọc sách chậm rãi, hỏi con về cảm xúc của các nhân vật, liên hệ với tình huống ngoài đời. Chia sẻ 1 điều biết ơn trong ngày của từng thành viên gia đình.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-check">
-              <input type="checkbox" id="chk-7" onchange="saveCheck(7)">
-            </div>
-            <div class="timeline-time">Trước khi ngủ</div>
-            <div class="timeline-body">
-              <div class="timeline-title">❤️ Ôm 8 Giây & Tích Hợp Tiềm Thức Yêu Thương</div>
-              <span class="timeline-meta" style="background:#FFF1F2; color:#BE123C;">Oxytocin & Safe Attachment</span>
-              <p class="timeline-desc">Cái ôm chặt giải phóng Oxytocin triệt tiêu Cortisol. Thì thầm những lời khẳng định về tình yêu vô điều kiện và lòng dũng cảm khi con bắt đầu chìm vào giấc ngủ.</p>
-            </div>
-          </div>
-
-        </div>
+        <ul class="bullet-list">
+          <li><strong>Glenn Doman:</strong> Tối đa hóa vận động thô (bò chéo, đu xà, giữ thăng bằng) để kích hoạt liên kết hai bán cầu não.</li>
+          <li><strong>Steiner / Waldorf:</strong> 0% màn hình trước 6 tuổi, bảo vệ các giác quan nguyên bản và nuôi dưỡng lòng biết ơn vạn vật.</li>
+          <li><strong>Montessori:</strong> Rèn luyện sự độc lập, văn hóa lịch thiệp nhã nhặn và chu kỳ chú ý điều hành chủ động 2 tiếng.</li>
+          <li><strong>Daniel Siegel (Whole-Brain):</strong> Tích hợp cảm xúc và lý trí qua chiến lược "Connect & Redirect" và "Name it to tame it".</li>
+          <li><strong>Mã hóa liên tưởng sâu (Peg System):</strong> Biến con số khô khan thành cuộn phim hoạt hình giàu cảm xúc do chính trẻ sáng tạo.</li>
+        </ul>
       </div>
 
     </section>
@@ -1125,7 +1632,6 @@
     <!-- ========================================== -->
     <section id="tab-brain" class="tab-pane">
       
-      <!-- Khoa học về Ghi nhớ số Pi -->
       <div class="card">
         <span class="card-eyebrow">Giải Mã Khoa Học Nhận Thức</span>
         <h3 class="card-title">1. Kỹ Thuật Ghi Nhớ Sâu Số Pi (Peg System & Elaborative Encoding)</h3>
@@ -1154,7 +1660,6 @@
           </div>
         </div>
 
-        <!-- Chuỗi phim hoạt hình mẫu -->
         <div style="background:#FFF9F5; border-radius: var(--radius-md); padding:16px; margin-top:16px; border:1px solid #FED7AA;">
           <h4 style="font-family:var(--font-display); font-size:14px; font-weight:700; color:var(--accent-terracotta); margin-bottom:8px;">
             🎬 Ví Dụ Chuỗi Phim Cho 10 Cặp Số Pi Đầu Tiên (3.1415926535...):
@@ -1166,12 +1671,11 @@
         </div>
       </div>
 
-      <!-- Đọc sách đối thoại thay vì lướt quét cơ học -->
       <div class="card">
         <span class="card-eyebrow">Đọc Hiểu Thực Chất</span>
         <h3 class="card-title">2. Đọc Sách Đối Thoại (Dialogic Reading) vs Đọc Quét Lướt Bề Mặt</h3>
         <p class="card-subtitle">
-          Nghiên cứu cho thấy đọc quét ảnh chớp nhoáng (1s/trang) chỉ kích hoạt khớp mẫu đồ họa ở vỏ não thị giác, hoàn toàn không tạo ra sự thấu cảm hay tư duy phản biện. Khoa học thần kinh khuyến nghị <strong>Đọc Sách Đối Thoại 4 Bước (PEER Sequence)</strong>:
+          Nghiên cứu cho thấy đọc quét ảnh chớp nhoáng (1s/trang) chỉ kích hoạt khớp mẫu đồ họa ở vỏ não thị giác. Khoa học thần kinh khuyến nghị <strong>Đọc Sách Đối Thoại 4 Bước (PEER Sequence)</strong>:
         </p>
 
         <ul class="bullet-list">
@@ -1182,12 +1686,11 @@
         </ul>
       </div>
 
-      <!-- Luyện Mắt Điều Hòa Thần Kinh Thị Giác -->
       <div class="card">
         <span class="card-eyebrow">Điều Hòa Vận Động Mắt</span>
         <h3 class="card-title">3. Bài Tập Thư Thái Cơ Mắt (Eye Relaxation & Tracking)</h3>
         <p class="card-subtitle">
-          Mục tiêu không phải để ép mắt chạy siêu tốc, mà giúp cơ vận nhãn dẻo dai, điều hòa hệ thần kinh thị giác và mở rộng góc nhìn tự nhiên:
+          Giúp cơ vận nhãn dẻo dai, điều hòa hệ thần kinh thị giác và mở rộng góc nhìn tự nhiên:
         </p>
 
         <div class="canvas-container">
@@ -1212,7 +1715,7 @@
         <span class="card-eyebrow">Tích Hợp Cảm Xúc Daniel Siegel</span>
         <h3 class="card-title">Chiến Lược Tích Hợp Cảm Xúc (Connect & Redirect)</h3>
         <p class="card-subtitle">
-          Khi con khóc lóc, ăn vạ hay giận dữ, hạch hạnh nhân (Amygdala) và não phải đang bùng nổ dữ dội. Mọi lời dạy bảo logic của não trái lúc này đều vô hiệu!
+          Khi con khóc lóc, ăn vạ hay giận dữ, hạch hạnh nhân (Amygdala) đang bùng nổ dữ dội. Mọi lời dạy bảo logic của não trái lúc này đều vô hiệu!
         </p>
 
         <div class="scenario-item open">
@@ -1268,7 +1771,6 @@
 
       </div>
 
-      <!-- 5 Câu Thì Thầm Tiềm Thức -->
       <div class="card" style="background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%); border-color: #FECDD3;">
         <span class="card-eyebrow" style="color:#E11D48;">Nuôi Dưỡng Gắn Kết An Toàn</span>
         <h3 class="card-title" style="color:#9F1239;">5 Lời Khẳng Định Tiềm Thức Trước Giờ Ngủ</h3>
@@ -1298,7 +1800,7 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 6: TƯ DUY THÍCH ỨNG & XỬ LÝ BIẾN CỐ -->
+    <!-- TAB 6: TƯ DUY THÍCH ỨNG NGOÀI KẾ HOẠCH -->
     <!-- ========================================== -->
     <section id="tab-adaptive" class="tab-pane">
       
@@ -1309,7 +1811,6 @@
           Trong thế kỷ 21, năng lực thích ứng với những điều chưa từng biết quan trọng hơn việc tích lũy dữ liệu có sẵn. Dưới đây là quy trình rèn luyện <strong>Nhà Khám Phá Thích Nghi</strong>:
         </p>
 
-        <!-- 4 Bước Phản Ứng -->
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:10px; margin-bottom:16px;">
           <div style="background:var(--bg-surface-subtle); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-forest);">
             <div style="font-weight:700; font-size:13px; color:var(--accent-forest);">BƯỚC 1: DỪNG 5 GIÂY</div>
@@ -1329,7 +1830,6 @@
           </div>
         </div>
 
-        <!-- Tình huống thực tế -->
         <h4 style="font-family:var(--font-display); font-size:15px; font-weight:700; margin:16px 0 10px;">
           🛠️ 3 Kịch Bản Biến Sự Cố Bất Ngờ Thành Cơ Hội Rèn Bản Lĩnh:
         </h4>
@@ -1380,17 +1880,17 @@
 
   <!-- Bottom Navigation -->
   <nav class="bottom-nav">
-    <button class="bottom-nav-btn active" id="bnav-science" onclick="switchTab('tab-science')">
+    <button class="bottom-nav-btn active" id="bnav-schedule" onclick="switchTab('tab-schedule')">
+      <span class="icon">⏰</span>
+      <span>Nhịp Điệu</span>
+    </button>
+    <button class="bottom-nav-btn" id="bnav-science" onclick="switchTab('tab-science')">
       <span class="icon">🔬</span>
       <span>Khoa Học</span>
     </button>
     <button class="bottom-nav-btn" id="bnav-overview" onclick="switchTab('tab-overview')">
       <span class="icon">🏛️</span>
       <span>Toàn Não</span>
-    </button>
-    <button class="bottom-nav-btn" id="bnav-schedule" onclick="switchTab('tab-schedule')">
-      <span class="icon">⏰</span>
-      <span>Lịch Trình</span>
     </button>
     <button class="bottom-nav-btn" id="bnav-brain" onclick="switchTab('tab-brain')">
       <span class="icon">🧩</span>
@@ -1434,54 +1934,62 @@
       }
     }
 
-    // Age Milestone
-    function showAgeMilestone(ageId) {
-      document.querySelectorAll('.age-milestone-content').forEach(el => el.style.display = 'none');
-      const target = document.getElementById(ageId);
-      if (target) target.style.display = 'block';
+    // Schedule Age Selector System
+    function selectScheduleAge(ageKey) {
+      document.querySelectorAll('.sched-age-pane').forEach(el => el.classList.remove('active'));
+      const target = document.getElementById(ageKey);
+      if (target) target.classList.add('active');
 
       document.querySelectorAll('.age-pill-btn').forEach(btn => {
-        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(ageId)) {
+        if (btn.id === 'btn-' + ageKey) {
           btn.classList.add('active');
         } else {
           btn.classList.remove('active');
         }
       });
+
+      localStorage.setItem('dds_active_schedule_age', ageKey);
+      loadAgeChecks(ageKey.replace('sched-', ''));
     }
 
-    // Accordion Toggle
+    // Checklist LocalStorage System per Age Group
+    function saveAgeCheck(ageKey, id) {
+      const chk = document.getElementById(`chk-${ageKey}-${id}`);
+      if (chk) {
+        localStorage.setItem(`dds_chk_${ageKey}_${id}`, chk.checked ? '1' : '0');
+      }
+    }
+
+    function loadAgeChecks(ageKey) {
+      for (let i = 1; i <= 10; i++) {
+        const chk = document.getElementById(`chk-${ageKey}-${i}`);
+        if (chk) {
+          const val = localStorage.getItem(`dds_chk_${ageKey}_${i}`);
+          chk.checked = (val === '1');
+        }
+      }
+    }
+
+    function clearAgeChecks(ageKey) {
+      for (let i = 1; i <= 10; i++) {
+        localStorage.removeItem(`dds_chk_${ageKey}_${i}`);
+        const chk = document.getElementById(`chk-${ageKey}-${i}`);
+        if (chk) chk.checked = false;
+      }
+    }
+
+    function loadAllSavedChecks() {
+      const ageGroups = ['0_6', '6_12', '1_2y', '2_3y', '3_6y'];
+      ageGroups.forEach(loadAgeChecks);
+    }
+
+    // Scenario Accordion Toggle
     function toggleScenario(headerEl) {
       const item = headerEl.parentElement;
       item.classList.toggle('open');
     }
 
-    // Checklist LocalStorage
-    function saveCheck(id) {
-      const chk = document.getElementById('chk-' + id);
-      if (chk) {
-        localStorage.setItem('dds_chk_' + id, chk.checked ? '1' : '0');
-      }
-    }
-
-    function loadChecks() {
-      for (let i = 1; i <= 7; i++) {
-        const val = localStorage.getItem('dds_chk_' + i);
-        const chk = document.getElementById('chk-' + i);
-        if (chk && val === '1') {
-          chk.checked = true;
-        }
-      }
-    }
-
-    function clearDailyChecks() {
-      for (let i = 1; i <= 7; i++) {
-        localStorage.removeItem('dds_chk_' + i);
-        const chk = document.getElementById('chk-' + i);
-        if (chk) chk.checked = false;
-      }
-    }
-
-    // Timer Logic
+    // Timer System
     let timerDuration = 20 * 60;
     let timerRemaining = timerDuration;
     let timerInterval = null;
@@ -1517,7 +2025,7 @@
             clearInterval(timerInterval);
             isTimerRunning = false;
             btn.textContent = 'Hoàn Thành!';
-            alert('🎉 Chúc mừng! Bạn và con vừa hoàn thành một phiên chú ý điều hành chủ động trọn vẹn!');
+            alert('🎉 Chúc mừng! Bạn và con vừa hoàn thành một phiên tập trung trọn vẹn!');
           }
         }, 1000);
       }
@@ -1540,10 +2048,12 @@
       timerRemaining = timerDuration;
       updateTimerUI();
       const label = document.getElementById('timerLabel');
-      if (mins === 20) {
-        label.textContent = 'Phiên Trò Chơi Tương Tác 2 Chiều (20m)';
+      if (mins === 15) {
+        label.textContent = 'Phiên Khởi Động & Vận Động (15m)';
+      } else if (mins === 30) {
+        label.textContent = 'Phiên Kể Chuyện & Mã Hóa Số Pi (30m)';
       } else {
-        label.textContent = 'Phiên Chú Ý Điều Hành Chủ Động Montessori (45m)';
+        label.textContent = 'Phiên Tập Trung Sâu Montessori (45m)';
       }
       const btn = document.getElementById('startTimerBtn');
       btn.textContent = 'Bắt Đầu';
@@ -1724,9 +2234,14 @@
       lookupPiPeg();
     }
 
+    // Initialize
     window.addEventListener('DOMContentLoaded', () => {
-      loadChecks();
+      loadAllSavedChecks();
       updateTimerUI();
+
+      // Restore saved active schedule age group
+      const savedAge = localStorage.getItem('dds_active_schedule_age') || 'sched-0-6';
+      selectScheduleAge(savedAge);
     });
   </script>
 </body>
