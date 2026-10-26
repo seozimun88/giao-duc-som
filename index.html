@@ -504,6 +504,52 @@
       cursor: pointer;
     }
 
+    
+    /* Method Coordination Box */
+    .method-coord-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+    .method-coord-title {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink-primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .method-coord-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+    }
+    .method-badge-item {
+      background: var(--bg-surface-subtle);
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent-forest);
+      font-size: 12px;
+      color: var(--ink-secondary);
+      line-height: 1.45;
+    }
+    .method-badge-item.doman { border-left-color: var(--accent-terracotta); }
+    .method-badge-item.steiner { border-left-color: var(--accent-forest); }
+    .method-badge-item.montessori { border-left-color: var(--accent-indigo); }
+    .method-badge-item.siegel { border-left-color: #2563EB; }
+    .method-badge-item.cognitive { border-left-color: var(--accent-teal); }
+
+    .method-badge-item strong {
+      display: block;
+      color: var(--ink-primary);
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
     /* Pillars Grid */
     .pillars-grid {
       display: grid;
@@ -939,7 +985,7 @@
       <!-- ============================================== -->
       <!-- NHÓM 1: 0 - 6 THÁNG (SƠ SINH & GẮN KẾT AN TOÀN) -->
       <!-- ============================================== -->
-      <div id="sched-0-6" class="sched-age-pane active">
+            <div id="sched-0-6" class="sched-age-pane active">
         
         <!-- Thẻ hồ sơ sinh học -->
         <div class="bio-profile-card">
@@ -963,12 +1009,33 @@
           </div>
         </div>
 
+        <!-- Bản đồ phối hợp phương pháp 0-6m -->
+        <div class="method-coord-card">
+          <div class="method-coord-title">
+            <span>🏛️</span> Sự Phối Hợp Các Phương Pháp Trong Giai Đoạn 0 – 6 Tháng:
+          </div>
+          <div class="method-coord-grid">
+            <div class="method-badge-item steiner">
+              <strong>🌿 Steiner & Gắn Kết An Toàn (50%)</strong>
+              Nuôi dưỡng hệ phó giao cảm qua da kề da, nhịp điệu ngủ ngày đều đặn, 0% màn hình, bảo vệ các giác quan nguyên sơ.
+            </div>
+            <div class="method-badge-item doman">
+              <strong>🏃 Glenn Doman Sơ Sinh (35%)</strong>
+              Nằm sấp Tummy Time nhiều lần trong ngày, nâng cơ cổ/lưng và đánh thức hệ thống tiền đình nguyên thủy.
+            </div>
+            <div class="method-badge-item cognitive">
+              <strong>❤️ Triết Lý Kokoro & Ngôn Ngữ (15%)</strong>
+              Kích hoạt vỏ não thái dương trái qua ngữ âm mẹ đẻ (Motherese); 5 phút thì thầm tiềm thức trước giấc ngủ đêm.
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 0 – 6 Tháng</h3>
             <button class="btn-action secondary" style="font-size:11px; padding:4px 10px;" onclick="clearAgeChecks('0_6')">Xóa Tick</button>
           </div>
-          <p class="card-subtitle">Áp dụng theo chu kỳ thức - ngủ tự nhiên, không ép khuôn cứng nhắc:</p>
+          <p class="card-subtitle">Mỗi hoạt động đều được gắn nhãn phương pháp rõ ràng, vận hành theo chu kỳ thức - ngủ tự nhiên:</p>
 
           <div class="timeline-list">
             
@@ -977,7 +1044,7 @@
               <div class="timeline-time">07:00 - 08:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">☀️ Thức Giấc, Bú Sáng & Đánh Thức Xúc Giác</div>
-                <span class="timeline-meta">Gắn kết an toàn</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner / Waldorf (Gắn Kết & Da Kề Da)</span>
                 <p class="timeline-desc">Bú mẹ/sữa ấm. Tắm nắng sớm 15 phút. Da kề da (Kangaroo care), mát-xa nhẹ nhàng bàn chân và lưng giúp giải phóng Oxytocin và hạ Cortisol.</p>
               </div>
             </div>
@@ -987,7 +1054,7 @@
               <div class="timeline-time">08:00 - 08:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🐢 Tummy Time Lần 1 & Ngôn Ngữ Mẹ Đẻ (Motherese)</div>
-                <span class="timeline-meta">Vận động thô & Tiền đình</span>
+                <span class="timeline-meta" style="background:#FFF7ED; color:#C2410C;">🏃 Glenn Doman Sơ Sinh (Tiền Đình) + Ngôn Ngữ</span>
                 <p class="timeline-desc">Cho bé nằm sấp trên đệm cứng phẳng 5-10 phút để nâng cơ cổ và lưng. Cha mẹ nằm đối diện, nhìn vào mắt con, trò chuyện bằng giọng nói truyền cảm điệu đà.</p>
               </div>
             </div>
@@ -997,7 +1064,7 @@
               <div class="timeline-time">08:30 - 10:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">💤 Giấc Ngủ Ngày 1 (Nap Sáng 1.5h)</div>
-                <span class="timeline-meta">Phục hồi thần kinh</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner (Nhịp Điệu Sinh Học & Nhạc 60bpm)</span>
                 <p class="timeline-desc">Ngủ trong phòng thoáng mát, ánh sáng dịu. Mở nhạc êm dịu tiết tấu 60 nhịp/phút để ổn định nhịp tim và sóng não.</p>
               </div>
             </div>
@@ -1007,7 +1074,7 @@
               <div class="timeline-time">10:00 - 11:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">👀 Thức Giấc, Bú Cữ 2 & Thị Giác Tương Phản 3D</div>
-                <span class="timeline-meta">Giác quan thực tế</span>
+                <span class="timeline-meta" style="background:#CCFBF1; color:#0D9488;">🍎 Nhận Thức Hiện Thân (Chất Liệu Gỗ Mộc, Vải Lụa)</span>
                 <p class="timeline-desc">Cho bé nhìn thẻ hoa văn đen - trắng tương phản cách mắt 25cm. Để bé chạm ngón tay vào lục lạc bằng gỗ mộc, vải lụa mềm (tránh đồ nhựa phát sáng ồn ào).</p>
               </div>
             </div>
@@ -1017,7 +1084,7 @@
               <div class="timeline-time">11:30 - 13:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">💤 Giấc Ngủ Ngày 2 (Nap Trưa Sâu 2h)</div>
-                <span class="timeline-meta">Tái tạo năng lượng</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner (Tái Tạo Năng Lượng & Phân Nhánh Nơ-ron)</span>
                 <p class="timeline-desc">Giấc ngủ trưa quan trọng giúp não bộ xử lý và sắp xếp các kết nối thần kinh (synapse) mới tạo trong buổi sáng.</p>
               </div>
             </div>
@@ -1027,7 +1094,7 @@
               <div class="timeline-time">14:00 - 15:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🌿 Tummy Time Lần 2 & Tập Lẫy Tự Do</div>
-                <span class="timeline-meta">Glenn Doman sơ sinh</span>
+                <span class="timeline-meta" style="background:#FFF7ED; color:#C2410C;">🏃 Glenn Doman (Vận Động Sơ Sinh & Tiền Đình)</span>
                 <p class="timeline-desc">Đặt bé nằm sấp, để đồ chơi gỗ có tiếng chuông nhẹ trước mặt khuyến khích bé ngóc đầu và với tay. Cho chân chạm bề mặt mát/ấm tự nhiên.</p>
               </div>
             </div>
@@ -1037,7 +1104,7 @@
               <div class="timeline-time">17:00 - 18:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">🛁 Tắm Nước Ấm & Vận Động Bồn Nước</div>
-                <span class="timeline-meta">Thư giãn tiền đình</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner / Waldorf (Thư Giãn Cảm Quan)</span>
                 <p class="timeline-desc">Cho bé đạp chân tự do trong nước ấm. Mát-xa toàn thân bằng dầu dừa/dầu hạnh nhân hữu cơ.</p>
               </div>
             </div>
@@ -1047,7 +1114,7 @@
               <div class="timeline-time">19:30 - 20:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">❤️ Bú Cữ Đêm & 5 Phút Thì Thầm Tiềm Thức</div>
-                <span class="timeline-meta">Soul Communication</span>
+                <span class="timeline-meta" style="background:#FFF1F2; color:#BE123C;">❤️ Triết Lý Kokoro (Cài Đặt Tiềm Thức An Định)</span>
                 <p class="timeline-desc">Ôm ấp 8 giây. Khi bé bắt đầu thiu thiu ngủ, thì thầm nhẹ nhàng: "Bố mẹ yêu con vô điều kiện. Con luôn bình an và được bảo bọc".</p>
               </div>
             </div>
@@ -1056,9 +1123,6 @@
         </div>
       </div>
 
-      <!-- ============================================== -->
-      <!-- NHÓM 2: 6 - 12 THÁNG (BÒ BÙNG NỔ & ĂN DẶM BLW) -->
-      <!-- ============================================== -->
       <div id="sched-6-12" class="sched-age-pane">
         
         <div class="bio-profile-card">
@@ -1082,6 +1146,27 @@
           </div>
         </div>
 
+        <!-- Bản đồ phối hợp phương pháp 6-12m -->
+        <div class="method-coord-card">
+          <div class="method-coord-title">
+            <span>🏛️</span> Sự Phối Hợp Các Phương Pháp Trong Giai Đoạn 6 – 12 Tháng:
+          </div>
+          <div class="method-coord-grid">
+            <div class="method-badge-item doman">
+              <strong>🏃 Glenn Doman Vận Động (45%)</strong>
+              Bò chéo tay chân 500m/ngày trên sàn phẳng để myelin hóa bó sợi trục Thể Chai (Corpus Callosum) kết nối 2 bán cầu não.
+            </div>
+            <div class="method-badge-item steiner">
+              <strong>🍎 Steiner & Nhận Thức Hiện Thân (30%)</strong>
+              Ăn dặm tự chỉ huy BLW giúp trẻ cầm, ngửi, nếm thức ăn 3D thật; đồ dùng bếp tự nhiên thay vì ảnh 2D tĩnh.
+            </div>
+            <div class="method-badge-item cognitive">
+              <strong>🧠 Khoa Học Nhận Thức 2 Chiều (25%)</strong>
+              Tương tác đố vui (Serve & Return), đọc sách bìa cứng, chơi trò ú òa hiểu sự tồn tại của vật thể (Piaget Object Permanence).
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 6 – 12 Tháng</h3>
@@ -1096,8 +1181,8 @@
               <div class="timeline-time">06:30 - 07:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">☀️ Thức Giấc, Bú Sáng & Vận Động Bò Chéo</div>
-                <span class="timeline-meta">Glenn Doman Motor</span>
-                <p class="timeline-desc">Bú mẹ/sữa. Thả bé xuống sàn nhà trơn không chướng ngại vật để bé bò tự do 15-20 phút đầu ngày.</p>
+                <span class="timeline-meta" style="background:#FFF7ED; color:#C2410C;">🏃 Glenn Doman (Bò Chéo Dày Thể Chai)</span>
+                <p class="timeline-desc">Bú mẹ/sữa. Thả bé xuống sàn nhà trơn không chướng ngại vật để bé bò tự do 15-20 phút khởi động ngày mới.</p>
               </div>
             </div>
 
@@ -1106,7 +1191,7 @@
               <div class="timeline-time">08:00 - 09:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">🥦 Ăn Dặm Hiện Thân (BLW - Bốc Nhặt Tự Chủ)</div>
-                <span class="timeline-meta">Embodied Cognition</span>
+                <span class="timeline-meta" style="background:#CCFBF1; color:#0D9488;">🍎 Nhận Thức Hiện Thân (Vị Giác & Xúc Giác 3D)</span>
                 <p class="timeline-desc">Cho bé tự dùng ngón tay bốc cà rốt hấp, chuối, bông cải. Cảm nhận độ mềm, trơn, mùi vị tự nhiên thay vì chỉ đút bột xay nhuyễn.</p>
               </div>
             </div>
@@ -1116,7 +1201,7 @@
               <div class="timeline-time">09:30 - 11:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">💤 Giấc Ngủ Ngày 1 (Nap Sáng 1.5h)</div>
-                <span class="timeline-meta">Hồi phục năng lượng</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner (Nhịp Điệu Sinh Học 2 Giấc Cố Định)</span>
                 <p class="timeline-desc">Không gian yên tĩnh, tối nhẹ để giấc ngủ sâu hỗ trợ hormone tăng trưởng tiết ra.</p>
               </div>
             </div>
@@ -1126,7 +1211,7 @@
               <div class="timeline-time">11:30 - 12:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🧩 Khám Phá Kho Báu Thực Tế & Chơi Ú Òa</div>
-                <span class="timeline-meta">Montessori Sensory</span>
+                <span class="timeline-meta" style="background:#FAF5FF; color:#7E22CE;">🧩 Montessori Sensory + Piaget (Object Permanence)</span>
                 <p class="timeline-desc">Cho bé rổ đựng đồ dùng nhà bếp: thìa gỗ, bát inox, nắp hộp. Chơi giấu đồ dưới khăn (Ú òa) để bé hiểu quy luật vật thể vẫn tồn tại dù bị che khuất.</p>
               </div>
             </div>
@@ -1136,7 +1221,7 @@
               <div class="timeline-time">14:00 - 15:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">💤 Giấc Ngủ Ngày 2 (Nap Chiều 1.5h)</div>
-                <span class="timeline-meta">Ổn định nhịp sinh học</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner (Hồi Phục Thần Kinh)</span>
                 <p class="timeline-desc">Cữ ngủ chiều giúp bé không bị quá mệt (overtired) vào buổi tối.</p>
               </div>
             </div>
@@ -1146,7 +1231,7 @@
               <div class="timeline-time">15:30 - 17:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">🌳 Khám Phá Ngoài Trời & Bò Vượt Chướng Ngại Vật</div>
-                <span class="timeline-meta">Tiền đình & Thiên nhiên</span>
+                <span class="timeline-meta" style="background:#FFF7ED; color:#C2410C;">🏃 Glenn Doman (Vượt Chướng Ngại) + Steiner Thiên Nhiên</span>
                 <p class="timeline-desc">Đi dạo công viên, cho chân chạm cỏ, tay sờ vỏ cây. Trong nhà: xếp gối đệm thành bậc nhỏ để bé bò trèo qua, rèn lực nắm ngón tay vào thanh xà mini.</p>
               </div>
             </div>
@@ -1156,7 +1241,7 @@
               <div class="timeline-time">19:00 - 20:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">📚 Đọc Sách Bìa Cứng Đối Thoại (Serve & Return) & Ngủ Đêm</div>
-                <span class="timeline-meta">Ngôn ngữ tương tác</span>
+                <span class="timeline-meta" style="background:#CCFBF1; color:#0D9488;">🧠 Khoa Học Nhận Thức (Tương Tác 2 Chiều) + Kokoro</span>
                 <p class="timeline-desc">Đọc sách bìa cứng, cùng chỉ con chó, bắt chước tiếng sủa "gâu gâu", chờ bé ê a đáp lại. Tắm nước ấm, ôm 8 giây và thì thầm trước giờ ngủ.</p>
               </div>
             </div>
@@ -1165,9 +1250,6 @@
         </div>
       </div>
 
-      <!-- ============================================== -->
-      <!-- NHÓM 3: 1 – 2 TUỔI (TẬP ĐI, NGÔN NGỮ & TỰ LẬP) -->
-      <!-- ============================================== -->
       <div id="sched-1-2y" class="sched-age-pane">
         
         <div class="bio-profile-card">
@@ -1191,6 +1273,27 @@
           </div>
         </div>
 
+        <!-- Bản đồ phối hợp phương pháp 1-2y -->
+        <div class="method-coord-card">
+          <div class="method-coord-title">
+            <span>🏛️</span> Sự Phối Hợp Các Phương Pháp Trong Giai Đoạn 1 – 2 Tuổi:
+          </div>
+          <div class="method-coord-grid">
+            <div class="method-badge-item montessori">
+              <strong>🧩 Montessori Thực Hành Cuộc Sống (40%)</strong>
+              Trẻ tự xúc ăn, tự uống nước, tự cất giày dép, lau dọn bàn – rèn luyện tính độc lập và đôi bàn tay khéo léo.
+            </div>
+            <div class="method-badge-item doman">
+              <strong>🏃 Glenn Doman & Tiền Đình (35%)</strong>
+              Đi bộ dã ngoại, leo bậc tam cấp, đi thăng bằng, tập đu xà đơn tự thụ động 10–20 giây kéo giãn cột sống.
+            </div>
+            <div class="method-badge-item cognitive">
+              <strong>🧠 Khoa Học Trí Nhớ & Ngôn Ngữ (25%)</strong>
+              Tiền đề mã hóa Peg System (gắn vật thật 3D với biểu tượng quen thuộc), đọc sách đối thoại tương tác.
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 1 – 2 Tuổi</h3>
@@ -1205,7 +1308,7 @@
               <div class="timeline-time">06:30 - 07:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🏃 Đi Bộ Chân Trần & Leo Bậc Thang Ngoài Trời</div>
-                <span class="timeline-meta">Doman + Tiền đình</span>
+                <span class="timeline-meta" style="background:#FFF7ED; color:#C2410C;">🏃 Glenn Doman (Tiền Đình & Đu Xà Mini)</span>
                 <p class="timeline-desc">Đi dạo ngoài trời, cho bé đi chân trần trên cỏ, leo cầu thang dốc thoai thoải có người đỡ. Tập đu xà đơn tự thụ động 10 - 20 giây.</p>
               </div>
             </div>
@@ -1215,7 +1318,7 @@
               <div class="timeline-time">07:30 - 08:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🥣 Bữa Sáng Tự Chủ & Tự Cất Bát Đĩa</div>
-                <span class="timeline-meta">Montessori Practical Life</span>
+                <span class="timeline-meta" style="background:#FAF5FF; color:#7E22CE;">🧩 Montessori (Thực Hành Cuộc Sống - Practical Life)</span>
                 <p class="timeline-desc">Bé tự dùng thìa xúc ăn, tự cầm cốc nước hai quai uống. Ăn xong, hướng dẫn bé bê đĩa đặt vào bồn rửa chén nhỏ vừa tầm.</p>
               </div>
             </div>
@@ -1225,7 +1328,7 @@
               <div class="timeline-time">08:30 - 10:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🎯 Chu Kỳ Tập Trung Độc Lập 45 – 60 Phút</div>
-                <span class="timeline-meta">Chú ý điều hành chủ động</span>
+                <span class="timeline-meta" style="background:#FAF5FF; color:#7E22CE;">🧩 Montessori (Chú Ý Điều Hành Chủ Động)</span>
                 <p class="timeline-desc">Bé tự chọn giáo cụ trên kệ thấp: thả cọc gỗ, phân loại khối tròn/vuông, xâu vòng hạt lớn. Cha mẹ chỉ quan sát, tuyệt đối không ngắt quãng dòng suy nghĩ của con.</p>
               </div>
             </div>
@@ -1235,7 +1338,7 @@
               <div class="timeline-time">10:30 - 11:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🌱 Lao Động Thực Tế: Tưới Cây & Lau Bàn</div>
-                <span class="timeline-meta">Lao động đời sống</span>
+                <span class="timeline-meta" style="background:#FAF5FF; color:#7E22CE;">🧩 Montessori Lao Động + Steiner Trách Nhiệm</span>
                 <p class="timeline-desc">Đưa cho bé chiếc bình tưới nước mini để tưới chậu hoa, chiếc khăn lau nhỏ để lau bàn ăn. Bé học được cảm giác tự hào vì "mình là người có ích".</p>
               </div>
             </div>
@@ -1245,7 +1348,7 @@
               <div class="timeline-time">12:00 - 14:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">💤 Giấc Ngủ Trưa Sâu Duy Nhất (2 Giờ)</div>
-                <span class="timeline-meta">Tái tạo thần kinh</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner (Chuyển Dịch Nhịp Sinh Học 1 Giấc)</span>
                 <p class="timeline-desc">Ngủ trưa trọn vẹn giúp não bộ củng cố trí nhớ dài hạn và phục hồi thể lực sau một buổi sáng vận động tích cực.</p>
               </div>
             </div>
@@ -1255,7 +1358,7 @@
               <div class="timeline-time">14:30 - 15:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🧩 Trò Chơi Liên Tưởng Hình Ảnh & Nhận Diện 3D</div>
-                <span class="timeline-meta">Tiền đề Peg System</span>
+                <span class="timeline-meta" style="background:#CCFBF1; color:#0D9488;">🧠 Khoa Học Nhận Thức (Tiền Đề Peg System)</span>
                 <p class="timeline-desc">Chơi đố vui liên tưởng: Cầm ngọn nến thật rồi chỉ số 1; cầm quả trứng gà rồi chỉ số 0. Dạy bé cách mã hóa thế giới qua hình tượng quen thuộc một cách vui vẻ.</p>
               </div>
             </div>
@@ -1265,7 +1368,7 @@
               <div class="timeline-time">16:00 - 17:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🪵 Khám Phá Thiên Nhiên & Vận Động Tự Do</div>
-                <span class="timeline-meta">Cảm quan Steiner</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner / Waldorf (Chất Liệu Mộc Nguyên Bản)</span>
                 <p class="timeline-desc">Chơi với cát sạch, bê sỏi cuội, nhặt lá rụng xếp thành hình. Để bàn tay bận rộn với chất liệu mộc nguyên bản của tự nhiên.</p>
               </div>
             </div>
@@ -1275,7 +1378,7 @@
               <div class="timeline-time">19:30 - 20:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">❤️ Đọc Sách Đối Thoại (Dialogic Reading) & Ngủ Đêm</div>
-                <span class="timeline-meta">Gắn kết yêu thương</span>
+                <span class="timeline-meta" style="background:#EEF2FF; color:#4338CA;">🌉 Daniel Siegel EQ + Kokoro Yêu Thương</span>
                 <p class="timeline-desc">Hỏi con về cảm xúc của bạn gấu trong truyện. Ôm chặt 8 giây và thì thầm 5 lời khẳng định tiềm thức trước khi chìm vào giấc ngủ.</p>
               </div>
             </div>
@@ -1284,9 +1387,6 @@
         </div>
       </div>
 
-      <!-- ============================================== -->
-      <!-- NHÓM 4: 2 – 3 TUỔI (CẢM XÚC, BẢN LĨNH & SỐ PI) -->
-      <!-- ============================================== -->
       <div id="sched-2-3y" class="sched-age-pane">
         
         <div class="bio-profile-card">
@@ -1310,6 +1410,27 @@
           </div>
         </div>
 
+        <!-- Bản đồ phối hợp phương pháp 2-3y -->
+        <div class="method-coord-card">
+          <div class="method-coord-title">
+            <span>🏛️</span> Sự Phối Hợp Các Phương Pháp Trong Giai Đoạn 2 – 3 Tuổi:
+          </div>
+          <div class="method-coord-grid">
+            <div class="method-badge-item siegel">
+              <strong>🌉 Daniel Siegel - Whole Brain (35%)</strong>
+              Quản trị khủng hoảng tuổi lên 2 qua kỹ thuật Connect & Redirect (kết nối cảm xúc trước, chuyển hướng sau) và Name it to tame it.
+            </div>
+            <div class="method-badge-item doman">
+              <strong>🏃 Glenn Doman Nâng Cao (35%)</strong>
+              Chạy cự ly dài 300–500m, đu xà 20–30s giúp kéo giãn cột sống và tăng lượng oxy bơm lên Vỏ não trước trán.
+            </div>
+            <div class="method-badge-item cognitive">
+              <strong>🧠 Khoa Học Trí Nhớ Peg System & Montessori (30%)</strong>
+              Sáng tạo chuỗi phim hoạt hình vui nhộn để nhớ 10–20 số Pi; chu kỳ làm việc độc lập 60–90 phút.
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 2 – 3 Tuổi</h3>
@@ -1324,7 +1445,7 @@
               <div class="timeline-time">06:30 - 07:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🏃 Vận Động Bùng Nổ & Đu Xà Mở Rộng Phổi</div>
-                <span class="timeline-meta">Glenn Doman Khỏe Khoắn</span>
+                <span class="timeline-meta" style="background:#FFF7ED; color:#C2410C;">🏃 Glenn Doman (Thể Lực & Tăng Oxy Não)</span>
                 <p class="timeline-desc">Chạy thi cùng cha mẹ 300 - 500m. Đu xà đơn 20 - 30 giây giúp kéo giãn cột sống và tăng lượng oxy bơm lên vỏ não trước trán.</p>
               </div>
             </div>
@@ -1334,7 +1455,7 @@
               <div class="timeline-time">08:30 - 10:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🎯 Chu Kỳ Montessori Sâu 60 – 90 Phút</div>
-                <span class="timeline-meta">Executive Function</span>
+                <span class="timeline-meta" style="background:#FAF5FF; color:#7E22CE;">🧩 Montessori (Rèn Vỏ Não Trước Trán)</span>
                 <p class="timeline-desc">Tự chuẩn bị bàn làm việc: cắt chuối bằng dao gỗ cùn, rót nước từ bình nhỏ không làm rớt, ghép mô hình động vật 3D. Rèn tính kiên nhẫn sâu.</p>
               </div>
             </div>
@@ -1344,7 +1465,7 @@
               <div class="timeline-time">10:30 - 11:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🌱 Nghi Thức Bàn Ăn & Biết Ơn Bữa Cơm</div>
-                <span class="timeline-meta">Lòng biết ơn Steiner</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner (Lòng Biết Ơn Bàn Ăn Gia Đình)</span>
                 <p class="timeline-desc">Cùng mẹ nhặt rau ngót, bóc vỏ trứng luộc. Nắm tay nhau 10 giây trước khi ăn cảm ơn đất mẹ và người nấu nướng.</p>
               </div>
             </div>
@@ -1354,7 +1475,7 @@
               <div class="timeline-time">12:30 - 14:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">💤 Giấc Ngủ Trưa Tĩnh Lặng (1.5 Giờ)</div>
-                <span class="timeline-meta">Phục hồi tế bào não</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner (Phục Hồi Tế Bào Thần Kinh)</span>
                 <p class="timeline-desc">Phòng ngủ mát mẻ, yên tĩnh để não bộ hoàn thiện quá trình phân nhánh tế bào thần kinh.</p>
               </div>
             </div>
@@ -1364,7 +1485,7 @@
               <div class="timeline-time">14:30 - 15:15</div>
               <div class="timeline-body">
                 <div class="timeline-title">🎬 Kể Chuyện Hoạt Hình Nhớ Dãy Số Pi (Peg System)</div>
-                <span class="timeline-meta">Mã hóa liên tưởng sâu</span>
+                <span class="timeline-meta" style="background:#CCFBF1; color:#0D9488;">🧠 Khoa Học Nhận Thức (Mã Hóa Liên Tưởng Sâu)</span>
                 <p class="timeline-desc">Cùng sáng tạo chuỗi phim kỳ thú cho 10-20 số Pi tiếp theo: "Thuyền buồm chở dưa hấu bay lên trời...". Trẻ cười vui vẻ và tự chiếu lại bộ phim trong đầu.</p>
               </div>
             </div>
@@ -1374,7 +1495,7 @@
               <div class="timeline-time">15:30 - 17:00</div>
               <div class="timeline-body">
                 <div class="timeline-title">🪵 Trò Chơi Vật Liệu Mở (Loose Parts Play)</div>
-                <span class="timeline-meta">Tư duy thích ứng</span>
+                <span class="timeline-meta" style="background:#FEF3C7; color:#B45309;">🛠️ Tư Duy Thích Ứng (Heuristic Play & Sáng Tạo)</span>
                 <p class="timeline-desc">Cho bé rổ đựng bìa các-tông, lõi giấy, vỏ ốc, cành cây khô. Quan sát bé tự nghĩ ra cách biến tấu. Rèn bản lĩnh khi tháp gãy đổ (áp dụng dừng 5 giây).</p>
               </div>
             </div>
@@ -1384,7 +1505,7 @@
               <div class="timeline-time">19:30 - 20:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">❤️ Thấu Cảm Cảm Xúc (Name It to Tame It) & Ngủ Đêm</div>
-                <span class="timeline-meta">Daniel Siegel EQ</span>
+                <span class="timeline-meta" style="background:#EEF2FF; color:#4338CA;">🌉 Daniel Siegel (Tích Hợp Cảm Xúc) + Kokoro</span>
                 <p class="timeline-desc">Đọc truyện trước khi ngủ, giải thích các cảm xúc giận dữ/lo lắng trong ngày của con. Ôm 8 giây và thì thầm 5 lời khẳng định tiềm thức.</p>
               </div>
             </div>
@@ -1393,9 +1514,6 @@
         </div>
       </div>
 
-      <!-- ============================================== -->
-      <!-- NHÓM 5: 3 – 6 TUỔI (TOÀN DIỆN, THÍCH ỨNG & ĐỌC SÂU) -->
-      <!-- ============================================== -->
       <div id="sched-3-6y" class="sched-age-pane">
         
         <div class="bio-profile-card">
@@ -1419,6 +1537,27 @@
           </div>
         </div>
 
+        <!-- Bản đồ phối hợp phương pháp 3-6y -->
+        <div class="method-coord-card">
+          <div class="method-coord-title">
+            <span>🏛️</span> Sự Phối Hợp Các Phương Pháp Trong Giai Đoạn 3 – 6 Tuổi:
+          </div>
+          <div class="method-coord-grid">
+            <div class="method-badge-item montessori">
+              <strong>🧩 Montessori Nâng Cao (35%)</strong>
+              Chu kỳ tập trung sâu 2 tiếng không ngắt quãng với toán học cụ 3D, khoa học tự nhiên, mô hình vũ trụ và dự án mộc thực tế.
+            </div>
+            <div class="method-badge-item doman">
+              <strong>🏃 Thể Thao Kỷ Luật - Glenn Doman (35%)</strong>
+              Chạy cự ly 1–2km, bơi lội, đu xà đơn 1 phút rèn ý chí và thể lực vượt trội, nạp lượng oxy dồi dào cho não.
+            </div>
+            <div class="method-badge-item cognitive">
+              <strong>🛠️ Tư Duy Thích Ứng & Trí Nhớ Sâu (30%)</strong>
+              Thám hiểm thiên nhiên có kiểm soát, xử lý khi kế hoạch đổi; mã hóa dãy số Pi dài 50–100+ số và đọc đối thoại PEER.
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 3 – 6 Tuổi</h3>
@@ -1433,7 +1572,7 @@
               <div class="timeline-time">06:30 - 07:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🏃 Thể Thao Kỷ Luật: Chạy Bộ, Bơi Lội & Đu Xà 1 Phút</div>
-                <span class="timeline-meta">Doman Nâng Cao</span>
+                <span class="timeline-meta" style="background:#FFF7ED; color:#C2410C;">🏃 Glenn Doman (Ý Chí & Oxy Vỏ Não)</span>
                 <p class="timeline-desc">Chạy cự ly 1 – 2km, tập bơi lội hoặc thể dục dụng cụ. Đu xà 30 giây đến 1 phút giúp lồng ngực nở rộng, lượng oxy lên não đạt mức tối ưu.</p>
               </div>
             </div>
@@ -1443,7 +1582,7 @@
               <div class="timeline-time">08:30 - 10:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🎯 Chu Kỳ Tập Trung Sâu Montessori 2 Tiếng (Deep Focus)</div>
-                <span class="timeline-meta">Vỏ não trước trán đỉnh cao</span>
+                <span class="timeline-meta" style="background:#FAF5FF; color:#7E22CE;">🧩 Montessori (Chú Ý Điều Hành Đỉnh Cao)</span>
                 <p class="timeline-desc">Trẻ tự lập dự án: làm toán học cụ 3D (bê khối 1000 hạt cườm), xếp bản đồ thế giới, ghép mạch điện mini, làm mộc với dụng cụ thật. Không ai được phép ngắt quãng.</p>
               </div>
             </div>
@@ -1453,7 +1592,7 @@
               <div class="timeline-time">10:30 - 11:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🌱 Dự Án Cộng Đồng Gia Đình & Lễ Nghi Nhã Nhặn</div>
-                <span class="timeline-meta">Montessori Grace & Courtesy</span>
+                <span class="timeline-meta" style="background:#FAF5FF; color:#7E22CE;">🧩 Montessori Grace & Courtesy (Đạo Đức & Xã Hội)</span>
                 <p class="timeline-desc">Cùng nấu ăn, dọn vườn, chăm sóc chậu cây nhỏ. Thực hành tôn trọng không gian riêng của người khác và nói lời cảm ơn chân thành.</p>
               </div>
             </div>
@@ -1463,7 +1602,7 @@
               <div class="timeline-time">12:30 - 13:45</div>
               <div class="timeline-body">
                 <div class="timeline-title">💤 Giấc Ngủ Trưa Tái Tạo Thần Kinh (~1h15p)</div>
-                <span class="timeline-meta">Hồi phục nhận thức</span>
+                <span class="timeline-meta" style="background:#F0FDF4; color:#15803D;">🌿 Steiner (Duy Trì Sắc Bén Buổi Chiều)</span>
                 <p class="timeline-desc">Giúp duy trì sự tỉnh táo và khả năng tập trung sắc bén cho các hoạt động sáng tạo buổi chiều.</p>
               </div>
             </div>
@@ -1473,7 +1612,7 @@
               <div class="timeline-time">14:30 - 15:15</div>
               <div class="timeline-body">
                 <div class="timeline-title">🧩 Mã Hóa Dãy Số Pi Dài (Peg System 100+ Số) & Luyện Mắt</div>
-                <span class="timeline-meta">Toàn não bộ hòa nhịp</span>
+                <span class="timeline-meta" style="background:#CCFBF1; color:#0D9488;">🧠 Khoa Học Nhận Thức (Toàn Não Bộ Hòa Nhịp)</span>
                 <p class="timeline-desc">Tăng độ dài chuỗi liên tưởng lên 50 - 100+ số Pi. Bài tập điều hòa cơ mắt theo hình số 8 vô cực thư thái, mở rộng góc nhìn toàn phần.</p>
               </div>
             </div>
@@ -1483,7 +1622,7 @@
               <div class="timeline-time">15:30 - 17:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">🪵 Thám Hiểm Mạo Hiểm Có Kiểm Soát & Tư Duy Thích Ứng</div>
-                <span class="timeline-meta">Loose parts & Heuristics</span>
+                <span class="timeline-meta" style="background:#FEF3C7; color:#B45309;">🛠️ Tư Duy Thích Ứng (Xử Lý Sự Cố Ngoài Dự Kiến)</span>
                 <p class="timeline-desc">Trèo cây thấp, leo vách đá nhân tạo, thử nghiệm vật liệu mở. Áp dụng quy trình 4 bước khi gặp sự cố ngoài kế hoạch (kế hoạch B vui nhộn).</p>
               </div>
             </div>
@@ -1493,7 +1632,7 @@
               <div class="timeline-time">19:30 - 20:30</div>
               <div class="timeline-body">
                 <div class="timeline-title">📚 Đọc Sách Đối Thoại (Dialogic Reading PEER) & Chia Sẻ Biết Ơn</div>
-                <span class="timeline-meta">Phản biện & Thấu cảm</span>
+                <span class="timeline-meta" style="background:#CCFBF1; color:#0D9488;">🧠 Dialogic Reading (Phản Biện) + Steiner Tri Ân</span>
                 <p class="timeline-desc">Đọc truyện tranh sâu sắc, đặt câu hỏi phản biện mở. Cả nhà cùng chia sẻ 1 điều biết ơn trong ngày. Ôm 8 giây và thì thầm trước khi ngủ.</p>
               </div>
             </div>
