@@ -1066,23 +1066,339 @@
       .pillars-grid { grid-template-columns: 1fr; }
       .timeline-time { width: 80px; font-size: 12px; }
     }
+  
+    /* ========================================== */
+    /* CUTE CHILDREN THEME & FRIENDLY UI POLISH   */
+    /* ========================================== */
+    body {
+      background: linear-gradient(180deg, #FFFDF9 0%, #FFF8EE 30%, #F3FAF5 65%, #FAF5FF 100%) !important;
+      background-attachment: fixed !important;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Cute SVG Doodle Pattern Overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.38;
+      background-image: 
+        radial-gradient(circle at 10% 12%, rgba(254, 240, 138, 0.45) 0%, transparent 20%),
+        radial-gradient(circle at 92% 10%, rgba(186, 230, 253, 0.45) 0%, transparent 22%),
+        radial-gradient(circle at 88% 55%, rgba(254, 205, 211, 0.38) 0%, transparent 20%),
+        radial-gradient(circle at 12% 75%, rgba(187, 247, 208, 0.42) 0%, transparent 20%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M25 22 L27 27 L32 27 L28 30 L30 35 L25 32 L20 35 L22 30 L18 27 L23 27 Z' fill='%23F59E0B' fill-opacity='0.16' stroke='%23D97706' stroke-width='1.2' stroke-opacity='0.25'/%3E%3Cpath d='M115 25 Q115 32 122 32 Q115 32 115 39 Q115 32 108 32 Q115 32 115 25 Z' fill='%238B5CF6' fill-opacity='0.18'/%3E%3Cpath d='M85 85 C83 80 88 74 94 76 C97 70 106 70 109 76 C114 74 118 80 116 85 C119 88 117 94 112 94 L88 94 C83 94 82 88 85 85 Z' fill='%2360A5FA' fill-opacity='0.14' stroke='%233B82F6' stroke-width='1.2' stroke-opacity='0.22'/%3E%3Cpath d='M28 92 C28 85 35 82 40 82 C40 89 35 92 28 92 Z M28 92 C28 98 22 102 18 100 C18 94 22 92 28 92 Z' fill='%2310B981' fill-opacity='0.18' stroke='%23059669' stroke-width='1.1' stroke-opacity='0.25'/%3E%3Cpath d='M68 45 C65 40 58 42 58 47 C58 52 68 59 68 59 C68 59 78 52 78 47 C78 42 71 40 68 45 Z' fill='%23F43F5E' fill-opacity='0.15'/%3E%3Cpath d='M70 115 A 8 8 0 0 0 78 123 A 10 10 0 1 1 70 115 Z' fill='%23FBBF24' fill-opacity='0.22' stroke='%23D97706' stroke-width='1' stroke-opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Content layering over backdrop */
+    header.app-header, main.container, .bottom-nav, .cute-rainbow-bar {
+      position: relative;
+      z-index: 10;
+    }
+    header.app-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Cute Floating Background Elements */
+    .cute-bg-decorations {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .cute-sun {
+      position: absolute;
+      top: 85px;
+      right: 16px;
+      font-size: 32px;
+      opacity: 0.72;
+      animation: gentleRotate 25s linear infinite;
+      filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.25));
+    }
+    .cute-cloud {
+      position: absolute;
+      font-size: 30px;
+      opacity: 0.6;
+      animation: gentleFloat 14s ease-in-out infinite alternate;
+      filter: drop-shadow(0 2px 6px rgba(147, 197, 253, 0.3));
+    }
+    .cloud-1 { top: 160px; left: 12px; animation-duration: 16s; }
+    .cloud-2 { top: 680px; right: 20px; font-size: 26px; opacity: 0.5; animation-duration: 20s; }
+    .cute-star {
+      position: absolute;
+      font-size: 18px;
+      opacity: 0.65;
+      animation: gentleTwinkle 3.2s ease-in-out infinite alternate;
+      filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.2));
+    }
+    .star-1 { top: 260px; right: 35px; animation-delay: 0.4s; }
+    .star-2 { top: 520px; left: 18px; font-size: 22px; animation-delay: 1.5s; }
+    .star-3 { top: 920px; right: 28px; animation-delay: 2.3s; }
+    .cute-rainbow {
+      position: absolute;
+      bottom: 115px;
+      left: 18px;
+      font-size: 30px;
+      opacity: 0.55;
+      animation: gentleFloat 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes gentleFloat {
+      0% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(-10px) translateX(5px); }
+      100% { transform: translateY(0px) translateX(0px); }
+    }
+    @keyframes gentleRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes gentleTwinkle {
+      0% { opacity: 0.3; transform: scale(0.85); }
+      100% { opacity: 0.95; transform: scale(1.15); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .cute-sun, .cute-cloud, .cute-star, .cute-rainbow {
+        animation: none !important;
+      }
+    }
+
+    /* Cute Rainbow Top Accent Line */
+    .cute-rainbow-bar {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(90deg, #F87171, #FBBF24, #34D399, #60A5FA, #A78BFA, #F472B6);
+      position: sticky;
+      top: 60px;
+      z-index: 99;
+      box-shadow: 0 1px 6px rgba(248, 113, 113, 0.2);
+    }
+
+    /* Pulse Dot in Header */
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background-color: #10B981;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulseGreen 1.8s infinite;
+    }
+    @keyframes pulseGreen {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* Cute Welcome Banner */
+    .cute-welcome-banner {
+      background: linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 45%, #FCE7F3 100%);
+      border: 1.5px solid #FDE68A;
+      border-radius: 20px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 6px 18px rgba(245, 158, 11, 0.1);
+      animation: fadeIn 0.4s ease-out;
+    }
+    .cute-welcome-avatar {
+      font-size: 32px;
+      background: #FFFFFF;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+      border: 1.5px solid #FEF3C7;
+      flex-shrink: 0;
+      animation: gentleBounce 2.5s ease-in-out infinite;
+    }
+    .cute-welcome-content {
+      flex-grow: 1;
+    }
+    .cute-welcome-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      color: #92400E;
+      margin-bottom: 2px;
+    }
+    .cute-welcome-subtitle {
+      font-size: 12.5px;
+      color: #78350F;
+      line-height: 1.45;
+    }
+    @keyframes gentleBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    /* Friendly Card Softness */
+    .card {
+      background: rgba(255, 255, 255, 0.95) !important;
+      border: 1.5px solid rgba(235, 228, 218, 0.9) !important;
+      border-radius: 20px !important;
+      padding: 22px 20px !important;
+      margin-bottom: 18px !important;
+      box-shadow: 0 6px 20px rgba(180, 140, 100, 0.06) !important;
+      backdrop-filter: blur(8px);
+    }
+
+    /* Distinct Cute Colors for Active Age Buttons */
+    .age-pill-btn {
+      padding: 9px 18px !important;
+      border-radius: var(--radius-pill) !important;
+      border: 1.5px solid var(--border-subtle) !important;
+      background: #FFFFFF !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      color: var(--ink-secondary) !important;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+    .age-pill-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+    .age-pill-btn:active {
+      transform: scale(0.96);
+    }
+    /* 0-6m active: Cute Coral Pink */
+    #btn-sched-0-6.active {
+      background: linear-gradient(135deg, #FF6B8B 0%, #FF8E53 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #FF6B8B !important;
+      box-shadow: 0 4px 14px rgba(255, 107, 139, 0.38) !important;
+    }
+    /* 6-12m active: Angel Sky Blue */
+    #btn-sched-6-12.active {
+      background: linear-gradient(135deg, #0284C7 0%, #06B6D4 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #0284C7 !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.38) !important;
+    }
+    /* 1-2y active: Fresh Sage Mint */
+    #btn-sched-1-2y.active {
+      background: linear-gradient(135deg, #059669 0%, #10B981 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #059669 !important;
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.38) !important;
+    }
+    /* 2-3y active: Warm Honey Tangerine */
+    #btn-sched-2-3y.active {
+      background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #D97706 !important;
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.38) !important;
+    }
+    /* 3-6y active: Dreamy Violet */
+    #btn-sched-3-6y.active {
+      background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #7C3AED !important;
+      box-shadow: 0 4px 14px rgba(124, 58, 237, 0.38) !important;
+    }
+
+    /* Checklist & Timeline Polish */
+    .timeline-item {
+      display: flex;
+      gap: 14px;
+      padding: 13px 15px;
+      border-radius: 16px !important;
+      margin-bottom: 10px;
+      border: 1.5px solid #F1EBE2 !important;
+      background: #FFFFFF;
+      transition: all 0.25s ease;
+    }
+    .timeline-item:hover {
+      background: #FFFDF9;
+      border-color: #E2D7C8 !important;
+      transform: translateY(-1px);
+    }
+    .timeline-item.checked-done {
+      background: #F0FDF4 !important;
+      border-color: #86EFAC !important;
+    }
+    .timeline-item.checked-done .timeline-title {
+      color: #15803D !important;
+    }
+    .timeline-check input[type="checkbox"] {
+      width: 22px !important;
+      height: 22px !important;
+      accent-color: #16A34A;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .timeline-check input[type="checkbox"]:hover {
+      transform: scale(1.18);
+    }
+    .timeline-check input[type="checkbox"]:checked {
+      filter: drop-shadow(0 2px 5px rgba(22, 163, 74, 0.35));
+    }
+
+    /* Bottom Navigation Friendly Floating Dock */
+    .bottom-nav {
+      background: rgba(255, 255, 255, 0.96) !important;
+      backdrop-filter: blur(16px) !important;
+      border-top: 1.5px solid rgba(230, 220, 205, 0.8) !important;
+      padding: 8px 10px 10px !important;
+      box-shadow: 0 -6px 20px rgba(180, 140, 100, 0.08) !important;
+    }
+    .bottom-nav-btn {
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+      border-radius: 12px !important;
+    }
+    .bottom-nav-btn:active {
+      transform: scale(0.92);
+    }
+    .bottom-nav-btn.active {
+      background: #F0FDF4 !important;
+      color: #15803D !important;
+      font-weight: 800 !important;
+    }
+
   </style>
 </head>
 <body>
+  <!-- Cute Children Decorative Background Elements -->
+  <div class="cute-bg-decorations" aria-hidden="true">
+    <div class="cute-sun">☀️</div>
+    <div class="cute-cloud cloud-1">☁️</div>
+    <div class="cute-cloud cloud-2">☁️</div>
+    <div class="cute-star star-1">⭐</div>
+    <div class="cute-star star-2">✨</div>
+    <div class="cute-star star-3">🌟</div>
+    <div class="cute-rainbow">🌈</div>
+  </div>
 
   <!-- App Header -->
   <header class="app-header">
     <div class="header-brand">
-      <div class="brand-icon">🌱</div>
+      <div class="brand-icon">🧸</div>
       <div class="brand-text">
-        <h1>Giáo Dục Sớm Thực Chứng</h1>
-        <p>Toàn Não Bộ • Thể Chất • Thấu Cảm • Thích Ứng</p>
+        <h1>DDS Kids • Giáo Dục Sớm</h1>
+        <p>Yêu Thương • Thấu Cảm • Đa Trí Tuệ Toàn Não ✨</p>
       </div>
     </div>
     <div class="header-badge">
-      <span>●</span> Khoa Học Thực Chứng
+      <span class="pulse-dot"></span> Khoa Học Thực Chứng
     </div>
   </header>
+  <div class="cute-rainbow-bar"></div>
 
   <!-- Main Container -->
   <main class="container">
@@ -1104,6 +1420,15 @@
     <!-- ======================================================= -->
     <section id="tab-schedule" class="tab-pane active">
       
+      <!-- Banner Thân Thiện Chào Ba Mẹ & Bé -->
+      <div class="cute-welcome-banner">
+        <div class="cute-welcome-avatar">🧸</div>
+        <div class="cute-welcome-content">
+          <div class="cute-welcome-title">Chào ba mẹ & bé yêu! 🌟</div>
+          <div class="cute-welcome-subtitle">Mỗi ngày bên con là một hành trình kỳ diệu. Hãy chọn mốc tháng tuổi của bé để xem nhịp sinh học và các hoạt động phát triển toàn não bộ hôm nay nhé!</div>
+        </div>
+      </div>
+
       <!-- Bộ Chọn Tháng Tuổi -->
       <div class="card" style="padding-bottom: 14px; margin-bottom: 14px;">
         <span class="card-eyebrow">Bước 1: Chọn Độ Tháng Tuổi Của Con</span>
@@ -2545,6 +2870,11 @@
       const chk = document.getElementById(`chk-${ageKey}-${id}`);
       if (chk) {
         localStorage.setItem(`dds_chk_${ageKey}_${id}`, chk.checked ? '1' : '0');
+        const item = chk.closest('.timeline-item');
+        if (item) {
+          if (chk.checked) item.classList.add('checked-done');
+          else item.classList.remove('checked-done');
+        }
       }
     }
 
@@ -2554,6 +2884,11 @@
         if (chk) {
           const val = localStorage.getItem(`dds_chk_${ageKey}_${i}`);
           chk.checked = (val === '1');
+          const item = chk.closest('.timeline-item');
+          if (item) {
+            if (chk.checked) item.classList.add('checked-done');
+            else item.classList.remove('checked-done');
+          }
         }
       }
     }
@@ -2562,7 +2897,11 @@
       for (let i = 1; i <= 10; i++) {
         localStorage.removeItem(`dds_chk_${ageKey}_${i}`);
         const chk = document.getElementById(`chk-${ageKey}-${i}`);
-        if (chk) chk.checked = false;
+        if (chk) {
+          chk.checked = false;
+          const item = chk.closest('.timeline-item');
+          if (item) item.classList.remove('checked-done');
+        }
       }
     }
 
