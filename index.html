@@ -935,6 +935,87 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    
+    /* Age Milestone Spotlight Box (Red circled area) */
+    .age-spotlight-box {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F9FBF9 100%);
+      border: 1.5px solid #BBF7D0;
+      border-left: 5px solid var(--accent-forest);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 14px rgba(46, 111, 82, 0.06);
+      transition: var(--transition);
+      animation: fadeIn 0.25s ease-in-out;
+    }
+    .age-spotlight-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .age-spotlight-badge {
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--accent-forest);
+      background: var(--accent-forest-soft);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+    }
+    .age-spotlight-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--ink-primary);
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+    .age-spotlight-desc {
+      font-size: 13px;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .age-spotlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .age-spotlight-item {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+    }
+    .age-spotlight-item span.label {
+      display: block;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 2px;
+    }
+    .age-spotlight-item span.val {
+      font-weight: 700;
+      color: var(--ink-primary);
+    }
+    .age-spotlight-mission {
+      background: #F0FDF4;
+      border: 1px dashed #86EFAC;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #166534;
+      line-height: 1.45;
+    }
+
     /* Timer Widget */
     .timer-widget {
       background: linear-gradient(135deg, #F0FDF4, #E8F4EE);
@@ -1048,6 +1129,11 @@
             🚀 3 – 6 Tuổi
           </button>
         </div>
+      </div>
+
+      <!-- Ô THÔNG TIN THANG TUỔI (VỊ TRÍ KHOANH ĐỎ) -->
+      <div id="ageSpotlightContainer" class="age-spotlight-box">
+        <!-- Tự động cập nhật nội dung qua JavaScript theo độ tuổi đang chọn -->
       </div>
 
       <!-- Đồng Hồ Bấm Giờ Tập Trung Nhanh -->
@@ -2357,6 +2443,89 @@
       }
     }
 
+    
+    // Dữ liệu ô thông tin thang tuổi (Vị trí khoanh đỏ)
+    const ageOverviewData = {
+      'sched-0-6': {
+        badge: '🍼 Đang chọn: Bé 0 – 6 Tháng',
+        title: 'Đánh Thức Giác Quan & Thiết Lập Gắn Kết An Toàn',
+        desc: 'Giai đoạn vàng đặt nền móng hệ thần kinh. Trẻ vận hành theo phản xạ sinh tồn và nhịp điệu sinh học tự nhiên, cần sự bảo bọc yêu thương tuyệt đối để ổn định sóng não và nhịp tim.',
+        highlights: [
+          { label: 'Cửa Sổ Thức (Wake Window)', val: '60 – 90 phút tối đa (ngủ 3–4 naps)' },
+          { label: 'Vận Động Cốt Lõi', val: 'Tummy Time (nằm sấp) nâng cơ cổ, lưng' },
+          { label: 'Tỷ Lệ Phối Hợp', val: '50% Steiner • 35% Doman • 15% Kokoro' }
+        ],
+        mission: '🎯 Mục tiêu giai đoạn: Trẻ ngóc đầu vững vàng, mắt dõi theo vật thể 3D, cảm nhận trọn vẹn tình yêu vô điều kiện từ cha mẹ.'
+      },
+      'sched-6-12': {
+        badge: '🚼 Đang chọn: Bé 6 – 12 Tháng',
+        title: 'Bò Chéo Dày Thể Chai, Ăn Dặm BLW Hiện Thân & Tương Tác 2 Chiều',
+        desc: 'Bước ngoặt kết nối hai bán cầu não. Bò chéo luân phiên làm dày Thể Chai (Corpus Callosum); bắt đầu ăn dặm hiện thân (BLW) chạm - ngửi - nếm thức ăn thật 3D.',
+        highlights: [
+          { label: 'Cửa Sổ Thức (Wake Window)', val: '2.5 – 3.5 giờ (gom 2 cữ nap cố định)' },
+          { label: 'Vận Động Cốt Lõi', val: 'Bò chéo 500m/ngày trên sàn phẳng' },
+          { label: 'Tỷ Lệ Phối Hợp', val: '45% Doman • 30% Steiner • 25% Nhận thức' }
+        ],
+        mission: '🎯 Mục tiêu giai đoạn: Hệ tiền đình vững chắc, làm chủ phản xạ nhón ngón tay (pincer grasp), hiểu sự tồn tại của vật thể (Object Permanence).'
+      },
+      'sched-1-2y': {
+        badge: '🚶 Đang chọn: Bé 1 – 2 Tuổi (12 – 24 Tháng)',
+        title: 'Giải Phóng Đôi Tay, Bùng Nổ Ngôn Ngữ & Tự Lập Thực Hành Cuộc Sống',
+        desc: 'Khi biết đi thẳng, đôi bàn tay được giải phóng hoàn toàn để thao tác thế giới 3D. Trẻ bước vào thời kỳ nhạy cảm về trật tự và khao khát tự làm mọi việc.',
+        highlights: [
+          { label: 'Cửa Sổ Thức (Wake Window)', val: '4.5 – 5.5 giờ (chuyển 1 nap trưa 2h)' },
+          { label: 'Vận Động Cốt Lõi', val: 'Đi bộ, leo bậc thang, đu xà 10–20 giây' },
+          { label: 'Tỷ Lệ Phối Hợp', val: '40% Montessori • 35% Doman • 25% Peg Pi' }
+        ],
+        mission: '🎯 Mục tiêu giai đoạn: Tự xúc ăn, tự uống cốc, tự cất giày dép, bùng nổ vốn từ vựng (Word explosion quanh mốc 18 tháng).'
+      },
+      'sched-2-3y': {
+        badge: '🎨 Đang chọn: Bé 2 – 3 Tuổi (24 – 36 Tháng)',
+        title: 'Quản Trị Cảm Xúc Bùng Nổ & Sáng Tạo Phim Nhớ Số Pi',
+        desc: 'Giai đoạn khủng hoảng tuổi lên 2 do sự lệch pha giữa Hạch hạnh nhân và Vỏ não trước trán. Đây cũng là thời kỳ vàng mở ra tư duy biểu tượng (Symbolic Thought) để mã hóa số Pi.',
+        highlights: [
+          { label: 'Cửa Sổ Thức (Wake Window)', val: '5.5 – 6 giờ (1 nap trưa ổn định 1.5h)' },
+          { label: 'Vận Động Cốt Lõi', val: 'Chạy đua 300–500m, đu xà tăng oxy não' },
+          { label: 'Tỷ Lệ Phối Hợp', val: '35% Daniel Siegel EQ • 35% Doman • 30% Peg Pi' }
+        ],
+        mission: '🎯 Mục tiêu giai đoạn: Trẻ biết gọi tên cảm xúc (Name it to tame it), sáng tạo cuộn phim hoạt hình nhớ 10–20 số Pi bằng Peg System.'
+      },
+      'sched-3-6y': {
+        badge: '🚀 Đang chọn: Bé 3 – 6 Tuổi',
+        title: 'Tập Trung Sâu 2 Tiếng, Thể Thao Kỷ Luật & Tư Duy Thích Ứng',
+        desc: 'Vỏ não trước trán trưởng thành vượt bậc. Trẻ có khả năng chú ý điều hành chủ động (Executive Attention), rèn luyện Thuyết Tâm Trí (Theory of Mind) để thấu cảm và thích ứng biến cố.',
+        highlights: [
+          { label: 'Khả Năng Tập Trung', val: 'Chu kỳ độc lập 90 – 120 phút sâu' },
+          { label: 'Vận Động Cốt Lõi', val: 'Chạy 1–2km, bơi lội, đu xà 1 phút' },
+          { label: 'Tỷ Lệ Phối Hợp', val: '35% Montessori • 35% Doman • 30% Thích ứng & Pi' }
+        ],
+        mission: '🎯 Mục tiêu giai đoạn: Chú ý điều hành đỉnh cao, mã hóa 50–100+ số Pi, thấu cảm xã hội và bình tĩnh xử lý các sự cố ngoài kế hoạch.'
+      }
+    };
+
+    function updateAgeSpotlight(ageKey) {
+      const box = document.getElementById('ageSpotlightContainer');
+      const data = ageOverviewData[ageKey];
+      if (!box || !data) return;
+
+      box.innerHTML = `
+        <div class="age-spotlight-header">
+          <span class="age-spotlight-badge">${data.badge}</span>
+        </div>
+        <div class="age-spotlight-title">${data.title}</div>
+        <div class="age-spotlight-desc">${data.desc}</div>
+        <div class="age-spotlight-grid">
+          ${data.highlights.map(h => `
+            <div class="age-spotlight-item">
+              <span class="label">${h.label}</span>
+              <span class="val">${h.val}</span>
+            </div>
+          `).join('')}
+        </div>
+        <div class="age-spotlight-mission">${data.mission}</div>
+      `;
+    }
+
     // Schedule Age Selector System
     function selectScheduleAge(ageKey) {
       document.querySelectorAll('.sched-age-pane').forEach(el => el.classList.remove('active'));
@@ -2373,6 +2542,7 @@
 
       localStorage.setItem('dds_active_schedule_age', ageKey);
       loadAgeChecks(ageKey.replace('sched-', ''));
+      updateAgeSpotlight(ageKey);
     }
 
     // Checklist LocalStorage System per Age Group
