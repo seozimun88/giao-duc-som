@@ -505,6 +505,90 @@
     }
 
     
+    
+    /* 5 Pillars Evidence Card */
+    .pillars-evidence-card {
+      background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+      border: 1px solid #CBD5E1;
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    .pillars-evidence-header {
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.85);
+      user-select: none;
+      transition: var(--transition);
+    }
+    .pillars-evidence-header:hover {
+      background: #FFFFFF;
+    }
+    .pillars-evidence-title {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .pillars-evidence-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: #475569;
+      background: #E2E8F0;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .pillars-evidence-content {
+      padding: 14px 16px;
+      border-top: 1px solid #E2E8F0;
+      display: block;
+    }
+    .pillars-evidence-card.collapsed .pillars-evidence-content {
+      display: none;
+    }
+    .pillars-evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+    }
+    .pillar-eval-item {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: #334155;
+    }
+    .pillar-eval-tag {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #0284C7;
+      background: #E0F2FE;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+    .pillar-eval-item strong {
+      color: #0F172A;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+    }
+
     /* Method Coordination Box */
     .method-coord-card {
       background: var(--bg-surface);
@@ -1030,6 +1114,46 @@
           </div>
         </div>
 
+        <!-- Hộp 5 Trụ Cột Xác Minh Khoa Học 0-6m -->
+        <div class="pillars-evidence-card">
+          <div class="pillars-evidence-header" onclick="togglePillarsEvidence(this)">
+            <div class="pillars-evidence-title">
+              <span>🔬</span> Căn Cứ Thực Chứng: 5 Trụ Cột Y Khoa & Thần Kinh Học Xác Minh Mốc 0 – 6 Tháng
+            </div>
+            <span class="pillars-evidence-badge">Thu gọn 5 trụ cột ▲</span>
+          </div>
+          <div class="pillars-evidence-content">
+            <div class="pillars-evidence-grid">
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🩺 Trụ Cột 1: WHO & AAP</span>
+                <strong>Sinh Học Vận Động:</strong>
+                Quy luật Myelin hóa từ đầu xuống chân (Cephalocaudal); tích hợp các phản xạ sơ sinh nguyên thủy (Moro, ATNR); thị giác hội tụ từ 2D tương phản sang nhìn lập thể 3D.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧩 Trụ Cột 2: Jean Piaget</span>
+                <strong>Nhận Thức Cảm Giác:</strong>
+                Giai đoạn Cảm giác - Vận động sơ cấp (Sensorimotor Substage 1 & 2): thế giới xoay quanh cơ thể bé (mút tay); quy luật "xa mặt cách lòng" (vật bị che khuất là biến mất).
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🏫 Trụ Cột 3: Maria Montessori</span>
+                <strong>Thời Kỳ Nhạy Cảm:</strong>
+                Thời kỳ nhạy cảm về Xúc giác & Sự an toàn tuyệt đối: tiếp nhận âm thanh giọng nói mẹ đẻ (Motherese) như một miếng bọt biển hút nước.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🌙 Trụ Cột 4: Y Khoa Giấc Ngủ</span>
+                <strong>Nhịp Điệu Sinh Học:</strong>
+                Cửa sổ thức (Wake window) 60 – 90 phút tối đa theo TS. Marc Weissbluth; 3–4 giấc ngủ ngày (Naps); 50% thời gian ngủ là sóng REM để phân nhánh tế bào thần kinh.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧠 Trụ Cột 5: Daniel Siegel</span>
+                <strong>Tích Hợp Toàn Não:</strong>
+                Hệ viền & Thân não chỉ huy hoàn toàn; da kề da kích hoạt tuyến yên tiết Oxytocin dập tắt Cortisol, thiết lập gốc rễ Gắn kết an toàn (Secure Attachment).
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 0 – 6 Tháng</h3>
@@ -1167,6 +1291,46 @@
           </div>
         </div>
 
+        <!-- Hộp 5 Trụ Cột Xác Minh Khoa Học 6-12m -->
+        <div class="pillars-evidence-card">
+          <div class="pillars-evidence-header" onclick="togglePillarsEvidence(this)">
+            <div class="pillars-evidence-title">
+              <span>🔬</span> Căn Cứ Thực Chứng: 5 Trụ Cột Y Khoa & Thần Kinh Học Xác Minh Mốc 6 – 12 Tháng
+            </div>
+            <span class="pillars-evidence-badge">Thu gọn 5 trụ cột ▲</span>
+          </div>
+          <div class="pillars-evidence-content">
+            <div class="pillars-evidence-grid">
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🩺 Trụ Cột 1: WHO & AAP</span>
+                <strong>Bò Chéo Dày Thể Chai:</strong>
+                Bò chéo tay chân (Cross-crawling) là bước ngoặt làm dày 200 triệu sợi trục Thể Chai (Corpus Callosum); phản xạ nhón ngón tay (Pincer grasp) xuất hiện mở đường cho ăn dặm BLW.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧩 Trụ Cột 2: Jean Piaget</span>
+                <strong>Sự Tồn Tại Của Vật Thể:</strong>
+                Object Permanence xuất hiện: trẻ hiểu vật thể vẫn tồn tại dù bị giấu dưới khăn $\rightarrow$ Căn cứ sinh học để chơi trò Ú Òa và trốn tìm đồ vật thực tế.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🏫 Trụ Cột 3: Maria Montessori</span>
+                <strong>Khám Phá Vật Thể 3D:</strong>
+                Thời kỳ nhạy cảm về Vận động bò & Khám phá đồ vật 3D: trẻ hứng thú vô tận với thìa gỗ, rổ mây thật trong đời sống hơn các đồ chơi điện tử phát sáng.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🌙 Trụ Cột 4: Y Khoa Giấc Ngủ</span>
+                <strong>Gom Nhịp 2 Giấc Nap:</strong>
+                Não bộ gom giấc ngủ ngày thành 2 cữ cố định (sáng 9:30, chiều 14:00); cửa sổ thức giãn ra 2.5 – 3.5 giờ bền bỉ hơn.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧠 Trụ Cột 5: Daniel Siegel</span>
+                <strong>Giao Tiếp Hai Chiều:</strong>
+                Vùng hồi hải mã (Hippocampus) bắt đầu hình thành trí nhớ tường minh sơ khai; phản xạ tương tác hai chiều (Serve & Return) kích hoạt mạng lưới nơ-ron xã hội.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 6 – 12 Tháng</h3>
@@ -1293,6 +1457,46 @@
             </div>
           </div>
         </div>
+
+        <!-- Hộp 5 Trụ Cột Xác Minh Khoa Học 1-2y -->
+        <div class="pillars-evidence-card">
+          <div class="pillars-evidence-header" onclick="togglePillarsEvidence(this)">
+            <div class="pillars-evidence-title">
+              <span>🔬</span> Căn Cứ Thực Chứng: 5 Trụ Cột Y Khoa & Thần Kinh Học Xác Minh Mốc 1 – 2 Tuổi
+            </div>
+            <span class="pillars-evidence-badge">Thu gọn 5 trụ cột ▲</span>
+          </div>
+          <div class="pillars-evidence-content">
+            <div class="pillars-evidence-grid">
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🩺 Trụ Cột 1: WHO & AAP</span>
+                <strong>Đi Thẳng Giải Phóng Tay:</strong>
+                Dáng đi hai chân đứng thẳng (Bipedal locomotion) giải phóng đôi bàn tay để thao tác đồ vật 3D; hoàn thiện cấu trúc vòm họng chuẩn bị cho bùng nổ ngôn ngữ.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧩 Trụ Cột 2: Jean Piaget</span>
+                <strong>Nhà Khoa Học Thử Nghiệm:</strong>
+                Phản xạ vòng lặp tam cấp: trẻ thử nghiệm quan hệ Nhân - Quả (thả rơi đồ vật từ trên cao, bật tắt công tắc, mở nắp hộp).
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🏫 Trụ Cột 3: Maria Montessori</span>
+                <strong>Nhạy Cảm Trật Tự & Tự Lập:</strong>
+                Thời kỳ nhạy cảm Trật tự (Order) & Đồ vật chi tiết nhỏ: thích mọi thứ ở đúng vị trí cũ; thời kỳ vàng bắt đầu Thực hành cuộc sống tự lập (tự xúc, cất giày, lau bàn).
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🌙 Trụ Cột 4: Y Khoa Giấc Ngủ</span>
+                <strong>Chuyển Dịch 1 Nap Trưa:</strong>
+                Bước ngoặt sinh học rụng giấc ngủ sáng theo National Sleep Foundation, chuyển sang duy nhất 1 giấc trưa 2 tiếng; cửa sổ thức kéo dài 4.5 – 5.5 giờ.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧠 Trụ Cột 5: Daniel Siegel</span>
+                <strong>Bùng Nổ Từ Vựng (Word Spurt):</strong>
+                Vỏ não thái dương trái bùng nổ kết nối từ vựng quanh mốc 18 tháng; trẻ bắt đầu hình thành cảm nhận về ý muốn riêng biệt với cha mẹ.
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
@@ -1431,6 +1635,46 @@
           </div>
         </div>
 
+        <!-- Hộp 5 Trụ Cột Xác Minh Khoa Học 2-3y -->
+        <div class="pillars-evidence-card">
+          <div class="pillars-evidence-header" onclick="togglePillarsEvidence(this)">
+            <div class="pillars-evidence-title">
+              <span>🔬</span> Căn Cứ Thực Chứng: 5 Trụ Cột Y Khoa & Thần Kinh Học Xác Minh Mốc 2 – 3 Tuổi
+            </div>
+            <span class="pillars-evidence-badge">Thu gọn 5 trụ cột ▲</span>
+          </div>
+          <div class="pillars-evidence-content">
+            <div class="pillars-evidence-grid">
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🩺 Trụ Cột 1: WHO & AAP</span>
+                <strong>Thăng Bằng & Oxy Vỏ Não:</strong>
+                Làm chủ phản xạ thăng bằng động (chạy cự ly, nhảy 2 chân, đu xà); dung tích phổi tăng vọt hỗ trợ lượng máu và oxy dồi dào bơm lên Vỏ não trước trán.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧩 Trụ Cột 2: Jean Piaget</span>
+                <strong>Tư Duy Biểu Tượng (Peg Pi):</strong>
+                Giai đoạn Tư duy biểu tượng (Symbolic Thought): hiểu một hình ảnh có thể đại diện cho một con số $\rightarrow$ Căn cứ sinh học áp dụng Peg System mã hóa số Pi thành phim.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🏫 Trụ Cột 3: Maria Montessori</span>
+                <strong>Vận Động Tinh Phức Tạp:</strong>
+                Thời kỳ nhạy cảm Ngôn ngữ bùng nổ & Phối hợp vận động tinh phức tạp: tự dùng dao gỗ cùn cắt quả, cài cúc áo lớn, tự chuẩn bị bàn ăn.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🌙 Trụ Cột 4: Y Khoa Giấc Ngủ</span>
+                <strong>Nhịp Điệu Trưa 1.5 Giờ:</strong>
+                1 giấc trưa ổn định 1.5 giờ; thời gian thức buổi chiều dài giúp xả hết năng lượng cơ bắp, hỗ trợ giấc ngủ đêm sâu không trằn trọc.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧠 Trụ Cột 5: Daniel Siegel</span>
+                <strong>Khủng Hoảng Tuổi Lên 2:</strong>
+                Sự lệch pha giữa Hạch hạnh nhân Amygdala (cảm xúc bùng nổ) và Vỏ não trước trán (chưa đủ ức chế) gây ra Tantrums $\rightarrow$ Bắt buộc dùng Connect & Redirect và Name it to tame it.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <h3 class="card-title" style="margin-bottom:0;">Lịch Trình 1 Ngày: Bé 2 – 3 Tuổi</h3>
@@ -1557,6 +1801,46 @@
             </div>
           </div>
         </div>
+
+        <!-- Hộp 5 Trụ Cột Xác Minh Khoa Học 3-6y -->
+        <div class="pillars-evidence-card">
+          <div class="pillars-evidence-header" onclick="togglePillarsEvidence(this)">
+            <div class="pillars-evidence-title">
+              <span>🔬</span> Căn Cứ Thực Chứng: 5 Trụ Cột Y Khoa & Thần Kinh Học Xác Minh Mốc 3 – 6 Tuổi
+            </div>
+            <span class="pillars-evidence-badge">Thu gọn 5 trụ cột ▲</span>
+          </div>
+          <div class="pillars-evidence-content">
+            <div class="pillars-evidence-grid">
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🩺 Trụ Cột 1: WHO & AAP</span>
+                <strong>Thể Thao Kỷ Luật & Myelin:</strong>
+                Hoàn thiện Myelin cho các sợi thần kinh vận động tinh (viết, vẽ, cắt mộc); làm chủ thể thao kỷ luật (bơi lội, đu xà 1 phút, đạp xe 2 bánh).
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧩 Trụ Cột 2: Jean Piaget</span>
+                <strong>Thuyết Tâm Trí (Theory of Mind):</strong>
+                Giai đoạn Tiền thao tác phát triển Thuyết Tâm Trí: hiểu người khác có cảm xúc và góc nhìn khác mình $\rightarrow$ Căn cứ khoa học rèn luyện lòng trắc ẩn, đồng cảm và văn hóa nhã nhặn.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🏫 Trụ Cột 3: Maria Montessori</span>
+                <strong>Chú Ý Điều Hành 2 Tiếng:</strong>
+                Thời kỳ Trí tuệ thẩm thấu có ý thức (Conscious Absorbent Mind): Vỏ não trước trán cho phép ngồi tập trung sâu 90 – 120 phút liên tục với toán học cụ 3D.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🌙 Trụ Cột 4: Y Khoa Giấc Ngủ</span>
+                <strong>Cắt Tỉa Khớp Thần Kinh:</strong>
+                Giấc ngủ trưa rút ngắn (~1h15p); nhịp sinh học tương đương người lớn; não bộ thực hiện tái cấu trúc và cắt tỉa synapse (Synaptic Pruning) củng cố trí nhớ dài hạn.
+              </div>
+              <div class="pillar-eval-item">
+                <span class="pillar-eval-tag">🧠 Trụ Cột 5: Daniel Siegel</span>
+                <strong>Vỏ Não Trước Trán Trưởng Thành:</strong>
+                Vỏ não trước trán thiết lập các liên kết ức chế hạch hạnh nhân; trẻ bắt đầu làm chủ kỹ năng tự điều chỉnh hành vi, tư duy thích ứng 4 bước khi kế hoạch thay đổi (Heuristics).
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
@@ -2120,6 +2404,18 @@
     function loadAllSavedChecks() {
       const ageGroups = ['0_6', '6_12', '1_2y', '2_3y', '3_6y'];
       ageGroups.forEach(loadAgeChecks);
+    }
+
+    
+    function togglePillarsEvidence(headerEl) {
+      const card = headerEl.parentElement;
+      card.classList.toggle('collapsed');
+      const badge = card.querySelector('.pillars-evidence-badge');
+      if (card.classList.contains('collapsed')) {
+        badge.textContent = 'Mở chi tiết 5 trụ cột ▼';
+      } else {
+        badge.textContent = 'Thu gọn 5 trụ cột ▲';
+      }
     }
 
     // Scenario Accordion Toggle
